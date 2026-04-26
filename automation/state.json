@@ -1,0 +1,41 @@
+{
+  "last_published_episode": -1,
+  "episodes": [
+    {
+      "number": 0,
+      "article_path": "articles/000_manifesto.md",
+      "x_promo_path": "promo/000_manifesto_x.md",
+      "scheduled_for": "2026-04-27T12:00:00+09:00",
+      "type": "manifesto",
+      "title": "【新連載】AIで投資の壁を越える｜予測不能と言われる領域に実装でどこまで迫れるか",
+      "published": false,
+      "note_url": null,
+      "x_thread_id": null,
+      "published_at": null
+    },
+    {
+      "number": 1,
+      "article_path": "articles/001_3weeks_4percent_backtest_note.md",
+      "x_promo_path": "promo/001_episode1_x.md",
+      "scheduled_for": "2026-04-29T12:00:00+09:00",
+      "type": "episode",
+      "title": "【AIで投資の壁を越える #1】「3週間で4%勝った」AI自動売買、10年バックテストしてみたら結論はあっけなかった",
+      "published": false,
+      "note_url": null,
+      "x_thread_id": null,
+      "published_at": null
+    },
+    {
+      "number": 2,
+      "article_path": "articles/002_llm_debate_vs_evaluator.md",
+      "x_promo_path": "promo/002_episode2_x.md",
+      "scheduled_for": "2026-05-06T12:00:00+09:00",
+      "type": "episode",
+      "title": "【AIで投資の壁を越える #2】Claude に投資判断を聞いたら「ソフトウェアエンジニアリングの範囲外」と拒否された話",
+      "published": false,
+      "note_url": null,
+      "x_thread_id": null,
+      "published_at": null
+    }
+  ]
+}

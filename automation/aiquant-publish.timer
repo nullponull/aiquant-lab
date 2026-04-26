@@ -1,0 +1,12 @@
+[Unit]
+Description=連載「AIで投資の壁を越える」自動投稿タイマー
+# 毎日 12:00 にチェック → state.json に基づき公開予定のエピソードがあれば投稿
+# 既存の AIコンパス note (10:01) と被らない
+
+[Timer]
+OnCalendar=*-*-* 12:00:00
+Persistent=true
+RandomizedDelaySec=180
+
+[Install]
+WantedBy=timers.target

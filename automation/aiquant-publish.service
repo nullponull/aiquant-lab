@@ -1,0 +1,13 @@
+[Unit]
+Description=AIで投資の壁を越える 連載自動投稿
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/sol/aiquant-lab
+ExecStart=/home/sol/aiquant-lab/automation/run.sh
+Environment=HOME=/home/sol
+Environment=PATH=/home/sol/.local/bin:/home/sol/.claude/local:/usr/local/bin:/usr/bin:/bin
+StandardOutput=journal
+StandardError=journal
+TimeoutStartSec=1200
