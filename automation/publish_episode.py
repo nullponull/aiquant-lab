@@ -86,8 +86,75 @@ def find_next_episode(state: dict, force_episode: int | None = None) -> dict | N
     return None
 
 
+def convert_markdown_tables_to_lists(markdown: str) -> str:
+    """note 投稿用に markdown 表をリスト形式に変換する。
+
+    note エディタは markdown 表を自動レンダリングしないため、
+    publish-single.cjs が貼り付けると `| col | col |` が生で残る。
+
+    戦略:
+      1. ヘッダー行 + セパレータ行 + データ行を検出
+      2. データ行を「- **第1列値** — 第2列ヘッダー: 第2列値 / 第3列ヘッダー: ...」形式に変換
+      3. ただし 1 列目が同じ繰り返しになる場合（"### Tweet 1" などのフィクション避け）
+    """
+    lines = markdown.splitlines()
+    out: list[str] = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        # 表の開始 (パイプ区切り、次行がセパレータ)
+        if (
+            line.strip().startswith("|")
+            and line.strip().endswith("|")
+            and i + 1 < len(lines)
+            and re.match(r"^\s*\|[\s:|-]+\|\s*$", lines[i + 1])
+        ):
+            # ヘッダー行
+            header_cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            i += 2  # ヘッダーとセパレータをスキップ
+
+            # データ行を集める
+            rows: list[list[str]] = []
+            while i < len(lines) and lines[i].strip().startswith("|") and lines[i].strip().endswith("|"):
+                cells = [c.strip() for c in lines[i].strip().strip("|").split("|")]
+                # セル数を揃える
+                while len(cells) < len(header_cells):
+                    cells.append("")
+                rows.append(cells[: len(header_cells)])
+                i += 1
+
+            # リストへ変換
+            if not rows:
+                continue
+            out.append("")  # 空行で表を区切る
+            for row in rows:
+                # 1列目を見出しに、残りを「ヘッダー: 値」で連結
+                first_col = row[0]
+                rest_parts: list[str] = []
+                for h, v in zip(header_cells[1:], row[1:]):
+                    if not v:
+                        continue
+                    if h:
+                        rest_parts.append(f"{h}: {v}")
+                    else:
+                        rest_parts.append(v)
+                if rest_parts:
+                    out.append(f"- **{first_col}** — " + " / ".join(rest_parts))
+                else:
+                    out.append(f"- **{first_col}**")
+            out.append("")
+            continue
+
+        out.append(line)
+        i += 1
+
+    return "\n".join(out)
+
+
 def build_article_with_frontmatter(article_path: Path, episode: dict) -> str:
-    """publish-single.cjs が読めるフロントマター付き markdown を生成"""
+    """publish-single.cjs が読めるフロントマター付き markdown を生成。
+    note エディタが扱えない markdown 構造はここで安全な形に変換する。
+    """
     body = article_path.read_text(encoding="utf-8")
 
     # 本文先頭の「# タイトル」行を削る (note 側で title が別管理になるので)
@@ -98,6 +165,9 @@ def build_article_with_frontmatter(article_path: Path, episode: dict) -> str:
         while lines and lines[0].strip() == "":
             lines.pop(0)
     cleaned_body = "\n".join(lines)
+
+    # 表をリストに変換 (note エディタは markdown 表を自動レンダリングしない)
+    cleaned_body = convert_markdown_tables_to_lists(cleaned_body)
 
     # フロントマター + 本文
     title = episode["title"]
