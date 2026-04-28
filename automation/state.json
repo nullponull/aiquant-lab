@@ -1,5 +1,5 @@
 {
-  "last_published_episode": -1,
+  "last_published_episode": 0,
   "episodes": [
     {
       "number": 0,
@@ -8,10 +8,19 @@
       "scheduled_for": "2026-04-27T12:00:00+09:00",
       "type": "manifesto",
       "title": "【新連載】AIで投資の壁を越える｜予測不能と言われる領域に実装でどこまで迫れるか",
-      "published": false,
-      "note_url": null,
-      "x_thread_id": null,
-      "published_at": null
+      "published": true,
+      "note_url": "https://note.com/notes/n67ed9e6112a3/landing?puid=dc1061c1-8d29-4de8-a8dc-ca7506e8bee8",
+      "x_thread_id": "2048954850877346282",
+      "x_thread_url": "https://x.com/nullpodesu/status/2048954850877346282",
+      "x_replies": [
+        "2048957263243776435",
+        "2048957368957116566",
+        "2048957477421752483",
+        "2048957582279323859",
+        "2048957686449058010",
+        "2048957797333872840"
+      ],
+      "published_at": "2026-04-28T11:28:04.923408+09:00"
     },
     {
       "number": 1,
