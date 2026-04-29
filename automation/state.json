@@ -1,5 +1,5 @@
 {
-  "last_published_episode": 0,
+  "last_published_episode": 1,
   "episodes": [
     {
       "number": 0,
@@ -29,10 +29,10 @@
       "scheduled_for": "2026-04-29T12:00:00+09:00",
       "type": "episode",
       "title": "【AIで投資の壁を越える #1】「3週間で4%勝った」AI自動売買、10年バックテストしてみたら結論はあっけなかった",
-      "published": false,
-      "note_url": null,
-      "x_thread_id": null,
-      "published_at": null
+      "published": true,
+      "note_url": "https://note.com/notes/n06ba588bde16/landing?puid=c4ec4b2d-4e04-4251-8881-388cc532285a",
+      "x_thread_id": "1988568030847336795",
+      "published_at": "2026-04-29T12:05:08.131870+09:00"
     },
     {
       "number": 2,

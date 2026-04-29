@@ -1,0 +1,60 @@
+[
+  {
+    "item": {
+      "source": "yahoo_finance_jp",
+      "source_type": "rss",
+      "title": "“240万円⇒4億円超”にした投資家・ちょる子さんが「NISA活用術」を伝授！ つみたて投資枠で「オルカン」より「TOPIXのインデックス型投信」を選ぶ理由を公開(ダイヤモンド・ザイ)",
+      "url": "https://news.yahoo.co.jp/articles/e42a7a73f34dc55063e506bf93806c5ce83ddf17?source=rss",
+      "body": "【個人投資家】総資産4億円を突破した個人投資家・ちょる子さんが「NISA活用術」と「いま注目している投資対象」を公開！ ●今の日本市場は下がっても意外に悲壮感がなく、強い！ つみたて投資枠はT",
+      "author": null,
+      "published_at": "Wed, 29 Apr 2026 12:20:30 GMT",
+      "raw_data": {},
+      "fetched_at": "2026-04-30T01:44:33.783870"
+    },
+    "classification": {
+      "score": 9,
+      "category": "sku5_credible",
+      "reason": "実名・具体資産額（4億円超）・公開ロジック（NISA・TOPIX選定理由）。検証記事の対極事例として最適"
+    }
+  },
+  {
+    "item": {
+      "source": "yahoo_finance_jp",
+      "source_type": "rss",
+      "title": "【米国株・グローバル投資入門：ポール・サイの10の視点】第5回 フィデリティの新人研修「会社探偵ゲーム」とは？ 財務諸表から企業のストーリーを読む方法(ダイヤモンド・ザイ)",
+      "url": "https://news.yahoo.co.jp/articles/943f04952f832e57acf22131d5e02dd9e8f7fc33?source=rss",
+      "body": "●フィデリティの新入社員が最初に学ぶ「会社探偵ゲーム」とは？ 私がかつて資産運用の業務に携わっていたフィデリティ・グループでは、新入社員のアナリスト研修に「会社探偵ゲーム(Company Dete",
+      "author": null,
+      "published_at": "Wed, 29 Apr 2026 12:00:45 GMT",
+      "raw_data": {},
+      "fetched_at": "2026-04-30T01:44:33.783932"
+    },
+    "classification": {
+      "score": 7,
+      "category": "series_material",
+      "reason": "フィデリティの研修方法・企業分析ロジックの具体例。連載の教育コンテンツ素材として活用可能"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_投資",
+      "source_type": "note",
+      "title": "コンシュマー向けAIが無くなる？！ | 「限界費用ゼロ」の終わり、機会費用の始まりがもたらすAI産業の新しい投資地図",
+      "url": "https://note.com/fabymetal/n/nbc1ee24a7c0c",
+      "body": "",
+      "author": "FabyΔ",
+      "published_at": "2026-04-24T13:07:29.000+09:00",
+      "raw_data": {
+        "like_count": 152,
+        "price": 980,
+        "comment_count": 0
+      },
+      "fetched_at": "2026-04-30T01:44:34.255320"
+    },
+    "classification": {
+      "score": 7,
+      "category": "regime_change",
+      "reason": "AI産業の構造転換（限界費用→機会費用）を分析した記事。市場構造変化の素材として有用"
+    }
+  }
+]
