@@ -47,16 +47,36 @@ shortlist 生成 → 弁理士確認 → 試作 → 量産 → 販売
 patent_mine/
 ├── README.md                      # 本ファイル
 ├── PHASE1_LEGAL_CLEARANCE.md     # Phase 1 弁理士確認の手順
+├── JPLATPAT_USER_GUIDE.md        # ★ J-PlatPat CSV 取得手順 (人間操作)
 ├── sources/
-│   └── google_patents.py         # Google Patents 検索 (要 Playwright)
+│   └── google_patents.py         # Google Patents (Sorry検出のため非推奨)
 ├── scorer.py                      # Claude 6 軸スコアリング ★ 動作確認済
-├── run_pilot.py                   # Phase 0 パイロット ★ 動作確認済
+├── jplatpat_csv_loader.py        # ★ J-PlatPat CSV パーサー
+├── run_pilot.py                   # サンプルでパイロット ★ 動作確認済
+├── run_from_csv.py                # ★ CSV → スコアリング → shortlist
 ├── data/
-│   └── sample_patents.json       # サンプル 10 件 (動作確認用)
+│   ├── sample_patents.json       # サンプル 10 件 (動作確認用)
+│   └── (your CSV files)          # J-PlatPat エクスポートを置く
 └── results/
     ├── scored_YYYY-MM-DD.json    # スコアリング結果
     └── shortlist_YYYY-MM-DD.md   # ショートリスト
 ```
+
+## 推奨運用フロー
+
+```
+[ステップ 1: 5 分] 人間が J-PlatPat で検索 (例: ペット 給水)
+        ↓
+[ステップ 2: 1 分] 「CSV 出力」ボタンで結果ダウンロード
+        ↓
+[ステップ 3: 自動 10 分] uv run python run_from_csv.py search_results.csv --max 50
+        ↓
+[ステップ 4: 自動] shortlist_YYYY-MM-DD.md 自動生成
+        ↓
+[ステップ 5: 人間] 弁理士に依頼 (PHASE1_LEGAL_CLEARANCE.md 参照)
+```
+
+詳細手順: `JPLATPAT_USER_GUIDE.md`
 
 ---
 
