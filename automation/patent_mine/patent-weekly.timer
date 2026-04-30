@@ -1,0 +1,10 @@
+[Unit]
+Description=patent_mine 週次 top picks タイマー (毎週月曜 06:00)
+
+[Timer]
+OnCalendar=Mon *-*-* 06:00:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

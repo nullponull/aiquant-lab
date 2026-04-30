@@ -1,0 +1,12 @@
+[Unit]
+Description=patent_mine 週次 top picks + ALERT (毎週月曜)
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/sol/aiquant-lab
+ExecStart=/home/sol/aiquant-lab/automation/patent_mine/run_weekly_picks.sh
+Environment=HOME=/home/sol
+Environment=PATH=/home/sol/.local/bin:/home/sol/.claude/local:/usr/local/bin:/usr/bin:/bin
+StandardOutput=journal
+StandardError=journal
+TimeoutStartSec=300

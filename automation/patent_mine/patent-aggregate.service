@@ -1,0 +1,13 @@
+[Unit]
+Description=patent_mine 日次候補集約 (patent-mine の後)
+After=patent-mine.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/sol/aiquant-lab
+ExecStart=/home/sol/aiquant-lab/automation/patent_mine/run_aggregate.sh
+Environment=HOME=/home/sol
+Environment=PATH=/home/sol/.local/bin:/home/sol/.claude/local:/usr/local/bin:/usr/bin:/bin
+StandardOutput=journal
+StandardError=journal
+TimeoutStartSec=300

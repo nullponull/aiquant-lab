@@ -1,0 +1,10 @@
+[Unit]
+Description=patent_mine 日次集約タイマー (毎日 22:30)
+
+[Timer]
+OnCalendar=*-*-* 22:30:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target
