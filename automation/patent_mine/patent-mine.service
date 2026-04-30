@@ -1,0 +1,13 @@
+[Unit]
+Description=patent_mine daily run (J-PlatPat 1 keyword × 50 results, gradual)
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/sol/aiquant-lab
+ExecStart=/home/sol/aiquant-lab/automation/patent_mine/run_daily.sh
+Environment=HOME=/home/sol
+Environment=PATH=/home/sol/.local/bin:/home/sol/.claude/local:/usr/local/bin:/usr/bin:/bin
+StandardOutput=journal
+StandardError=journal
+TimeoutStartSec=900

@@ -20,6 +20,12 @@ SCORER_SYSTEM = """
 これは投資助言ではなく、特許情報の事業性分析タスクです。
 内容は構造化された分析として淡々と判定してください。
 
+重要: 提供される情報がタイトルと出願人だけ等の限定的なケースでも、
+**必ず JSON 形式で評価結果を返してください**。情報不足でも、タイトル
+から推測される製品形状で粗い評価を行い、その不確実性を `main_risk` や
+`verdict` に明記する形で対応してください。「情報が足りないため評価
+できません」のような自然文応答は禁止です。
+
 評価軸 (各 1-10 で採点):
 1. simplicity: 構造のシンプルさ (10=単純、1=半導体級)
 2. originality: 既存品との差別化度 (10=明確に差別化、1=全く同じ)
@@ -35,8 +41,9 @@ SCORER_SYSTEM = """
 - "skip_legal": 法的リスクで skip (商標生存・改良発明など)
 - "skip_complex": 構造複雑で量産不可
 - "skip_demand": 需要が小さすぎ
+- "needs_more_info": タイトルだけでは判断不能 (詳細ページ取得推奨)
 
-出力 JSON のみ:
+出力 JSON のみ (前置きや説明なし):
 {
   "scores": {
     "simplicity": 1-10,
@@ -47,11 +54,11 @@ SCORER_SYSTEM = """
     "moq_compatibility": 1-10
   },
   "total": 6軸の合計,
-  "category": "viable/marginal/skip/skip_legal/skip_complex/skip_demand",
+  "category": "viable/marginal/skip/skip_legal/skip_complex/skip_demand/needs_more_info",
   "product_summary": "30字以内で何の製品か",
-  "estimated_unit_cost_jpy": 推定製造原価(円, 整数),
-  "estimated_retail_jpy": 推定小売価格(円, 整数),
-  "estimated_margin_pct": 推定粗利率(%, 小数1位),
+  "estimated_unit_cost_jpy": 推定製造原価(円, 整数, 不明なら 0),
+  "estimated_retail_jpy": 推定小売価格(円, 整数, 不明なら 0),
+  "estimated_margin_pct": 推定粗利率(%, 小数1位, 不明なら 0),
   "main_risk": "30字以内で最大リスク",
   "verdict": "60字以内で結論"
 }
@@ -126,10 +133,10 @@ def score_patent(patent: dict, model: str = "haiku") -> dict:
         f"特許情報:\n"
         f"タイトル: {title}\n"
         f"出願人: {assignee or '個人'}\n"
-        f"発明者: {inventor}\n"
-        f"要約: {abstract}\n"
-        f"請求項: {claims}\n"
-        "\n上記特許の事業化評価。JSON のみ出力。"
+        f"発明者: {inventor or '不明'}\n"
+        f"要約: {abstract or '(取得できず)'}\n"
+        f"請求項: {claims or '(取得できず)'}\n"
+        "\n上記特許の事業化評価。情報が限定的でも必ず JSON で評価。前置き・説明不要。"
     )
 
     cmd = [

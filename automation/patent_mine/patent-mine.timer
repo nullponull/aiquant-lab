@@ -1,0 +1,10 @@
+[Unit]
+Description=patent_mine daily timer (毎日 22:00、ちょっとずつ運用)
+
+[Timer]
+OnCalendar=*-*-* 22:00:00
+Persistent=true
+RandomizedDelaySec=1200
+
+[Install]
+WantedBy=timers.target
