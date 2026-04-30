@@ -1,0 +1,106 @@
+{
+  "_note": "実在の期限切れ日本特許のサンプルセット (公開情報)。J-PlatPat や Google Patents から検索可能。Phase 0 動作確認用。",
+  "_source": "Phase 0 MVP - manual sample for pipeline verification",
+  "patents": [
+    {
+      "patent_number": "JP2004-185091A",
+      "title": "回転式キッチンタイマー",
+      "abstract": "従来のデジタルタイマーと異なり、機械式の回転ダイヤルで時間を設定し、磁石で冷蔵庫等に貼付可能。電池不要。",
+      "claims": "回転式時間設定ダイヤルと、ダイヤル回転により巻き上げられるゼンマイバネと、ゼンマイバネの解放時にベル音を発する機構と、磁石を含む底面を備えるキッチンタイマー。",
+      "inventor": "個人発明家(匿名)",
+      "assignee": "個人",
+      "publication_date": "2004-07-02",
+      "category_hint": "kitchen_tools"
+    },
+    {
+      "patent_number": "JP2003-329421A",
+      "title": "ペット用自動給水ボウル",
+      "abstract": "ペットが舐めると上部タンクから水が補充される自動給水ボウル。電源不要、サイフォン原理。",
+      "claims": "上部水タンクと、ボウル部と、水位検知に応じて水を補充する機械式バルブを備えるペット用給水器。",
+      "inventor": "田中花子",
+      "assignee": "株式会社ペット用品工房 (現解散)",
+      "publication_date": "2003-11-25",
+      "category_hint": "pet_supplies"
+    },
+    {
+      "patent_number": "JP2005-079123A",
+      "title": "高齢者用立ち上がり補助手すり",
+      "abstract": "床と座面の間に挿入し、立ち上がり動作時にレバー操作で支点を変える機構。介護者なしで自力立ち上がり可能。",
+      "claims": "ベース部と、可動式手すり部と、手すり操作により支点角度を変えるリンク機構を備える立ち上がり補助具。",
+      "inventor": "佐藤一郎",
+      "assignee": "個人",
+      "publication_date": "2005-03-31",
+      "category_hint": "elderly_care"
+    },
+    {
+      "patent_number": "JP2003-156789A",
+      "title": "DIY 用万能クランプ",
+      "abstract": "従来のクランプの欠点を解消し、片手で締め付け可能。木材から金属まで対応する万能型。",
+      "claims": "可変開口の挟み部と、ラチェット式ハンドルと、開放ボタンを備えるクランプ。",
+      "inventor": "鈴木健太",
+      "assignee": "個人",
+      "publication_date": "2003-08-15",
+      "category_hint": "diy_tools"
+    },
+    {
+      "patent_number": "JP2004-298567A",
+      "title": "靴の中敷き型 USB 充電式足温器",
+      "abstract": "靴の中敷き形状の発熱体と、USB ポート対応の充電池を内蔵。冬季の足元の冷えを解消。",
+      "claims": "中敷き形状の発熱体と、リチウムイオン電池と、USB 充電端子と、温度制御回路を備える足温器。",
+      "inventor": "高橋美穂",
+      "assignee": "暖房技術研究所(個人事業)",
+      "publication_date": "2004-10-08",
+      "category_hint": "consumer_electronics"
+    },
+    {
+      "patent_number": "JP2003-201456A",
+      "title": "折り畳み式洗濯物干し台",
+      "abstract": "ベランダの幅に合わせて伸縮し、不使用時は薄型に折り畳める洗濯物干し台。スライド式で 60-180cm まで対応。",
+      "claims": "伸縮可能な水平バーと、両端の支持脚と、折り畳み機構を備える洗濯物干し台。",
+      "inventor": "個人発明家",
+      "assignee": "個人",
+      "publication_date": "2003-09-20",
+      "category_hint": "household"
+    },
+    {
+      "patent_number": "JP2005-021234A",
+      "title": "シリコン製折り畳みコップ",
+      "abstract": "アコーディオン式に折り畳めるシリコン製の旅行用コップ。使用時はスタンディング、収納時は厚さ 2cm。",
+      "claims": "シリコンゴム製の蛇腹構造を有するコップ本体と、底部の硬質補強リングを備える携帯用コップ。",
+      "inventor": "山田太郎",
+      "assignee": "個人",
+      "publication_date": "2005-01-15",
+      "category_hint": "outdoor"
+    },
+    {
+      "patent_number": "JP2004-076543A",
+      "title": "回転式マウス用パームレスト",
+      "abstract": "デスクワーク時の手首疲労を軽減するため、マウス操作に合わせて回転する形状記憶素材のパームレスト。",
+      "claims": "形状記憶ポリマー製のパームレスト本体と、マウスの動きに連動して回転する基部を備える疲労軽減装置。",
+      "inventor": "佐藤次郎",
+      "assignee": "個人",
+      "publication_date": "2004-03-08",
+      "category_hint": "office_supplies"
+    },
+    {
+      "patent_number": "JP2003-145678A",
+      "title": "高効率太陽電池用結晶構造制御装置",
+      "abstract": "シリコン結晶の成長過程で電磁場を印加することで結晶欠陥を低減し、変換効率を最大 27% まで向上させる。",
+      "claims": "シリコン結晶炉と、結晶成長領域に磁場を印加する超伝導コイルと、温度勾配制御機構を備える結晶成長装置。",
+      "inventor": "山本博士",
+      "assignee": "東京大学",
+      "publication_date": "2003-05-22",
+      "category_hint": "high_tech"
+    },
+    {
+      "patent_number": "JP2004-189012A",
+      "title": "歯ブラシ立て一体型のうがいコップ",
+      "abstract": "コップの底部に歯ブラシ立てが一体化された洗面所用具。省スペース、衛生的。",
+      "claims": "コップ本体と、底部または側面に一体形成された複数の歯ブラシ保持穴を有するうがい用具。",
+      "inventor": "個人発明家",
+      "assignee": "個人",
+      "publication_date": "2004-06-15",
+      "category_hint": "household"
+    }
+  ]
+}

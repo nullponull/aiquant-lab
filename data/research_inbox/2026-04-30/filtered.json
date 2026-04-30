@@ -3,36 +3,18 @@
     "item": {
       "source": "yahoo_finance_jp",
       "source_type": "rss",
-      "title": "“240万円⇒4億円超”にした投資家・ちょる子さんが「NISA活用術」を伝授！ つみたて投資枠で「オルカン」より「TOPIXのインデックス型投信」を選ぶ理由を公開(ダイヤモンド・ザイ)",
-      "url": "https://news.yahoo.co.jp/articles/e42a7a73f34dc55063e506bf93806c5ce83ddf17?source=rss",
-      "body": "【個人投資家】総資産4億円を突破した個人投資家・ちょる子さんが「NISA活用術」と「いま注目している投資対象」を公開！ ●今の日本市場は下がっても意外に悲壮感がなく、強い！ つみたて投資枠はT",
+      "title": "円相場が急騰 1ドル155円台に 円安加速受け、為替介入を示唆(テレビ朝日系（ANN）)",
+      "url": "https://news.yahoo.co.jp/articles/1780d41c2ced602a1ae67896985a0d6fabb1a799?source=rss",
+      "body": "外国為替市場で円相場が急騰し、短時間に5円以上、円高が進みました。 片山財務大臣 「いよいよ、かねてから申し上げてきた断固たる措置を取るタイミングが近付いていると思っております。皆さま、ご外出の時も",
       "author": null,
-      "published_at": "Wed, 29 Apr 2026 12:20:30 GMT",
+      "published_at": "Thu, 30 Apr 2026 12:46:27 GMT",
       "raw_data": {},
-      "fetched_at": "2026-04-30T01:44:33.783870"
-    },
-    "classification": {
-      "score": 9,
-      "category": "sku5_credible",
-      "reason": "実名・具体資産額（4億円超）・公開ロジック（NISA・TOPIX選定理由）。検証記事の対極事例として最適"
-    }
-  },
-  {
-    "item": {
-      "source": "yahoo_finance_jp",
-      "source_type": "rss",
-      "title": "【米国株・グローバル投資入門：ポール・サイの10の視点】第5回 フィデリティの新人研修「会社探偵ゲーム」とは？ 財務諸表から企業のストーリーを読む方法(ダイヤモンド・ザイ)",
-      "url": "https://news.yahoo.co.jp/articles/943f04952f832e57acf22131d5e02dd9e8f7fc33?source=rss",
-      "body": "●フィデリティの新入社員が最初に学ぶ「会社探偵ゲーム」とは？ 私がかつて資産運用の業務に携わっていたフィデリティ・グループでは、新入社員のアナリスト研修に「会社探偵ゲーム(Company Dete",
-      "author": null,
-      "published_at": "Wed, 29 Apr 2026 12:00:45 GMT",
-      "raw_data": {},
-      "fetched_at": "2026-04-30T01:44:33.783932"
+      "fetched_at": "2026-04-30T23:03:35.654701"
     },
     "classification": {
       "score": 7,
-      "category": "series_material",
-      "reason": "フィデリティの研修方法・企業分析ロジックの具体例。連載の教育コンテンツ素材として活用可能"
+      "category": "regime_change",
+      "reason": "政策当局の為替介入示唆は市場構造変化の素材。具体的な介入タイミング言及"
     }
   },
   {
@@ -45,16 +27,880 @@
       "author": "FabyΔ",
       "published_at": "2026-04-24T13:07:29.000+09:00",
       "raw_data": {
-        "like_count": 152,
+        "like_count": 156,
         "price": 980,
         "comment_count": 0
       },
-      "fetched_at": "2026-04-30T01:44:34.255320"
+      "fetched_at": "2026-04-30T23:03:36.771476"
+    },
+    "classification": {
+      "score": 6,
+      "category": "regime_change",
+      "reason": "AI産業の構造変化（限界費用ゼロから機会費用へ）を扱う、市場構造変化の材料"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_投資",
+      "source_type": "note",
+      "title": "SanDisk +2,500%、キオクシア完売 | エージェントが食い尽くすメモリとストレージの投資地図",
+      "url": "https://note.com/fabymetal/n/nd321f7388da0",
+      "body": "",
+      "author": "FabyΔ",
+      "published_at": "2026-04-26T05:34:04.000+09:00",
+      "raw_data": {
+        "like_count": 115,
+        "price": 980,
+        "comment_count": 0
+      },
+      "fetched_at": "2026-04-30T23:03:36.771488"
+    },
+    "classification": {
+      "score": 9,
+      "category": "series_material",
+      "reason": "AI時代のメモリ・ストレージ需要シフト。具体的企業名・価格上昇率で素材価値が高い"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_投資",
+      "source_type": "note",
+      "title": "【引退発表】ポス鳥、noteでの販売を引退しようと思います。 #生成AI #ChatGPT #Gemini #Claude #メンバーシップ #AI活用 #毎日更新 #毎日投稿 #SNS運用 #コンテンツビジネス #自己紹介 #集客 #フリーランス #SNS集客 #独立起業 #投資 #日経平均",
+      "url": "https://note.com/glad_auklet4142/n/n0ebfb7cdb243",
+      "body": "",
+      "author": "ポス鳥（ビジネス＆投資NEWS解説）おそらく日本で１番「事業の失敗例を載せているnoteアカウント」",
+      "published_at": "2026-04-10T00:32:22.000+09:00",
+      "raw_data": {
+        "like_count": 895,
+        "price": 0,
+        "comment_count": 10
+      },
+      "fetched_at": "2026-04-30T23:03:36.771498"
+    },
+    "classification": {
+      "score": 7,
+      "category": "failure_case",
+      "reason": "コンテンツビジネス失敗事例。有名アカウント（日本で1番失敗例を載せる）による引退宣言は、SKU教材・ビジネス限界の検証素"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_AI投資",
+      "source_type": "note",
+      "title": "データセンターにミサイル防衛を | イラン戦争が湾岸AI投資に突きつけた「物理層」の現実",
+      "url": "https://note.com/fabymetal/n/n15a1d5d5eff6",
+      "body": "",
+      "author": "FabyΔ",
+      "published_at": "2026-03-09T18:45:48.000+09:00",
+      "raw_data": {
+        "like_count": 138,
+        "price": 980,
+        "comment_count": 0
+      },
+      "fetched_at": "2026-04-30T23:03:37.334283"
+    },
+    "classification": {
+      "score": 8,
+      "category": "regime_change",
+      "reason": "地政学リスク（イラン戦争）がAI投資インフラに与える影響を具体的に描写。非定常性の壁素材として有用。"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_AI投資",
+      "source_type": "note",
+      "title": "Meta-NVIDIA契約をGPUの台数で語るな | 数百億ドル契約が示すAI投資の急所",
+      "url": "https://note.com/fabymetal/n/n5ae2e4a11b82",
+      "body": "",
+      "author": "FabyΔ",
+      "published_at": "2026-02-19T06:09:18.000+09:00",
+      "raw_data": {
+        "like_count": 97,
+        "price": 980,
+        "comment_count": 0
+      },
+      "fetched_at": "2026-04-30T23:03:37.334292"
+    },
+    "classification": {
+      "score": 8,
+      "category": "regime_change",
+      "reason": "Meta-NVIDIAの大型契約は市場構造変化を示す具体事例。AI投資の急所を数値で定量化"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_AI投資",
+      "source_type": "note",
+      "title": "【AI開発100兆円が消える。ビッグテック4社が仕掛ける】「AIインフラチキンレース」の絶望。底なしのツケと華やかな知能の裏にある泥臭い土木工事。 #生成AI #AI投資 #ビッグテック #データセンター #インフラ #テクノロジー #コスト転嫁 #米国株 #AI株",
+      "url": "https://note.com/glad_auklet4142/n/nab818df2fdf8",
+      "body": "",
+      "author": "ポス鳥（ビジネス＆投資NEWS解説）おそらく日本で１番「事業の失敗例を載せているnoteアカウント」",
+      "published_at": "2026-04-14T21:26:17.000+09:00",
+      "raw_data": {
+        "like_count": 37,
+        "price": 7980,
+        "comment_count": 0
+      },
+      "fetched_at": "2026-04-30T23:03:37.334297"
+    },
+    "classification": {
+      "score": 8,
+      "category": "regime_change",
+      "reason": "AI インフラコスト構造の非定常性。ビッグテック競争による市場構造変化の具体事例"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_AI投資",
+      "source_type": "note",
+      "title": "【独自分析】Fortune誌「AIトレードは終わった」「AIバブル崩壊」の報告と1.3兆ドルの工事。#AIバブル #株式投資 #米国株 #半導体 #投資信託 #資産運用 #インデックス投資 #決算 #経済ニュース #マネー",
+      "url": "https://note.com/glad_auklet4142/n/n1ff2bac4daa0",
+      "body": "",
+      "author": "ポス鳥（ビジネス＆投資NEWS解説）おそらく日本で１番「事業の失敗例を載せているnoteアカウント」",
+      "published_at": "2026-04-20T23:29:37.000+09:00",
+      "raw_data": {
+        "like_count": 84,
+        "price": 7980,
+        "comment_count": 0
+      },
+      "fetched_at": "2026-04-30T23:03:37.334300"
+    },
+    "classification": {
+      "score": 7,
+      "category": "series_material",
+      "reason": "AIバブル崩壊の具体的事例＋Fortune誌の権威性。限界を示す素材として有用"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_AI投資",
+      "source_type": "note",
+      "title": "【AI投資の最終結論】エヌビディアの裏で密かに笑う。バブルの「尻拭い」でボロ儲けする3つの影の支配者",
+      "url": "https://note.com/toto0316/n/ndf1c4bd4a5f7",
+      "body": "",
+      "author": "投資猫トト",
+      "published_at": "2026-04-15T05:59:29.000+09:00",
+      "raw_data": {
+        "like_count": 37,
+        "price": 0,
+        "comment_count": 0
+      },
+      "fetched_at": "2026-04-30T23:03:37.334306"
+    },
+    "classification": {
+      "score": 7,
+      "category": "sku5_scam",
+      "reason": "AI投資の「裏の支配者」「ボロ儲け」という扇動的表現。具体性と数値に欠けるが、AIバブル関連の典型的な煽り記事として検証"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_AI投資",
+      "source_type": "note",
+      "title": "Tesla決算！本業は会社予想超え、でも焦点は「AI投資をいつ利益に変えられるか」",
+      "url": "https://note.com/utbuffett/n/nc4943535c4b2",
+      "body": "",
+      "author": "東大ぱふぇっと🐰20代で億り人達成❗米国株式投資で大評判の相場予測noteは20万部突破",
+      "published_at": "2026-04-23T19:00:00.000+09:00",
+      "raw_data": {
+        "like_count": 24,
+        "price": 0,
+        "comment_count": 0
+      },
+      "fetched_at": "2026-04-30T23:03:37.334309"
     },
     "classification": {
       "score": 7,
       "category": "regime_change",
-      "reason": "AI産業の構造転換（限界費用→機会費用）を分析した記事。市場構造変化の素材として有用"
+      "reason": "AI投資の収益化タイミングが市場構造の変化を示す、具体的企業例"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_AI投資",
+      "source_type": "note",
+      "title": "【AIの熱を冷やす「水」に7100億円の投資】3年で価値17.6倍の異常事態。半導体の次は冷却インフラが覇権を握るのか？ #生成AI #データセンター #投資 #米国株 #日本株 #半導体 #水資源",
+      "url": "https://note.com/glad_auklet4142/n/n53caf6f8a97f",
+      "body": "",
+      "author": "ポス鳥（ビジネス＆投資NEWS解説）おそらく日本で１番「事業の失敗例を載せているnoteアカウント」",
+      "published_at": "2026-03-24T23:08:40.000+09:00",
+      "raw_data": {
+        "like_count": 130,
+        "price": 1980,
+        "comment_count": 0
+      },
+      "fetched_at": "2026-04-30T23:03:37.334313"
+    },
+    "classification": {
+      "score": 8,
+      "category": "regime_change",
+      "reason": "データセンター冷却インフラの投資急増は市場構造変化を示す典型事例。数値（7100億円、17.6倍）と具体的な産業動向が連"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_NISA",
+      "source_type": "note",
+      "title": "NISA貧乏が生まれる心理──なぜ枠を埋めることが目的になるのか【NISA×投資心理①】",
+      "url": "https://note.com/ample_bonobo3566/n/ndb0244782940",
+      "body": "",
+      "author": "ネルゥ@投資家",
+      "published_at": "2026-04-14T19:31:05.000+09:00",
+      "raw_data": {
+        "like_count": 206,
+        "price": 0,
+        "comment_count": 16
+      },
+      "fetched_at": "2026-04-30T23:03:38.088679"
+    },
+    "classification": {
+      "score": 9,
+      "category": "series_material",
+      "reason": "NISA制度の心理的罠を具体的に分析。連載素材として高評価"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_NISA",
+      "source_type": "note",
+      "title": "年収1,000万・子2人・休職中。固定費・NISA・教育費・暴落・休職——5つの不安を数字とルールに変えた全記録【守備型サイドFIRE ロードマップ】",
+      "url": "https://note.com/lively_colt9874/n/n67abd2857779",
+      "body": "",
+      "author": "sっち",
+      "published_at": "2026-04-23T10:13:58.000+09:00",
+      "raw_data": {
+        "like_count": 174,
+        "price": 0,
+        "comment_count": 2
+      },
+      "fetched_at": "2026-04-30T23:03:38.088681"
+    },
+    "classification": {
+      "score": 7,
+      "category": "series_material",
+      "reason": "実践的なFIRE事例。具体的な年収・家族構成・資産管理の数字が豊富で、連載エピソード素材として引用価値あり"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_NISA",
+      "source_type": "note",
+      "title": "資産1億円の正体は「自由」じゃなかった。GUを着る億り人の頭の中【新NISA・インデックス投資】",
+      "url": "https://note.com/bonjin_taro_jp/n/nb9b2866a2fb9",
+      "body": "",
+      "author": "凡人太郎｜7年で1億のサラリーマン投資家│インデックス投資",
+      "published_at": "2026-04-11T20:37:31.000+09:00",
+      "raw_data": {
+        "like_count": 182,
+        "price": 0,
+        "comment_count": 20
+      },
+      "fetched_at": "2026-04-30T23:03:38.088700"
+    },
+    "classification": {
+      "score": 8,
+      "category": "sku5_credible",
+      "reason": "実名著者（凡人太郎）による具体的資産達成（1億円）の心理分析。新NISA×インデックス投資の実績例として、連載素材に引用"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_つみたてNISA",
+      "source_type": "note",
+      "title": "【漫画】新NISA・積立NISAで利益167万！主婦のほったらかし投資術を出版しました",
+      "url": "https://note.com/kotobadayori/n/nd7783f0a532e",
+      "body": "",
+      "author": "さっと🌸引き寄せ＆積立NISAをKindle漫画で出版｜実体験漫画",
+      "published_at": "2026-04-16T07:01:28.000+09:00",
+      "raw_data": {
+        "like_count": 104,
+        "price": 0,
+        "comment_count": 1
+      },
+      "fetched_at": "2026-04-30T23:03:38.970519"
+    },
+    "classification": {
+      "score": 7,
+      "category": "sku5_credible",
+      "reason": "具体的な利益額・運用手法・出版実績で信頼性高い"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_つみたてNISA",
+      "source_type": "note",
+      "title": "６０代の不動産とＮＩＳＡのＢ／Ｓ統合ＶＯＬ.４：金利上昇局面の投資判断。ＮＩＳＡ積立 ＶＳ ローン繰り上げのＢ／Ｓ判定法",
+      "url": "https://note.com/ready_hryshim204/n/n71f24e291c3c",
+      "body": "",
+      "author": "森ヒロ｜セカンドライフの整え役",
+      "published_at": "2026-04-16T19:46:18.000+09:00",
+      "raw_data": {
+        "like_count": 56,
+        "price": 0,
+        "comment_count": 0
+      },
+      "fetched_at": "2026-04-30T23:03:38.970527"
+    },
+    "classification": {
+      "score": 7,
+      "category": "series_material",
+      "reason": "60代資産運用の具体的事例。NISA vs 繰上返済判定は連載素材として価値あり"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_つみたてNISA",
+      "source_type": "note",
+      "title": "FIRE資産1100万円。44歳独身男の楽しいセミリタイア暮らし【月収20万円/生活費10万円/積立NISA月5万円】【仕事を辞めてみた】【社会不適合者】",
+      "url": "https://note.com/hayabu_fire/n/nef4a25431e77",
+      "body": "",
+      "author": "ハヤブ【資産500万円でセミリタイアした男】YouTube登録者1万人！",
+      "published_at": "2026-04-26T19:10:13.000+09:00",
+      "raw_data": {
+        "like_count": 7,
+        "price": 0,
+        "comment_count": 0
+      },
+      "fetched_at": "2026-04-30T23:03:38.970543"
+    },
+    "classification": {
+      "score": 7,
+      "category": "sku5_credible",
+      "reason": "具体的な資産額・生活費・積立額を数値で公開。セミリタイア実績あり"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_つみたてNISA",
+      "source_type": "note",
+      "title": "自己肯定感ブームに\"静かに搾られる\"日本人——5兆円自己啓発市場が老後積立・NISA・キャリア防衛力を溶かす4つのトラップ",
+      "url": "https://note.com/sei_ryu5055/n/n4d444f9de520",
+      "body": "",
+      "author": "せいりゅう",
+      "published_at": "2026-04-07T20:44:00.000+09:00",
+      "raw_data": {
+        "like_count": 13,
+        "price": 0,
+        "comment_count": 1
+      },
+      "fetched_at": "2026-04-30T23:03:38.970556"
+    },
+    "classification": {
+      "score": 7,
+      "category": "series_material",
+      "reason": "自己啓発市場・金融リテラシー・行動心理の具体事例として連載素材価値が高い"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_クオンツ",
+      "source_type": "note",
+      "title": "クオンツの学校で習ったこと #14：クオンツの世界では、コードの速さがお金に直結するという話",
+      "url": "https://note.com/lovely_roses54/n/nd686630d949e",
+      "body": "",
+      "author": "くろの｜クオンツトレード研究ノート",
+      "published_at": "2026-04-02T14:16:32.000+09:00",
+      "raw_data": {
+        "like_count": 7,
+        "price": 0,
+        "comment_count": 0
+      },
+      "fetched_at": "2026-04-30T23:03:39.813177"
+    },
+    "classification": {
+      "score": 7,
+      "category": "series_material",
+      "reason": "AI×投資の限界・実装現場の制約を示す具体事例。クオンツ実務の裏側"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_クオンツ",
+      "source_type": "note",
+      "title": "クオンツの学校で習ったこと #17：プロジェクトが形になって見えてきた、クオンツにとっての「スピード」の意味",
+      "url": "https://note.com/lovely_roses54/n/n5b967b979820",
+      "body": "",
+      "author": "くろの｜クオンツトレード研究ノート",
+      "published_at": "2026-04-07T18:26:33.000+09:00",
+      "raw_data": {
+        "like_count": 4,
+        "price": 0,
+        "comment_count": 0
+      },
+      "fetched_at": "2026-04-30T23:03:39.813187"
+    },
+    "classification": {
+      "score": 7,
+      "category": "series_material",
+      "reason": "クオンツの実務的な学習過程を公開。「スピード」という投資システム開発の本質的課題を提示"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_AI副業",
+      "source_type": "note",
+      "title": "noteの運営を変えたら全部変わった｜書けない・読まれない・売れないが同時に動き出した理由（生成AI活用・副業初心者）ChatGPT/Gemini。ライティング・文章術・情報発信・AI副業",
+      "url": "https://note.com/fukugyotousi/n/n31f6a0ce8fcd",
+      "body": "",
+      "author": "ふくおnote 📗 止まらず書けて、積み上がる時短育成note術（収益化×生成AI×副業）",
+      "published_at": "2026-04-23T18:04:20.000+09:00",
+      "raw_data": {
+        "like_count": 269,
+        "price": 0,
+        "comment_count": 0
+      },
+      "fetched_at": "2026-04-30T23:03:40.693349"
+    },
+    "classification": {
+      "score": 7,
+      "category": "series_material",
+      "reason": "noteの運営改善×生成AI活用の具体事例。副業初心者向けで、AIツール（ChatGPT/Gemini）の実践活用が明示"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_AI副業",
+      "source_type": "note",
+      "title": "noteで同じことをやっていたのに伸びた理由｜4月1週目も伸びたのに、2週目でさらに変わった話（生成AI活用×note副業）｜副業初心者・ChatGPT/Gemini・情報発信・AI副業",
+      "url": "https://note.com/fukugyotousi/n/nbe5fa94eb8b2",
+      "body": "",
+      "author": "ふくおnote 📗 止まらず書けて、積み上がる時短育成note術（収益化×生成AI×副業）",
+      "published_at": "2026-04-21T18:06:15.000+09:00",
+      "raw_data": {
+        "like_count": 200,
+        "price": 0,
+        "comment_count": 2
+      },
+      "fetched_at": "2026-04-30T23:03:40.693360"
+    },
+    "classification": {
+      "score": 7,
+      "category": "series_material",
+      "reason": "note成長事例・具体的な時期変動。AI副業連載の事例素材として活用可"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_AI副業",
+      "source_type": "note",
+      "title": "noteが書けない理由は忙しさじゃない｜止まる原因と、生成AIで回す方法（生成AI活用×note副業）ChatGPT/Gemini・副業初心者・継続・AI副業",
+      "url": "https://note.com/fukugyotousi/n/n13721adcd403",
+      "body": "",
+      "author": "ふくおnote 📗 止まらず書けて、積み上がる時短育成note術（収益化×生成AI×副業）",
+      "published_at": "2026-04-22T18:03:31.000+09:00",
+      "raw_data": {
+        "like_count": 167,
+        "price": 0,
+        "comment_count": 2
+      },
+      "fetched_at": "2026-04-30T23:03:40.693365"
+    },
+    "classification": {
+      "score": 7,
+      "category": "series_material",
+      "reason": "note執筆の障壁（忙しさ以外）と生成AI活用の実践事例。連載素材として具体的"
+    }
+  },
+  {
+    "item": {
+      "source": "note_search_AI副業",
+      "source_type": "note",
+      "title": "AI副業、正直うまくいかなかった話【実録vol.11】",
+      "url": "https://note.com/witty_myrtle4328/n/nc7246bde466c",
+      "body": "",
+      "author": "K｜病院事務出身×シンギュラリティに備える人",
+      "published_at": "2026-04-14T18:35:35.000+09:00",
+      "raw_data": {
+        "like_count": 248,
+        "price": 0,
+        "comment_count": 8
+      },
+      "fetched_at": "2026-04-30T23:03:40.693370"
+    },
+    "classification": {
+      "score": 8,
+      "category": "series_material",
+      "reason": "AI副業の失敗事例。具体的な実体験・連載素材として高価値"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_投資_自動化",
+      "source_type": "x",
+      "title": "ザイ・オンライン\n@zaionline\n·\n2時間\n【「お宝銘柄」発掘術！】｢AIエージェント｣関連銘柄を紹介！ 従来の生成AIより高度な作業の自動化まで可能に",
+      "url": "https://x.com/zaionline/status/2049814915125596408",
+      "body": "ザイ・オンライン\n@zaionline\n·\n2時間\n【「お宝銘柄」発掘術！】｢AIエージェント｣関連銘柄を紹介！ 従来の生成AIより高度な作業の自動化まで可能にする｢AIエージェント｣事業を手掛けるソ… \nhttps://\ndiamond.jp/zai/articles/-\n/1066610\n… #リンク先の記事には広告を含みます #株 #投資 #日本株 #銘柄 #AIエージェント #マルチエージェントシステム #テーマ株\ndiamond.jp\n｢AIエージェント｣関連銘柄を紹介！ 従来の生成AIより高度な作業の自動化まで可能にする｢AIエージェント｣事業を手掛けるソフトバンク、LINEヤフーなどを解説\n「AIエージェント」関連銘柄について、アナリストの村瀬智一さんが解説。4月23日、米国のマイクロソフト（MSFT）は、米国の従業員を対象に希望退職制度を計画していると報じられました。メタ・プラットフォームズ（META）も4月23日、大規模な人員削減計画を明らかにしました。こうしたビックテックによる人員削減は、単なるコスト削減ではなく「人からAIへの投資シフト」を象徴する重要な動きとしてとらえ...\n1\n1\n2\n676",
+      "author": "zaionline",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 投資 自動化"
+      },
+      "fetched_at": "2026-04-30T23:03:47.081011"
+    },
+    "classification": {
+      "score": 6,
+      "category": "tool_release",
+      "reason": "AIエージェント関連銘柄紹介。業界動向は参考になるが、具体的な投資ロジックや失敗事例がない"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_投資_自動化",
+      "source_type": "x",
+      "title": "junbom\n@junbom\n·\n4時間\n投資プロセスの最適化のため、今月に入ってからGeminiでのスクリーニングとChatGPTでの戦略構築と、2つのAIを",
+      "url": "https://x.com/junbom/status/2049790874763280721",
+      "body": "junbom\n@junbom\n·\n4時間\n投資プロセスの最適化のため、今月に入ってからGeminiでのスクリーニングとChatGPTでの戦略構築と、2つのAIを活用しています。\n\n最大の収穫は意思決定の合理化。AIを介すことで私情を排した執行が可能になりました。また、面倒な収支計算や銘柄抽出の自動化による時間的な恩恵も大きいです\n23",
+      "author": "junbom",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 投資 自動化"
+      },
+      "fetched_at": "2026-04-30T23:03:47.081036"
+    },
+    "classification": {
+      "score": 6,
+      "category": "series_material",
+      "reason": "AI活用での投資プロセス最適化の具体例。感情排除・自動化の実例として参考価値あり"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_投資_自動化",
+      "source_type": "x",
+      "title": ":Daichi |コミュニティ×AI×スタートアップ大好き界隈\n@Dai_Challenge\n·\n5時間\n投資銀行のジュニアバンカー業務を全部AIにやらせるRo",
+      "url": "https://x.com/Dai_Challenge/status/2049765699657334927",
+      "body": ":Daichi |コミュニティ×AI×スタートアップ大好き界隈\n@Dai_Challenge\n·\n5時間\n投資銀行のジュニアバンカー業務を全部AIにやらせるRogoが、$160M（約240億円）のSeries D調達したらしい。評価額$2B超で、立ち上げたのは\"雑用に嫌気がさした元銀行員。ディール調査もCIM作成も全部自動化。\"嫌な仕事をしてた本人が、AIで業界をひっくり返す\"パターンが増えてきた感じがする。\nさらに表示\nRogo Raises $160M Series D to Scale the Agentic Platform for Finance\nprnewswire.comから\n111",
+      "author": "Dai_Challenge",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 投資 自動化"
+      },
+      "fetched_at": "2026-04-30T23:03:47.081039"
+    },
+    "classification": {
+      "score": 6,
+      "category": "tool_release",
+      "reason": "AI金融ツールの調達ニュース。業界動向は参考になるが、投資戦略への直接的な教訓は薄い"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_投資_自動化",
+      "source_type": "x",
+      "title": "フジヤマ｜コレクタブル投資家\n@Collectables_AI\n·\n8時間\n返信先: \n@Collectables_AI\nさん\n今日のnote記事『「構想の自律",
+      "url": "https://x.com/Collectables_AI/status/2049731165989593322",
+      "body": "フジヤマ｜コレクタブル投資家\n@Collectables_AI\n·\n8時間\n返信先: \n@Collectables_AI\nさん\n今日のnote記事『「構想の自律化」で育てる投資脳』はこちらから。コンセプトやプロットまで、私の思考パターンや個性に基づいてAIに任せられるようになるなら、それは「執筆の自動化」という範囲を超えて、「構想の自律化」と呼べるものになるでしょう。\n「構想の自律化」で育てる投資脳｜フジヤマ｜コレクタブル投資家\nnote.comから\n103",
+      "author": "Collectables_AI",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 投資 自動化"
+      },
+      "fetched_at": "2026-04-30T23:03:47.081045"
+    },
+    "classification": {
+      "score": 7,
+      "category": "series_material",
+      "reason": "AI執筆自動化と投資思考の融合事例。連載素材として具体的"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_投資_自動化",
+      "source_type": "x",
+      "title": "だいたい飯と酒のファンドマン\n@middleback55\n·\n13時間\n投資銀行のアナリスト業務をAIで自動化するRogoが大型調達。\nリサーチや資料作成は削れ",
+      "url": "https://x.com/middleback55/status/2049648430499401772",
+      "body": "だいたい飯と酒のファンドマン\n@middleback55\n·\n13時間\n投資銀行のアナリスト業務をAIで自動化するRogoが大型調達。\nリサーチや資料作成は削れても「前提を疑う力」は残る。\n文脈を外したアウトプットが一人歩きするリスクもむしろ増えるはず。\n結局は「完全代替」ではなく「人間の検証前提の高速化」に収束する気がする。\n31",
+      "author": "middleback55",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 投資 自動化"
+      },
+      "fetched_at": "2026-04-30T23:03:47.081052"
+    },
+    "classification": {
+      "score": 7,
+      "category": "tool_release",
+      "reason": "AI投資ツール(Rogo)のローンチ。業界動向として参考値。人間の限界を示唆"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_ChatGPT_株",
+      "source_type": "x",
+      "title": "こまいぬ\n@komadog_2020\n·\n6時間\nおもちゃ株で個別投資デビューした！\nよく分からなかったからChatGPTが提案してきた指値で\n8",
+      "url": "https://x.com/komadog_2020/status/2049757098272280622",
+      "body": "こまいぬ\n@komadog_2020\n·\n6時間\nおもちゃ株で個別投資デビューした！\nよく分からなかったからChatGPTが提案してきた指値で\n8",
+      "author": "komadog_2020",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "ChatGPT 株"
+      },
+      "fetched_at": "2026-04-30T23:03:53.358164"
+    },
+    "classification": {
+      "score": 7,
+      "category": "failure_case",
+      "reason": "AI任せの投資判断の失敗事例。具体的・典型的な警告事例として連載素材に適切"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_自動売買_月利",
+      "source_type": "x",
+      "title": "ラッコM&A＠サイト売買（新着・値下げ・成約情報）\n@rakkomacom\n·\n4月22日\n成約御礼\n【最高月利100万越え】大谷翔平賞賛チャンネル/８月中であ",
+      "url": "https://x.com/rakkomacom/status/2046801355856285709",
+      "body": "ラッコM&A＠サイト売買（新着・値下げ・成約情報）\n@rakkomacom\n·\n4月22日\n成約御礼\n【最高月利100万越え】大谷翔平賞賛チャンネル/８月中であればさらに１０万円値引き（AI自動化/作業時間２...\n\n希望売却価格 600,000円\n売上/月 344,753円（0〜1,028,489）\n利益/月 344,753円（0〜1,028,489）\n投稿数 94\n\n#RM成約 #サイト売買 #YouTube\nrakkoma.com\n【最高月利100万越え】大谷翔平賞賛チャンネル/８月中であればさらに１０万円値引き（AI自動化/作業時間２時間） | サイト売買のラッコM&A\n希望売却価格: 600,000円。MLBニュースを翻訳・配信するYouTubeチャンネル。AIが台本を生成し顔出し・声出し不要、初心者でも短時間運営が可能です。運用開始から数か月で急成長を遂げ、シーズン需要で再加速が期待できます。引き渡し後は運営手順や翻訳効率化ノウハウを共有、外注化・自動化による収益拡大も狙える案件です。\n200",
+      "author": "rakkomacom",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 自動売買 月利"
+      },
+      "fetched_at": "2026-04-30T23:03:59.337923"
+    },
+    "classification": {
+      "score": 7,
+      "category": "sku5_scam",
+      "reason": "「月利100万越え」の具体数値を持つ典型的な煽り商材。検証DB素材として価値あり"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_自動売買_月利",
+      "source_type": "x",
+      "title": "スターダストラボAI搭載EA\n@f4rXUSenD787572\n·\n4月21日\n【想定月利240%の衝撃】\n短期原資回収に特化したGOLD専用EA「ORION ",
+      "url": "https://x.com/f4rXUSenD787572/status/2046534155132092793",
+      "body": "スターダストラボAI搭載EA\n@f4rXUSenD787572\n·\n4月21日\n【想定月利240%の衝撃】\n短期原資回収に特化したGOLD専用EA「ORION AI」がついに解禁！\n「AI決済」×「危険日自動回避」で、攻めながらも生存力を極限まで追求。まずは利益分だけで運用する理想のサイクルを最速で回しませんか？\n詳細はnoteをチェック \n\n\nhttps://\nnote.com/brisk_hyssop67\n41/n/n082cc9d11169\n…\n\nコピトレ/自動売買\n【想定月利240%】短期原資回収特化型EA「ORION AI」ついに始動！｜UNIVERSE\nnote.comから\n1\n4\n115",
+      "author": "f4rXUSenD787572",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 自動売買 月利"
+      },
+      "fetched_at": "2026-04-30T23:03:59.337945"
+    },
+    "classification": {
+      "score": 9,
+      "category": "sku5_scam",
+      "reason": "AI EA で月利 240% 謳う典型的な詐欺商材。具体的な製品名・数値・プラットフォーム（note リンク）を含む検証"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_自動売買_月利",
+      "source_type": "x",
+      "title": "佐々木優￤非競争を設計する経営者\n@koboy_crypto\n·\n4月21日\n【AIトレードは“必ず勝ち続ける”のか？】\n\n結論から言うと、僕は「それはありえな",
+      "url": "https://x.com/koboy_crypto/status/2046391822071865460",
+      "body": "佐々木優￤非競争を設計する経営者\n@koboy_crypto\n·\n4月21日\n【AIトレードは“必ず勝ち続ける”のか？】\n\n結論から言うと、僕は「それはありえない」と考えています。\n\n最近、AIを使ったトレードや自動売買ボットが増えてきていますよね。\n「月利3〜4％出ます」といった魅力的な話もよく見かけます。\n\nただ、一度冷静に考えてみてください。\nさらに表示\n2\n58",
+      "author": "koboy_crypto",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 自動売買 月利"
+      },
+      "fetched_at": "2026-04-30T23:03:59.337952"
+    },
+    "classification": {
+      "score": 9,
+      "category": "sku5_credible",
+      "reason": "AIトレード神話への明確な反論。信頼できる発信者による具体的な疑問提示"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_自動売買_月利",
+      "source_type": "x",
+      "title": "スターダストラボAI搭載EA\n@f4rXUSenD787572\n·\n4月19日\n【想定月利240%の衝撃】\n短期原資回収に特化したGOLD専用EA「ORION ",
+      "url": "https://x.com/f4rXUSenD787572/status/2045809654593413493",
+      "body": "スターダストラボAI搭載EA\n@f4rXUSenD787572\n·\n4月19日\n【想定月利240%の衝撃】\n短期原資回収に特化したGOLD専用EA「ORION AI」がついに解禁！\n「AI決済」×「危険日自動回避」で、攻めながらも生存力を極限まで追求。まずは利益分だけで運用する理想のサイクルを最速で回しませんか？\n詳細はnoteをチェック\n\n\nhttps://\nnote.com/brisk_hyssop67\n41/n/n082cc9d11169\n…\n\nコピトレ/自動売買\n【想定月利240%】短期原資回収特化型EA「ORION AI」ついに始動！｜UNIVERSE\nnote.comから\n2\n7\n119",
+      "author": "f4rXUSenD787572",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 自動売買 月利"
+      },
+      "fetched_at": "2026-04-30T23:03:59.337959"
+    },
+    "classification": {
+      "score": 9,
+      "category": "sku5_scam",
+      "reason": "月利240%、AI搭載EA、具体的商材名で典型的な煽り商材"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_自動売買_月利",
+      "source_type": "x",
+      "title": "ＥＡステーション｜GOLD @FX自動売買/副業/眼EAシリーズ\n@EA_station\n·\n4月16日\nAIが相場を読んで\n攻守を自動で切り替えるEA\n\n彩眼",
+      "url": "https://x.com/EA_station/status/2044704982822477886",
+      "body": "ＥＡステーション｜GOLD @FX自動売買/副業/眼EAシリーズ\n@EA_station\n·\n4月16日\nAIが相場を読んで\n攻守を自動で切り替えるEA\n\n彩眼EA（あやめEA）\n\n 荒れ相場 → DEFENSE MODE\n 安定相場 → OFFENSE MODE\n\nAIによる自動判断だから\n人間が見張らなくていい\n\n参考実績: 月利420%\n元本回収の成功例あり\n\n詳細\n\nhttps://\nauctions.yahoo.co.jp/jp/auction/122\n4376147\n…\n\n#FX自動売買 #EA #MT4 #副業 #彩眼EA\n28",
+      "author": "EA_station",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 自動売買 月利"
+      },
+      "fetched_at": "2026-04-30T23:03:59.337966"
+    },
+    "classification": {
+      "score": 8,
+      "category": "sku5_scam",
+      "reason": "月利420%の具体的数値＋AI自動判断＋典型的な煽り訴求。検証DB素材として価値高"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_自動売買_月利",
+      "source_type": "x",
+      "title": "ししまる@静かなるブルーオーシャン\n@fx_kokokara\n·\n4月11日\n「月利30%保証」のAI自動売買ツールが再び拡散中\n\n現実的な数字を知ってください",
+      "url": "https://x.com/fx_kokokara/status/2042809187567374685",
+      "body": "ししまる@静かなるブルーオーシャン\n@fx_kokokara\n·\n4月11日\n「月利30%保証」のAI自動売買ツールが再び拡散中\n\n現実的な数字を知ってください：\n✓ 年利10%→複利で2.6倍（10年）\n✓ 月利30%→年利2300%超\n✓ 100万円→1年後23億円\n\nこれが可能なら世界の富豪ランキングが毎年入れ替わります。\nさらに表示\n1\n61",
+      "author": "fx_kokokara",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 自動売買 月利"
+      },
+      "fetched_at": "2026-04-30T23:03:59.337973"
+    },
+    "classification": {
+      "score": 8,
+      "category": "sku5_scam",
+      "reason": "「月利30%保証」の典型的な詐欺商材を具体的数値で検証・批判する教育コンテンツ素材"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_自動売買_月利",
+      "source_type": "x",
+      "title": " ネクサスFX@裁量トレード限界？プロ仕様EAを無料で\n@Maafx3\n·\n4月10日\n ゴールド専用単ポジEA【NexusSpectra】爆誕！\n\n 勝率99",
+      "url": "https://x.com/Maafx3/status/2042559069437804927",
+      "body": " ネクサスFX@裁量トレード限界？プロ仕様EAを無料で\n@Maafx3\n·\n4月10日\n ゴールド専用単ポジEA【NexusSpectra】爆誕！\n\n 勝率99%超え × 21年破綻なし\n ナンピンマーチンなしの安心設計\n AI＋ChatGPTで地合いを完全攻略\n\n フォワード月利平均45%安定稼働中！\n たった1分で無料相談できます！\n\n ゴールド市場を本気で攻略したいなら、今すぐチェック\nさらに表示\n60",
+      "author": "Maafx3",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 自動売買 月利"
+      },
+      "fetched_at": "2026-04-30T23:03:59.337980"
+    },
+    "classification": {
+      "score": 9,
+      "category": "sku5_scam",
+      "reason": "典型的な詐欺的煽り商材。勝率99%超、月利45%、AI×ChatGPT、21年破綻なし等の誇大表現を網羅。素材として強い"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_自動売買_月利",
+      "source_type": "x",
+      "title": "ししまる@静かなるブルーオーシャン\n@fx_kokokara\n·\n4月2日\n3年前、僕も「AI自動売買で月利20%」っていう案件に手を出しかけた\n\n幸い、実際に",
+      "url": "https://x.com/fx_kokokara/status/2039673059293163761",
+      "body": "ししまる@静かなるブルーオーシャン\n@fx_kokokara\n·\n4月2日\n3年前、僕も「AI自動売買で月利20%」っていう案件に手を出しかけた\n\n幸い、実際にEA構築していたから技術的におかしいと気づけたけど、当時はマジで魅力的に見えてた。結局そのツール、半年後に飛んだ。\n\n今EA作ってるからこそ言える：本当のAI投資は地味。派手な数字を謳うものほど危険だよ。\n1\n2\n174",
+      "author": "fx_kokokara",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 自動売買 月利"
+      },
+      "fetched_at": "2026-04-30T23:03:59.337987"
+    },
+    "classification": {
+      "score": 8,
+      "category": "sku5_scam",
+      "reason": "典型的な詐欺案件の失敗事例。技術者による具体的な警告、実名・時系列・具体数字あり"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_自動売買_月利",
+      "source_type": "x",
+      "title": "ししまる@静かなるブルーオーシャン\n@fx_kokokara\n·\n4月2日\n月利30%を謳うAI自動売買ツール、これだけで詐欺確定です\n\n年利換算: 2238%",
+      "url": "https://x.com/fx_kokokara/status/2039540932979380656",
+      "body": "ししまる@静かなるブルーオーシャン\n@fx_kokokara\n·\n4月2日\n月利30%を謳うAI自動売買ツール、これだけで詐欺確定です\n\n年利換算: 2238%\nバフェット年平均: 20%\nヘッジファンド上位: 15-25%\nさらに表示\n61",
+      "author": "fx_kokokara",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 自動売買 月利"
+      },
+      "fetched_at": "2026-04-30T23:03:59.337994"
+    },
+    "classification": {
+      "score": 8,
+      "category": "sku5_scam",
+      "reason": "典型的な詐欺案件の具体例。月利30%（年利2238%）の主張と、バフェット・ヘッジファンドとの比較が実名著者による検証記"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_自動売買_月利",
+      "source_type": "x",
+      "title": "Kei\n@Zx_Ninja_12R\n·\n3月28日\nAI完全自動売買が完成し、\n最低でも月利5%を達成し落ち着いたら仕事辞めて\n資産運用、トレードで、生計を保ち",
+      "url": "https://x.com/Zx_Ninja_12R/status/2037858944056758338",
+      "body": "Kei\n@Zx_Ninja_12R\n·\n3月28日\nAI完全自動売買が完成し、\n最低でも月利5%を達成し落ち着いたら仕事辞めて\n資産運用、トレードで、生計を保ち\n黒い砂漠をやりたい放題課金して\n一日に一回はバイクで太陽を浴びて\n車は適当に乗る生活。\nうん。\nまさに夢www\nでもそういう生活を目標に前向きに取り組んでる。\nさらに表示\n1\n87",
+      "author": "Zx_Ninja_12R",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI 自動売買 月利"
+      },
+      "fetched_at": "2026-04-30T23:03:59.338001"
+    },
+    "classification": {
+      "score": 7,
+      "category": "sku5_scam",
+      "reason": "典型的な「月利5%確実」煽り。具体数値+実名で検証記事の素材として活用可能"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_Claude_投資",
+      "source_type": "x",
+      "title": "ごまぷん株式投資\n@gomagometti\n·\n1時間\nClaudecodeで投資方法を広めてる人いるので、投資×プログラミング×Claude詳しいものとして意",
+      "url": "https://x.com/gomagometti/status/2049837100447756375",
+      "body": "ごまぷん株式投資\n@gomagometti\n·\n1時間\nClaudecodeで投資方法を広めてる人いるので、投資×プログラミング×Claude詳しいものとして意見すると。\n最初に自分自身の独自投資ノウハウが感覚であることを数値化できるので、それがないままEDINET分析してスクリーニングするのは「銘柄スカウター」と変わらないと思う\nClaude Code Skills × 投資分析シリーズ — 記事一覧\nzenn.devから\n6",
+      "author": "gomagometti",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "Claude 投資"
+      },
+      "fetched_at": "2026-04-30T23:04:05.496915"
+    },
+    "classification": {
+      "score": 7,
+      "category": "series_material",
+      "reason": "Claude×投資の限界を指摘する具体的事例。競合分析にもなる"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_クオンツ",
+      "source_type": "x",
+      "title": "N225 GEX-Ray｜GEX解析\n@N225GEXRay\n·\n5時間\n日経225クオンツAI「Zero」【2026-04-30 17:10 ナイト解析】\n\n",
+      "url": "https://x.com/N225GEXRay/status/2049765189353120022",
+      "body": "N225 GEX-Ray｜GEX解析\n@N225GEXRay\n·\n5時間\n日経225クオンツAI「Zero」【2026-04-30 17:10 ナイト解析】\n\nGEX需給地形\nGEX：+0.0742兆円（ポジ / Z：+0.78）\n\n 需給地形と磁力点\n現在値：59,520円　方向バイアス：拮抗\n次は↑62,000円（[B]）\n次は↓56,500円（[B]）\n62,000円超えれば上継続 / 56,500円割れれば調整\n\n 売買判定\nさらに表示\n【2026-04-30 ナイト解析戦略B★】下シナリオ優位 EP:59,250円（RR_B:28.11 / EV_B:+270.1pt）｜GEX-Ray\nnote.comから\n39",
+      "author": "N225GEXRay",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI クオンツ"
+      },
+      "fetched_at": "2026-04-30T23:04:11.995479"
+    },
+    "classification": {
+      "score": 6,
+      "category": "tool_release",
+      "reason": "日経225クオンツAI『Zero』のGEX解析ツール。具体的な需給数値・価格レベルを含むが、単なるテクニカル分析ツールの"
+    }
+  },
+  {
+    "item": {
+      "source": "x_search_AI_クオンツ",
+      "source_type": "x",
+      "title": "M.Okumura (CV:奥村)\n@manabu_okumura\n·\n8時間\n私よりも遥かに優秀なクオンツ（そもそも私はクオンツでもない訳だが）がいるのでAI",
+      "url": "https://x.com/manabu_okumura/status/2049724655775395938",
+      "body": "M.Okumura (CV:奥村)\n@manabu_okumura\n·\n8時間\n私よりも遥かに優秀なクオンツ（そもそも私はクオンツでもない訳だが）がいるのでAIを利用した広域のデータ解析・分析では㌁は無理。そこは身の程を知ってる。\nなのでスケールしにくくやりにくい領域、１社を定性データ含め深く分析するしか余地は無いと思っている。\n1\n212",
+      "author": "manabu_okumura",
+      "published_at": "",
+      "raw_data": {
+        "keyword": "AI クオンツ"
+      },
+      "fetched_at": "2026-04-30T23:04:11.995485"
+    },
+    "classification": {
+      "score": 6,
+      "category": "series_material",
+      "reason": "個人の戦略・限界認識。AI時代の差別化が深掘り分析にあるという具体的な思考例"
     }
   }
 ]
