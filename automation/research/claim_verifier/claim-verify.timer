@@ -1,0 +1,10 @@
+[Unit]
+Description=主張検証タイマー (1時間ごと)
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

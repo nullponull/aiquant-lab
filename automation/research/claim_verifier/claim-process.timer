@@ -1,0 +1,10 @@
+[Unit]
+Description=主張抽出タイマー (毎日 23:30、research-collector の 30 分後)
+
+[Timer]
+OnCalendar=*-*-* 23:30:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=主張検証 週次レポート生成
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/sol/aiquant-lab
+ExecStart=/home/sol/aiquant-lab/automation/research/claim_verifier/run_report.sh --days 7
+Environment=HOME=/home/sol
+Environment=PATH=/home/sol/.local/bin:/home/sol/.claude/local:/usr/local/bin:/usr/bin:/bin
+StandardOutput=journal
+StandardError=journal
+TimeoutStartSec=300
