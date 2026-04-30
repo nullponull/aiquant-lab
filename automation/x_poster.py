@@ -169,7 +169,8 @@ def _type_and_submit(page, text: str) -> str | None:
             print("  [X] モーダルがまだ開いていて入力も残っている = 失敗")
             return None
 
-    # 3) 自分のプロフィールを確認して直近ツイートを取得
+    # 3) 自分のプロフィールを確認して直近自分の投稿を取得
+    #    text snippet で本文一致を探す。固定ツイートは除外。
     try:
         me = page.evaluate(
             """() => {
@@ -182,9 +183,13 @@ def _type_and_submit(page, text: str) -> str | None:
             time.sleep(4)
             latest = page.evaluate(
                 """(snippet) => {
+                    const pinned_markers = ["Pinned", "固定", "ピン留めされた"];
                     const articles = document.querySelectorAll('article');
-                    for (const a of Array.from(articles).slice(0, 5)) {
-                        if (a.innerText.includes(snippet)) {
+                    for (const a of Array.from(articles).slice(0, 8)) {
+                        const txt = a.innerText || '';
+                        const isPinned = pinned_markers.some(m => txt.startsWith(m + '\\n') || txt.includes('\\n' + m + '\\n'));
+                        if (isPinned) continue;
+                        if (txt.includes(snippet)) {
                             const link = a.querySelector('a[href*="/status/"]');
                             return link ? link.getAttribute('href') : 'matched';
                         }
@@ -281,8 +286,19 @@ def post_tweet(text: str, reply_to: str | None = None) -> str | None:
                 pass
 
 
+def _is_pinned_article(article_html_text: str) -> bool:
+    """記事テキストに固定ツイートマーカーが含まれるか判定"""
+    pinned_markers = ["Pinned", "固定", "ピン留めされた"]
+    return any(m in article_html_text for m in pinned_markers)
+
+
 def _get_latest_user_tweet_id(page) -> Optional[str]:
-    """自分のプロフィールから直近自分のツイート ID を取得（連鎖型スレッド用）"""
+    """自分のプロフィールから直近自分のツイート ID を取得（固定ツイートはスキップ）
+
+    Bug fix (2026-04-30): 以前は articles の先頭を取っていたため、
+    固定ツイート (2025-11-12 ID 1988568030847336795) を Episode 1 の
+    thread_id として誤記録していた。固定マーカーを検出して除外する。
+    """
     try:
         me = page.evaluate(
             """() => {
@@ -294,16 +310,27 @@ def _get_latest_user_tweet_id(page) -> Optional[str]:
             return None
         page.goto(f"https://x.com/{me}", wait_until="domcontentloaded", timeout=20000)
         time.sleep(3)
+        # 固定ツイートをスキップしつつ、最も新しい(=time が最大)のものを取得
         latest = page.evaluate(
             """() => {
+                const pinned_markers = ["Pinned", "固定", "ピン留めされた"];
+                const candidates = [];
                 const articles = document.querySelectorAll('article');
-                for (const a of Array.from(articles).slice(0, 3)) {
+                for (const a of Array.from(articles).slice(0, 8)) {
                     const link = a.querySelector('a[href*="/status/"]');
-                    if (link) {
-                        return link.getAttribute('href');
-                    }
+                    if (!link) continue;
+                    const txt = a.innerText || '';
+                    // socialContext に「固定」「Pinned」が含まれるか
+                    const isPinned = pinned_markers.some(m => txt.startsWith(m + '\\n') || txt.includes('\\n' + m + '\\n'));
+                    if (isPinned) continue;
+                    const time_el = a.querySelector('time');
+                    const ts = time_el ? time_el.getAttribute('datetime') : '';
+                    candidates.push({ href: link.getAttribute('href'), ts });
                 }
-                return null;
+                if (candidates.length === 0) return null;
+                // 最新 (ts 降順) を返す
+                candidates.sort((a, b) => b.ts.localeCompare(a.ts));
+                return candidates[0].href;
             }"""
         )
         if latest and "/status/" in latest:
