@@ -1,0 +1,92 @@
+{
+  "research_date": "2026-05-01",
+  "platform": "Amazon JP",
+  "search_query": "ペット 自動給水器",
+  "category": "ペット用品 / 給水器",
+  "competitors": [
+    {
+      "rank": 1,
+      "title": "PETKIT ペット用 みずのみ器 自動給水器 循環式 1.8L 静音ポンプ",
+      "price_jpy": 4408,
+      "type": "循環式 (電源あり)",
+      "features": ["静音ポンプ", "1.8L 大容量", "自動パワーオフ"],
+      "sponsored": true
+    },
+    {
+      "rank": 2,
+      "title": "PETKIT 自動給水器 コードレス 静音 アプリ管理 大容量 3L",
+      "price_jpy": 11560,
+      "type": "コードレス・スマート",
+      "features": ["コードレス", "アプリ連携", "3L"]
+    },
+    {
+      "rank": 3,
+      "title": "Oneisall 猫 給水器 30dB 低騒音 ステンレス 2L 活性炭フィルター付き",
+      "price_jpy": 3118,
+      "type": "循環式",
+      "features": ["低騒音", "ステンレス", "活性炭フィルター", "水位可視化", "2年保証"]
+    },
+    {
+      "rank": 4,
+      "title": "ジェックス ピュアクリスタル ウェル 1.5L フィルター式 USB 静音",
+      "price_jpy": 2427,
+      "type": "循環式 USB 給電",
+      "features": ["フィルター式", "USB 電源", "静音", "国内ブランド"]
+    },
+    {
+      "rank": 5,
+      "title": "重力式自動給水 大容量水タンク 電源不要",
+      "price_jpy": 1780,
+      "type": "重力式 (電源不要)",
+      "features": ["電源不要", "大容量", "週1-2回給水"]
+    },
+    {
+      "rank": 6,
+      "title": "Amazonベーシック 重力式 3.8L",
+      "price_jpy": 1717,
+      "type": "重力式",
+      "features": ["3.8L", "大手ブランド"]
+    },
+    {
+      "rank": 7,
+      "title": "プラスアクアライト うちのこエレクトリック 循環式 8.2dB 2.4L 日本メーカー",
+      "price_jpy": 2680,
+      "type": "循環式 (国内ブランド)",
+      "features": ["獣医師監修", "8.2dB 超静音", "2.4L", "国内メーカー"]
+    },
+    {
+      "rank": 8,
+      "title": "Iseebiz ペット給水器 2.4L 活性炭フィルター 循環式 LED ライト付き BPA フリー",
+      "price_jpy": 2634,
+      "type": "循環式",
+      "features": ["LED ライト", "BPA フリー", "活性炭"]
+    }
+  ],
+  "price_distribution": {
+    "min": 1717,
+    "max": 14870,
+    "median_estimate": 3000,
+    "重力式_range": "¥1,717 - 1,780",
+    "循環式_basic_range": "¥2,427 - 4,408",
+    "コードレス_smart_range": "¥5,980 - 11,560",
+    "高機能IoT_range": "¥14,870"
+  },
+  "differentiation_observations": {
+    "common_features": ["フィルター", "静音", "活性炭", "BPA フリー"],
+    "differentiation_axes": ["容量", "電源方式", "騒音レベル", "デザイン", "国内/海外ブランド"],
+    "rare_features": ["冷却機能", "獣医師監修", "アプリ連携", "獣医監修"],
+    "our_patent_unique": "浄化 + 冷却機能 (実登3101582)"
+  },
+  "customer_pain_points_inferred": [
+    "騒音が気になる (静音・低騒音を強調する商品多い)",
+    "大容量を希望 (1.5L 以上が中心)",
+    "フィルター交換のコスト",
+    "BPA・素材の安全性",
+    "見た目のインテリア性"
+  ],
+  "market_size_estimate": {
+    "amazon_jp_pet_water_dispenser_monthly_sales_estimate": "数千台/月 (上位 10 商品合計)",
+    "average_price_estimate": "¥3,000-5,000",
+    "growth_trend": "ペット人口増加に伴い拡大傾向"
+  }
+}
