@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Persona API — B2B Pitch Deck | AIコンパス</title>
+<meta name="description" content="AIコンパスが提供するPersona API / DD SDK の法人向けピッチデッキ。HR・営業・教育・医療など業界横断で展開可能なペルソナベース対話型AI基盤。">
+<style>
+:root {
+  --bg: #0a0e1a;
+  --bg-card: #131829;
+  --bg-soft: #1a2138;
+  --border: #2a3555;
+  --text: #e8ecf3;
+  --text-dim: #8b96b0;
+  --accent: #6ba3ff;
+  --accent2: #a78bfa;
+  --warn: #fbbf24;
+  --success: #4ade80;
+  --danger: #f87171;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", sans-serif; line-height: 1.7; }
+html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+.slide { min-height: 100vh; padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; scroll-snap-align: start; max-width: 1400px; margin: 0 auto; border-bottom: 1px solid var(--border); }
+.slide-num { color: var(--text-dim); font-family: ui-monospace, monospace; font-size: 13px; letter-spacing: 2px; margin-bottom: 24px; }
+.slide h1 { font-size: 60px; font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 32px; }
+.slide h2 { font-size: 44px; font-weight: 800; line-height: 1.2; margin-bottom: 24px; }
+.slide h3 { font-size: 24px; color: var(--accent); margin: 24px 0 12px; font-weight: 700; }
+.slide p { font-size: 22px; line-height: 1.7; color: var(--text-dim); margin-bottom: 16px; max-width: 1000px; }
+.slide .lead { font-size: 28px; color: var(--text); }
+.slide .hl { color: var(--warn); font-weight: 700; }
+.slide .accent { color: var(--accent); font-weight: 700; }
+.big-num { font-size: 140px; font-weight: 900; color: var(--warn); line-height: 1; letter-spacing: -5px; }
+.big-num-label { font-size: 22px; color: var(--text-dim); margin-top: 16px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
+.card h4 { font-size: 22px; margin-bottom: 12px; }
+.card p { font-size: 16px; line-height: 1.7; }
+.card .icon { font-size: 36px; margin-bottom: 12px; }
+.bullet { font-size: 22px; line-height: 1.9; color: var(--text); margin: 24px 0 0 28px; }
+.bullet li { margin-bottom: 14px; }
+.bullet li strong { color: var(--warn); }
+.flash { background: linear-gradient(135deg, rgba(107,163,255,0.15), rgba(167,139,250,0.15)); border: 1px solid var(--accent2); border-radius: 12px; padding: 24px 28px; margin: 28px 0; font-size: 20px; }
+.flash strong { color: var(--accent); }
+.compare-table { width: 100%; margin: 30px 0; border-collapse: collapse; font-size: 16px; }
+.compare-table th, .compare-table td { padding: 16px 20px; text-align: left; border-bottom: 1px solid var(--border); }
+.compare-table th { background: var(--bg-soft); color: var(--accent); font-size: 14px; letter-spacing: 1px; font-weight: 700; }
+.compare-table .us { background: rgba(74, 222, 128, 0.08); }
+.compare-table .us td { color: var(--success); }
+.metric { text-align: center; padding: 30px; }
+.metric .num { font-size: 60px; font-weight: 900; color: var(--accent); letter-spacing: -2px; }
+.metric .lbl { font-size: 15px; color: var(--text-dim); margin-top: 6px; }
+.footer-cta { margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border); font-size: 18px; color: var(--text-dim); }
+.footer-cta a { color: var(--accent); text-decoration: none; font-family: ui-monospace, monospace; }
+.cta-row { display: flex; gap: 18px; margin-top: 30px; flex-wrap: wrap; }
+.cta-btn { padding: 18px 38px; border-radius: 8px; font-size: 18px; font-weight: 700; text-decoration: none; }
+.cta-btn.primary { background: var(--accent); color: var(--bg); }
+.cta-btn.primary:hover { background: var(--warn); }
+.cta-btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.nav-dots { position: fixed; right: 24px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 10px; z-index: 100; }
+.nav-dots a { width: 12px; height: 12px; border-radius: 50%; background: var(--border); cursor: pointer; transition: all 0.2s; text-decoration: none; }
+.nav-dots a:hover { background: var(--accent); transform: scale(1.4); }
+.tag { display: inline-block; padding: 6px 14px; background: var(--bg-soft); color: var(--accent); border-radius: 6px; font-size: 13px; font-family: ui-monospace, monospace; letter-spacing: 1px; margin: 0 6px 6px 0; }
+@media print {
+  .slide { min-height: auto; page-break-after: always; padding: 40px; }
+  body { background: white; color: black; }
+  .slide h1, .slide h2 { color: black; }
+  .nav-dots { display: none; }
+  .card { background: #f8fafc; border: 1px solid #ddd; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav-dots">
+  <a href="#s1" title="Cover"></a>
+  <a href="#s2" title="Problem"></a>
+  <a href="#s3" title="Solution"></a>
+  <a href="#s4" title="Tech"></a>
+  <a href="#s5" title="Vertical"></a>
+  <a href="#s6" title="Competition"></a>
+  <a href="#s7" title="Pricing"></a>
+  <a href="#s8" title="Traction"></a>
+  <a href="#s9" title="Team"></a>
+  <a href="#s10" title="CTA"></a>
+</nav>
+
+<!-- ============ SLIDE 1: COVER ============ -->
+<section class="slide" id="s1">
+  <div class="slide-num">// PITCH DECK · 01 OF 10</div>
+  <h1>Persona API</h1>
+  <p class="lead">行動データから人格を再構成し、<br>
+    あらゆる業界の<span class="hl">"わかりにくい人"</span>を学習可能にする AI 基盤。</p>
+  <div style="margin-top: 60px;">
+    <p style="font-size: 18px; color: var(--text-dim);">
+      Powered by DD SDK / Operated by <strong style="color:var(--text);">AIコンパス (ai-media.co.jp)</strong><br>
+      Confidential / 2026 Q2 Edition
+    </p>
+  </div>
+</section>
+
+<!-- ============ SLIDE 2: PROBLEM ============ -->
+<section class="slide" id="s2">
+  <div class="slide-num">// 02 · PROBLEM</div>
+  <h2>研修・トレーニングが、現場の"想定外"に追いつかない</h2>
+  <div class="grid-2" style="margin-top: 40px;">
+    <div>
+      <h3>各業界共通の構造的課題</h3>
+      <ul class="bullet">
+        <li><strong>HR</strong>：圧迫候補者・うつ気味候補者への対応研修なし</li>
+        <li><strong>営業</strong>：難しい顧客タイプ別ロープレが不足</li>
+        <li><strong>教育</strong>：発達特性のある生徒対応の体系化不足</li>
+        <li><strong>医療</strong>：SP（模擬患者）が高コストでカバー不足</li>
+        <li><strong>CS</strong>：怒り顧客対応のシミュレーションなし</li>
+      </ul>
+    </div>
+    <div>
+      <h3>既存ソリューションの限界</h3>
+      <ul class="bullet">
+        <li>動画教材 → <strong>双方向性なし</strong></li>
+        <li>SP研修 → <strong>1セッション数万円、月1回が限度</strong></li>
+        <li>AIチャット → <strong>"人間らしい"対応がない</strong></li>
+        <li>競合AIロープレ → <strong>シナリオが画一的</strong></li>
+      </ul>
+    </div>
+  </div>
+  <div class="flash">
+    <strong>市場のペイン</strong>：研修コスト ×3倍、独り立ち期間 ×3倍、退職率 ×1.5倍 ──
+    "人間のバリエーション" を扱えない研修体制が原因。
+  </div>
+</section>
+
+<!-- ============ SLIDE 3: SOLUTION ============ -->
+<section class="slide" id="s3">
+  <div class="slide-num">// 03 · SOLUTION</div>
+  <h2>行動データから再構成する<br><span class="accent">2,245人格モデル</span></h2>
+  <p style="font-size: 24px;">業務チャット・SNS・行動ログから人格を多次元で再構成。<br>
+    各業界の"想定外"を学習可能なシミュレーションに変換します。</p>
+  <div class="grid-3" style="margin-top: 40px;">
+    <div class="card">
+      <div class="icon">🧬</div>
+      <h4>DD SDK 4階層モデル</h4>
+      <p>L1 OCEAN性格 → L2 タイプ分類 → L3 行動傾向 → L4 業界アダプタ。各層で個性と汎用性を両立。</p>
+    </div>
+    <div class="card">
+      <div class="icon">🎙</div>
+      <h4>低遅延音声対話</h4>
+      <p>200ms ストリーミング応答。表情・声色・間も評価対象に。実際の対面に近い練習体験。</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔬</div>
+      <h4>業界横展開</h4>
+      <p>HR・営業・教育・医療・CSなど横断可能。1基盤で複数のSaaS事業を派生展開。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 4: TECH MOAT ============ -->
+<section class="slide" id="s4">
+  <div class="slide-num">// 04 · TECH MOAT</div>
+  <h2>5年では追いつけない<span class="hl">データ資産</span></h2>
+  <div class="grid-2" style="margin-top: 40px;">
+    <div>
+      <h3>ペルソナ資産</h3>
+      <ul class="bullet">
+        <li><strong>2,245体</strong>の行動データペルソナ</li>
+        <li>うち<strong>782体が行動ベース</strong>（深いデータ）</li>
+        <li>毎月100体ペースで追加</li>
+        <li>業界別カスタムペルソナ無制限作成可能</li>
+      </ul>
+    </div>
+    <div>
+      <h3>技術防御</h3>
+      <ul class="bullet">
+        <li>特許 <strong>DD-2026-001</strong> 取得済</li>
+        <li>追加4特許 出願準備中</li>
+        <li>L4業界アダプタは <strong>営業秘密</strong> で防御</li>
+        <li>Anti-reverse-engineering 設計</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flash">
+    <strong>競合が同等の人格モデルを構築するには</strong>：行動データ蓄積 5年 + ML エンジニアリング 2年 + プロダクト化 1年 = 最低 <strong>8年</strong> のリード。
+  </div>
+</section>
+
+<!-- ============ SLIDE 5: VERTICAL EXPANSION ============ -->
+<section class="slide" id="s5">
+  <div class="slide-num">// 05 · VERTICAL EXPANSION</div>
+  <h2>4業界で<span class="accent">¥10億 ARR</span>の到達経路</h2>
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>業界プロダクト</th><th>ターゲット</th><th>単価/月</th><th>市場規模 (TAM)</th><th>3年目標</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>AI面接練習Mock</strong></td><td>HR部門 中堅企業</td><td>¥98K-¥300K</td><td>¥360億</td><td>200社・ARR¥3億</td></tr>
+      <tr><td><strong>営業ロープレGym</strong></td><td>営業組織 SaaS</td><td>¥98K-¥800K</td><td>¥120億</td><td>100社・ARR¥2億</td></tr>
+      <tr><td><strong>ライブAI家庭教師</strong></td><td>塾 + 個人講師</td><td>¥10K-¥250K</td><td>¥588億</td><td>500顧客・ARR¥2億</td></tr>
+      <tr><td><strong>医療問診シミュレータ</strong></td><td>医学部 + 病院</td><td>¥300K-¥2M</td><td>¥18億</td><td>20機関・ARR¥1.5億</td></tr>
+      <tr class="us"><td><strong>合計</strong></td><td>—</td><td>—</td><td><strong>¥1,086億</strong></td><td><strong>¥8.5億 ARR</strong></td></tr>
+    </tbody>
+  </table>
+  <p style="font-size: 18px; color: var(--text-dim); margin-top: 20px;">
+    ※ 加えてCS・保険・コールセンター等への横展開で<strong style="color:var(--warn);">¥10億超</strong>。
+  </p>
+</section>
+
+<!-- ============ SLIDE 6: COMPETITION ============ -->
+<section class="slide" id="s6">
+  <div class="slide-num">// 06 · COMPETITION</div>
+  <h2>誰も持っていない<span class="accent">「実データ×多業界」</span>の組み合わせ</h2>
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th></th><th>Character.AI</th><th>Replika</th><th>HeyGen</th><th>競合A (HRロープレ)</th><th class="accent">Persona API</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>実データから人格再構成</td><td>❌ 架空</td><td>❌ 架空</td><td>❌ アバター</td><td>❌ 画一</td><td class="accent"><strong>✓</strong></td></tr>
+      <tr><td>リアルタイム音声対話</td><td>❌</td><td>△</td><td>❌</td><td>△</td><td class="accent"><strong>✓</strong></td></tr>
+      <tr><td>業界横展開</td><td>❌</td><td>❌</td><td>○</td><td>HRのみ</td><td class="accent"><strong>4業界+</strong></td></tr>
+      <tr><td>カスタムペルソナ作成</td><td>○ (簡易)</td><td>❌</td><td>❌</td><td>❌</td><td class="accent"><strong>✓ 自社データ</strong></td></tr>
+      <tr><td>特許防御</td><td>?</td><td>?</td><td>?</td><td>❌</td><td class="accent"><strong>DD-2026-001</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="flash">
+    <strong>差別化の核</strong>：「行動データから再構成した実在性のあるペルソナ × 業界別アダプタ × リアルタイム音声」
+    の3点セットを持つのは現時点で <span style="color:var(--warn);">私たちだけ</span>。
+  </div>
+</section>
+
+<!-- ============ SLIDE 7: PRICING ============ -->
+<section class="slide" id="s7">
+  <div class="slide-num">// 07 · PRICING</div>
+  <h2>業界別 SaaS + Enterprise の<span class="accent">2軸モデル</span></h2>
+  <div class="grid-4" style="margin-top: 40px;">
+    <div class="card">
+      <h4>業界別 SaaS</h4>
+      <p style="font-size: 14px;">月額 ¥9.8K〜 ¥800K</p>
+      <ul style="margin-top:14px; font-size: 13px; padding-left: 18px; color: var(--text-dim);">
+        <li>標準ペルソナ提供</li>
+        <li>業界別UI/UX</li>
+        <li>セルフサーブ申込</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Enterprise</h4>
+      <p style="font-size: 14px;">¥800K〜¥2M/月</p>
+      <ul style="margin-top:14px; font-size: 13px; padding-left: 18px; color: var(--text-dim);">
+        <li>カスタムペルソナ作成</li>
+        <li>SAML/SSO・SOC2</li>
+        <li>自社システム連携</li>
+        <li>専属CS担当</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>API直接利用</h4>
+      <p style="font-size: 14px;">¥0.01/call〜</p>
+      <ul style="margin-top:14px; font-size: 13px; padding-left: 18px; color: var(--text-dim);">
+        <li>L1-L4階層別アクセス</li>
+        <li>従量課金</li>
+        <li>開発者向けAPI</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>研究データセット</h4>
+      <p style="font-size: 14px;">¥3M〜¥10M/件</p>
+      <ul style="margin-top:14px; font-size: 13px; padding-left: 18px; color: var(--text-dim);">
+        <li>大学・研究機関向け</li>
+        <li>匿名化済み</li>
+        <li>論文引用可</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flash">
+    <strong>LTV試算</strong>：Enterprise顧客 平均契約 24ヶ月 × ¥1.2M/月 = <strong style="color:var(--warn);">¥28.8M LTV</strong>。CAC回収 6ヶ月。
+  </div>
+</section>
+
+<!-- ============ SLIDE 8: TRACTION ============ -->
+<section class="slide" id="s8">
+  <div class="slide-num">// 08 · TRACTION & ROADMAP</div>
+  <h2>すでに<span class="hl">商用化済</span>のテック・データ・販路</h2>
+  <div class="grid-3" style="margin-top: 40px;">
+    <div class="metric"><div class="num">2,245</div><div class="lbl">ペルソナ蓄積</div></div>
+    <div class="metric"><div class="num">8</div><div class="lbl">業界アダプタ</div></div>
+    <div class="metric"><div class="num">19</div><div class="lbl">外部システムコネクタ</div></div>
+  </div>
+  <div class="grid-3">
+    <div class="metric"><div class="num">5</div><div class="lbl">業界LP公開済 (Q2 2026)</div></div>
+    <div class="metric"><div class="num">¥3,000</div><div class="lbl">フラッグシップnote記事 公開</div></div>
+    <div class="metric"><div class="num">104</div><div class="lbl">H200 GPU クラスタ</div></div>
+  </div>
+  <div style="margin-top: 30px;">
+    <h3>2026 Q2-Q3 ロードマップ</h3>
+    <ul class="bullet" style="font-size: 18px;">
+      <li>Q2: 4業界LP公開 + フラッグシップ記事 + メディア連動</li>
+      <li>Q3: 機関投資家ペルソナ100体追加 + B2B営業本格化</li>
+      <li>Q4: Enterprise顧客 10社到達 + シリーズA調達検討</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SLIDE 9: TEAM ============ -->
+<section class="slide" id="s9">
+  <div class="slide-num">// 09 · TEAM</div>
+  <h2>テック × 経営 × メディアの<span class="accent">三位一体</span></h2>
+  <div class="grid-2" style="margin-top: 40px;">
+    <div class="card">
+      <h4>創業者・代表 / ぬるぽん</h4>
+      <p>SE 15年（SIer→VR→AI→経営）/ 10億円規模事業を3期連続成長（上場基準クリア）/
+        大型CM向けAI音声合成（出荷台数2倍）/ 国内初VRコンテンツ / 技術書著者</p>
+    </div>
+    <div class="card">
+      <h4>運営基盤</h4>
+      <p>AIコンパス (ai-media.co.jp) — AI実装に特化した検証メディア。
+        note @ai_compass_media で連載「AIで投資の壁を越える」配信中。
+        GitHub: nullponull/aiquant-lab で全コード公開。</p>
+    </div>
+  </div>
+  <div class="flash">
+    <strong>独自の強み</strong>：技術構築から事業推進、メディア運営、コンテンツマーケティングまで
+    一気通貫で実行できる体制。営業・PR・採用も内製可能。
+  </div>
+</section>
+
+<!-- ============ SLIDE 10: CTA ============ -->
+<section class="slide" id="s10">
+  <div class="slide-num">// 10 · CALL TO ACTION</div>
+  <h1>Let's<br><span class="hl">talk.</span></h1>
+  <p class="lead">業界カスタム導入のご相談・データセット利用・<br>
+    投資検討・パートナーシップ ── お気軽にどうぞ。</p>
+  <div class="cta-row">
+    <a href="mailto:info@ai-media.co.jp?subject=Persona%20API%20%E3%81%94%E7%9B%B8%E8%AB%87" class="cta-btn primary">info@ai-media.co.jp</a>
+    <a href="https://ai-media.co.jp/industry/" class="cta-btn ghost">業界プロダクトを見る</a>
+    <a href="https://note.com/ai_compass_media" class="cta-btn ghost">連載を読む</a>
+  </div>
+  <div class="footer-cta">
+    <strong>AIコンパス</strong> / Persona API / DD SDK<br>
+    ai-media.co.jp · note <a href="https://note.com/ai_compass_media">@ai_compass_media</a> · GitHub <a href="https://github.com/nullponull/aiquant-lab">nullponull/aiquant-lab</a><br>
+    © 2026 AIコンパス. Confidential & Proprietary.
+  </div>
+</section>
+
+</body>
+</html>
