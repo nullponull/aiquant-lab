@@ -1,0 +1,1777 @@
+# Persona100 Longlist
+# AIで投資の壁を越える 番外編 #2 (2026-06-04 公開予定)
+# 公開情報のみ利用（書籍・公開IF・SEC公開資料・公式SNS等）
+#
+# カテゴリ配分:
+#   Value(15) + Macro(15) + Quants(10) + Growth/Tech(10) + Activist(8)
+#   + HedgeFund(12) + Distressed(8) + Japan(10) + Crypto(5) + Academic(7) = 100
+#
+# 6アーキタイプ:
+#   Conviction Holder / Panic Seller / Trend Chaser
+#   Contrarian / Anchor Trader / Noise Trader
+#   (+ 拡張型)
+
+investors:
+
+  # ============================================
+  # Value 投資家 (15名)
+  # ============================================
+
+  - id: "001"
+    name: "Warren Buffett"
+    archetype: "Conviction Holder (Value)"
+    nationality: "US"
+    primary_role: "Berkshire Hathaway CEO"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "berkshirehathaway.com (annual shareholder letters 1965-present)"
+      - "books: The Snowball (Schroeder 2008), Buffett (Lowenstein 1995)"
+      - "interviews: Becky Quick CNBC series, Berkshire AGM Q&A archives"
+      - "SEC 13F filings (Berkshire Hathaway, quarterly)"
+      - "Buffett Partnership letters 1957-1969"
+    notable_traits:
+      - "extreme long-term holding (avg 10+ years)"
+      - "circle of competence principle"
+      - "concentration over diversification"
+      - "owner mindset vs trading mindset"
+    market_relevance: "ベンチマーク的Value型、Conviction Holder代表"
+
+  - id: "002"
+    name: "Charlie Munger"
+    archetype: "Conviction Holder (Mental Models)"
+    nationality: "US"
+    primary_role: "Berkshire Hathaway Vice Chairman (former)"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "Poor Charlie's Almanack (Kaufman 2005)"
+      - "Daily Journal AGM transcripts (2014-2023)"
+      - "USC Law School commencement speeches"
+      - "Wesco Financial annual meeting notes"
+    notable_traits:
+      - "latticework of mental models"
+      - "inversion thinking (avoid stupidity first)"
+      - "willingness to do nothing for years"
+      - "deep moat fixation"
+    market_relevance: "Value判断の質的フレームワーク提供者"
+
+  - id: "003"
+    name: "Benjamin Graham"
+    archetype: "Conviction Holder (Margin of Safety)"
+    nationality: "US"
+    primary_role: "Graham-Newman Corp founder (historical)"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "Security Analysis (Graham & Dodd 1934)"
+      - "The Intelligent Investor (Graham 1949)"
+      - "Columbia Business School lecture transcripts"
+      - "Graham-Newman partnership records (public archives)"
+    notable_traits:
+      - "margin of safety formula"
+      - "Mr. Market personification"
+      - "net-net working capital screen"
+      - "defensive vs enterprising investor split"
+    market_relevance: "Value投資の理論的祖、全てのフレームワークの源流"
+
+  - id: "004"
+    name: "Walter Schloss"
+    archetype: "Conviction Holder (Deep Value)"
+    nationality: "US"
+    primary_role: "Walter J. Schloss Associates founder (historical)"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "Superinvestors of Graham-and-Doddsville (Buffett 1984)"
+      - "Forbes & Barron's interview archives"
+      - "Schloss partnership letters (Heilbrunn Center Columbia)"
+    notable_traits:
+      - "100+ position diversification within deep value"
+      - "no company visits, balance sheet only"
+      - "low PBR purist"
+      - "47 year track record beating S&P"
+    market_relevance: "純粋な定量Value、Graham派の実証者"
+
+  - id: "005"
+    name: "Seth Klarman"
+    archetype: "Contrarian (Value Distressed)"
+    nationality: "US"
+    primary_role: "Baupost Group CEO"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "Margin of Safety (Klarman 1991, out of print)"
+      - "Baupost investor letters (selectively leaked)"
+      - "MIT Sloan/HBS guest lectures"
+      - "SEC 13F filings (Baupost Group)"
+    notable_traits:
+      - "cash as strategic position (sometimes 40%+)"
+      - "patience as competitive edge"
+      - "absolute return mindset vs benchmark"
+      - "willingness to invest in complexity"
+    market_relevance: "現代Value+Distressedハイブリッドの代表"
+
+  - id: "006"
+    name: "Howard Marks"
+    archetype: "Contrarian (Cycle Aware)"
+    nationality: "US"
+    primary_role: "Oaktree Capital Co-chairman"
+    decision_style: "distressed_value"
+    public_data_sources:
+      - "The Most Important Thing (Marks 2011)"
+      - "Mastering the Market Cycle (Marks 2018)"
+      - "Oaktree Memos (1990-present, public)"
+      - "Bloomberg/Wharton podcast interviews"
+    notable_traits:
+      - "second-level thinking"
+      - "market cycle pendulum framework"
+      - "asymmetric risk-reward focus"
+      - "credit cycle expertise"
+    market_relevance: "サイクル認識の教育者、現代Contrarianの理論派"
+
+  - id: "007"
+    name: "Joel Greenblatt"
+    archetype: "Conviction Holder (Magic Formula)"
+    nationality: "US"
+    primary_role: "Gotham Asset Management co-founder"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "You Can Be a Stock Market Genius (Greenblatt 1997)"
+      - "The Little Book That Beats the Market (2005)"
+      - "Columbia Business School Value Investing course materials"
+      - "magicformulainvesting.com"
+    notable_traits:
+      - "ROIC + earnings yield ranking system"
+      - "special situations (spinoffs, merger arbs)"
+      - "systematic value implementation"
+      - "teaching-driven public disclosure"
+    market_relevance: "Value投資のシステム化先駆者"
+
+  - id: "008"
+    name: "Mohnish Pabrai"
+    archetype: "Conviction Holder (Cloning)"
+    nationality: "US/India"
+    primary_role: "Pabrai Investment Funds Managing Partner"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "The Dhandho Investor (Pabrai 2007)"
+      - "Pabrai Funds annual meetings (YouTube)"
+      - "SEC 13F filings (Pabrai Investments)"
+      - "Google Talks / Columbia guest lectures"
+    notable_traits:
+      - "deliberate cloning of superinvestors"
+      - "ultra-concentration (sometimes 5-10 stocks)"
+      - "low number of decisions per year (Kelly criterion)"
+      - "checklist-driven process (Atul Gawande inspired)"
+    market_relevance: "Value投資のClone手法を体系化"
+
+  - id: "009"
+    name: "Li Lu"
+    archetype: "Conviction Holder (Asia Value)"
+    nationality: "China/US"
+    primary_role: "Himalaya Capital founder"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "Modernization 16 Lectures (Li Lu 2019, Chinese)"
+      - "Columbia Business School guest lectures"
+      - "Peking University HSBC Business School speeches"
+      - "BYD investment public commentary"
+    notable_traits:
+      - "China + global value hybrid"
+      - "Munger-endorsed investor"
+      - "long civilization-scale view"
+      - "fundamental research depth"
+    market_relevance: "アジア発のValue代表、Munger継承者"
+
+  - id: "010"
+    name: "Bill Ackman"
+    archetype: "Activist (Concentrated Value)"
+    nationality: "US"
+    primary_role: "Pershing Square Capital Management CEO"
+    decision_style: "activist_pressure"
+    public_data_sources:
+      - "Pershing Square annual letters & investor day decks"
+      - "SEC 13D/13F filings"
+      - "Bloomberg/CNBC TV appearances"
+      - "Twitter/X @BillAckman (public posts)"
+    notable_traits:
+      - "extreme concentration (8-12 names)"
+      - "public activism campaigns (Valeant, Herbalife)"
+      - "high-conviction macro overlay (COVID hedge)"
+      - "long marketing letter style"
+    market_relevance: "Value+Activist+Macroのハイブリッド代表"
+
+  - id: "011"
+    name: "David Einhorn"
+    archetype: "Contrarian (Short-biased Value)"
+    nationality: "US"
+    primary_role: "Greenlight Capital President"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "Fooling Some of the People All of the Time (Einhorn 2008)"
+      - "Greenlight quarterly letters"
+      - "Ira Sohn Conference presentations"
+      - "SEC 13F filings (Greenlight Capital)"
+    notable_traits:
+      - "fraud-detection short selling (Allied Capital, Lehman)"
+      - "balance sheet forensic skill"
+      - "long/short discipline"
+      - "willingness to be wrong publicly for years"
+    market_relevance: "Value+ForensicショートのHybrid"
+
+  - id: "012"
+    name: "Bruce Berkowitz"
+    archetype: "Conviction Holder (Deep Conviction)"
+    nationality: "US"
+    primary_role: "Fairholme Capital Management founder"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "Fairholme annual reports"
+      - "Morningstar interviews"
+      - "Sears Holdings/AIG public commentary"
+      - "SEC 13F filings (Fairholme Capital)"
+    notable_traits:
+      - "willingness to ride huge drawdowns"
+      - "concentration in financials post-2008"
+      - "long timeframe (5-10年単位)"
+      - "Morningstar Manager of Decade受賞経験"
+    market_relevance: "Drawdown耐性Value、極端な集中型サンプル"
+
+  - id: "013"
+    name: "John Templeton"
+    archetype: "Contrarian (Global Value)"
+    nationality: "UK/US (historical)"
+    primary_role: "Templeton Growth Fund founder (historical)"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "Investing the Templeton Way (Lauren Templeton 2008)"
+      - "Templeton Touch (Proctor 2012)"
+      - "Templeton Growth Fund prospectuses (historical SEC archives)"
+      - "Forbes/Money interviews 1970s-1990s"
+    notable_traits:
+      - "point of maximum pessimism buying"
+      - "first true global investor (post-WWII Japan)"
+      - "16 metrics screening"
+      - "spiritual/long view framework"
+    market_relevance: "国際分散Valueの開拓者"
+
+  - id: "014"
+    name: "Philip Fisher"
+    archetype: "Conviction Holder (Growth at Reasonable Price)"
+    nationality: "US (historical)"
+    primary_role: "Fisher & Company founder (historical)"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "Common Stocks and Uncommon Profits (Fisher 1958)"
+      - "Conservative Investors Sleep Well (Fisher 1975)"
+      - "Stanford GSB lecture archives"
+    notable_traits:
+      - "scuttlebutt research method"
+      - "15-point checklist for quality growth"
+      - "ultra-long holding (Motorola 40+ years)"
+      - "Buffettに最大影響(85%Graham/15%Fisher自認)"
+    market_relevance: "GARP/Quality Growthの祖"
+
+  - id: "015"
+    name: "Francisco García Paramés"
+    archetype: "Conviction Holder (European Value)"
+    nationality: "Spain"
+    primary_role: "Cobas Asset Management founder"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "Investing for the Long Term (Paramés 2018)"
+      - "Cobas AM quarterly letters"
+      - "Bestinver historical performance reports"
+      - "Value Spain conference talks"
+    notable_traits:
+      - "Austrian School economics base"
+      - "European mid-cap focus"
+      - "shipping/commodity cycle plays"
+      - "Buffett of Europe呼称"
+    market_relevance: "欧州Value代表、オーストリア学派×Value"
+
+  # ============================================
+  # Macro/Global 投資家 (15名)
+  # ============================================
+
+  - id: "016"
+    name: "George Soros"
+    archetype: "Contrarian (Reflexivity Macro)"
+    nationality: "US/Hungary"
+    primary_role: "Soros Fund Management founder"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "The Alchemy of Finance (Soros 1987)"
+      - "Soros on Soros (1995)"
+      - "INET/CEU lectures"
+      - "Open Society Foundations公開発言"
+    notable_traits:
+      - "reflexivity theory in markets"
+      - "pound sterling 1992 short (legendary)"
+      - "willingness to bet big when conviction high"
+      - "philosophical/political overlay"
+    market_relevance: "Macro投資の象徴、Reflexivity理論の創始者"
+
+  - id: "017"
+    name: "Ray Dalio"
+    archetype: "Anchor Trader (Principles-based Macro)"
+    nationality: "US"
+    primary_role: "Bridgewater Associates founder"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "Principles (Dalio 2017)"
+      - "Big Debt Crises (2018), Changing World Order (2021)"
+      - "Bridgewater Daily Observations (institutional)"
+      - "LinkedIn長文投稿、YouTube解説動画"
+    notable_traits:
+      - "All Weather / risk parity portfolio"
+      - "debt cycle 75-100年フレームワーク"
+      - "radical transparency culture"
+      - "geopolitical regime change framing"
+    market_relevance: "現代Macroの教科書的存在、システム化代表"
+
+  - id: "018"
+    name: "Stanley Druckenmiller"
+    archetype: "Trend Chaser (Macro Concentration)"
+    nationality: "US"
+    primary_role: "Duquesne Family Office (former Soros CIO)"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "Sohn Conference presentations (2015-present)"
+      - "Bloomberg/CNBC interviews"
+      - "Real Vision long-form interviews"
+      - "Duquesne Capital historical 30%リターン記録"
+    notable_traits:
+      - "concentration when right, fast exit when wrong"
+      - "macro top-down + bottom-up combination"
+      - "currency/commodity expertise"
+      - "30年連続無敗record"
+    market_relevance: "Macro+Concentrationの理想形"
+
+  - id: "019"
+    name: "Paul Tudor Jones"
+    archetype: "Trend Chaser (Risk-managed Macro)"
+    nationality: "US"
+    primary_role: "Tudor Investment Corp founder"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "Trader (PBS 1987 documentary)"
+      - "Market Wizards (Schwager 1989) interview"
+      - "Robin Hood Foundation public appearances"
+      - "CNBC/Bloomberg interviews"
+    notable_traits:
+      - "1987 Black Monday prediction & profit"
+      - "5:1 risk-reward minimum"
+      - "technical + macro hybrid"
+      - "extreme position sizing discipline"
+    market_relevance: "Risk管理ベースMacroの典型"
+
+  - id: "020"
+    name: "Louis Bacon"
+    archetype: "Trend Chaser (Macro)"
+    nationality: "US"
+    primary_role: "Moore Capital Management founder"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "Moore Capital investor letters (selective public)"
+      - "Institutional Investor profile articles"
+      - "FT/Bloomberg coverage 1990s-2010s"
+    notable_traits:
+      - "Gulf War macro plays (1990)"
+      - "currency/rate concentration"
+      - "low public profile despite size"
+      - "20%+ annualized over 2 decades"
+    market_relevance: "古典的Macro Hedge Fundマネージャー"
+
+  - id: "021"
+    name: "Bruce Kovner"
+    archetype: "Trend Chaser (Macro)"
+    nationality: "US"
+    primary_role: "Caxton Associates founder (former)"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "Market Wizards (Schwager 1989) interview"
+      - "Caxton historical performance disclosures"
+      - "Juilliard/AEI board公開発言"
+    notable_traits:
+      - "geopolitical + technical combined"
+      - "harpsichord & macroのpolymath"
+      - "21年で2,100%リターン"
+      - "extreme leverage discipline"
+    market_relevance: "Macro Hedge Fundの第一世代代表"
+
+  - id: "022"
+    name: "Kyle Bass"
+    archetype: "Contrarian (Macro Tail Risk)"
+    nationality: "US"
+    primary_role: "Hayman Capital Management founder"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "2008 subprime short public commentary"
+      - "Hayman investor letters (selective)"
+      - "Twitter/X @Jkylebass"
+      - "CNBC/Bloomberg TV appearances"
+    notable_traits:
+      - "subprime crisis early short"
+      - "Japan yen/JGB short long-term thesis"
+      - "China credit concerns"
+      - "tail risk hedging specialist"
+    market_relevance: "Tail Risk Macroの代表事例"
+
+  - id: "023"
+    name: "John Paulson"
+    archetype: "Contrarian (One-shot Macro)"
+    nationality: "US"
+    primary_role: "Paulson & Co founder"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "The Greatest Trade Ever (Zuckerman 2009)"
+      - "SEC 13F filings (Paulson & Co)"
+      - "Senate Subcommittee testimony 2010"
+      - "CNBC interview archives"
+    notable_traits:
+      - "2007-2008 CDS subprime short ($15B profit)"
+      - "merger arbitrage origin"
+      - "gold long thesis post-crisis"
+      - "concentrated thematic bets"
+    market_relevance: "歴史的Single trade Macro成功例"
+
+  - id: "024"
+    name: "Michael Steinhardt"
+    archetype: "Trend Chaser (Variant Perception)"
+    nationality: "US"
+    primary_role: "Steinhardt Partners founder (former)"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "No Bull (Steinhardt 2001)"
+      - "Steinhardt Partners 28-year track record (24% annual)"
+      - "Wharton/NYU public lectures"
+    notable_traits:
+      - "variant perception concept"
+      - "block trading + macro"
+      - "extreme intensity decision-making"
+      - "30+ year edge"
+    market_relevance: "Variant Perceptionの提唱者"
+
+  - id: "025"
+    name: "Jim Rogers"
+    archetype: "Contrarian (Commodity Macro)"
+    nationality: "US/Singapore"
+    primary_role: "Quantum Fund co-founder (former), individual investor"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "Investment Biker (Rogers 1994), Hot Commodities (2004)"
+      - "Real Vision/RT interview archives"
+      - "Beeland Interests public commentary"
+      - "Twitter/X 公開発言"
+    notable_traits:
+      - "global on-the-ground research (biker tours)"
+      - "Asia century thesis"
+      - "commodity supercycle calls"
+      - "long-term contrarian positioning"
+    market_relevance: "コモディティMacroの代表"
+
+  - id: "026"
+    name: "Felix Zulauf"
+    archetype: "Contrarian (Swiss Macro)"
+    nationality: "Switzerland"
+    primary_role: "Zulauf Consulting founder"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "Barron's Roundtable参加(1990s-2010s)"
+      - "Macro Voices podcast interviews"
+      - "Zulauf Consulting public reports (selective)"
+    notable_traits:
+      - "long secular cycle framework"
+      - "gold/CHF bias"
+      - "Asia + Europe dual focus"
+      - "early debt cycle warnings"
+    market_relevance: "欧州Macro Strategist代表"
+
+  - id: "027"
+    name: "Hugh Hendry"
+    archetype: "Contrarian (Provocative Macro)"
+    nationality: "UK"
+    primary_role: "Eclectica Asset Management founder (former)"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "Hendry blog (acidcapitalist) & podcast"
+      - "BBC Newsnight 2009-2011 appearances"
+      - "Eclectica historical performance disclosures"
+      - "Twitter/X @hendry_hugh"
+    notable_traits:
+      - "extreme verbal/positional contrarian"
+      - "2008 +31% performance"
+      - "Japan/China short theses"
+      - "narrative-driven trader"
+    market_relevance: "Narrative Macroの代表事例"
+
+  - id: "028"
+    name: "Mark Mobius"
+    archetype: "Trend Chaser (EM Equity Macro)"
+    nationality: "Germany/US"
+    primary_role: "Mobius Capital Partners founder"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "Passport to Profits (Mobius 1999)"
+      - "Templeton Emerging Markets historical letters"
+      - "Mobius Capital newsletters"
+      - "Bloomberg TV appearances"
+    notable_traits:
+      - "frontier/emerging market specialist"
+      - "on-the-ground research (200+ days travel/year)"
+      - "ESG integration in EM"
+      - "Templeton継承"
+    market_relevance: "新興国Macro/Equityの代表"
+
+  - id: "029"
+    name: "Albert Edwards"
+    archetype: "Contrarian (Permabear Macro)"
+    nationality: "UK"
+    primary_role: "Société Générale Global Strategist"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "SocGen Global Strategy weekly notes"
+      - "Ice Age thesis (1996-present)"
+      - "Real Vision interviews"
+    notable_traits:
+      - "Ice Age deflation thesis 30+ years"
+      - "Japan analog framework"
+      - "secular bear positioning bias"
+    market_relevance: "Permabear Macroの理論派代表"
+
+  - id: "030"
+    name: "Russell Napier"
+    archetype: "Contrarian (Financial Repression Macro)"
+    nationality: "UK"
+    primary_role: "Orlock Advisors, Library of Mistakes founder"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "Anatomy of the Bear (Napier 2005)"
+      - "Solid Ground newsletter"
+      - "Edinburgh Library of Mistakes archives"
+      - "Real Vision interviews"
+    notable_traits:
+      - "financial repression early caller"
+      - "monetary history scholarship"
+      - "bear market bottom forensics"
+      - "central bank/government coupling thesis"
+    market_relevance: "歴史×Macroの理論派"
+
+  # ============================================
+  # Quants / Systematic (10名)
+  # ============================================
+
+  - id: "031"
+    name: "Jim Simons"
+    archetype: "Anchor Trader (Pure Quant)"
+    nationality: "US"
+    primary_role: "Renaissance Technologies founder"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "The Man Who Solved the Market (Zuckerman 2019)"
+      - "MIT/IAS public lectures (YouTube)"
+      - "Simons Foundation interviews"
+      - "Medallion Fund historical performance (66% gross)"
+    notable_traits:
+      - "pure statistical arbitrage"
+      - "no fundamental analysis"
+      - "PhD-only hiring"
+      - "extreme secrecy of signals"
+    market_relevance: "Quantsの伝説、Medallion Fund代表"
+
+  - id: "032"
+    name: "David Shaw"
+    archetype: "Anchor Trader (Quant)"
+    nationality: "US"
+    primary_role: "D.E. Shaw & Co founder"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Forbes/Institutional Investor profiles"
+      - "D.E. Shaw research career page (technology stack hints)"
+      - "Columbia/Stanford academic publications"
+    notable_traits:
+      - "computational arbitrage pioneer"
+      - "low-latency infrastructure builder"
+      - "Bezos employed pre-Amazon"
+      - "scientific approach to markets"
+    market_relevance: "Quantsの第一世代、ハイテクHedge Fundの祖"
+
+  - id: "033"
+    name: "Cliff Asness"
+    archetype: "Anchor Trader (Factor Investing)"
+    nationality: "US"
+    primary_role: "AQR Capital Management founder"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "AQR research papers (公開30+)"
+      - "Cliff's Perspective blog (aqr.com)"
+      - "Journal of Portfolio Management articles"
+      - "Twitter/X @CliffordAsness"
+    notable_traits:
+      - "value + momentum + quality + carry factors"
+      - "academic-quant bridge"
+      - "Fama PhD lineage"
+      - "long/short equity systematic"
+    market_relevance: "Factor投資の理論+実装代表"
+
+  - id: "034"
+    name: "Ed Thorp"
+    archetype: "Anchor Trader (Mathematical Edge)"
+    nationality: "US"
+    primary_role: "Princeton/Newport Partners founder (former)"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Beat the Dealer (Thorp 1962), Beat the Market (1967)"
+      - "A Man for All Markets (Thorp 2017)"
+      - "Wilmott Magazine interviews"
+    notable_traits:
+      - "blackjack card counting → markets"
+      - "warrant/convertible arbitrage pioneer"
+      - "Kelly criterion application"
+      - "29年連続positive"
+    market_relevance: "Quants/Arbitrageの理論的祖"
+
+  - id: "035"
+    name: "Robert Mercer"
+    archetype: "Anchor Trader (Quant)"
+    nationality: "US"
+    primary_role: "Renaissance Technologies former Co-CEO"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Renaissance Medallion Fund公開statistics"
+      - "Mercer Family Foundation IRS records"
+      - "Wall Street Journal profile articles"
+    notable_traits:
+      - "speech recognition → finance transition"
+      - "extreme low public profile"
+      - "machine learning early adopter"
+      - "political donor (separate from investment)"
+    market_relevance: "Simons継承のQuant統括代表"
+
+  - id: "036"
+    name: "Peter Muller"
+    archetype: "Anchor Trader (Quant)"
+    nationality: "US"
+    primary_role: "PDT Partners founder"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Inside the House of Money (Drobny 2006) interview"
+      - "Morgan Stanley PDT historical performance"
+      - "Princeton CS academic background"
+    notable_traits:
+      - "statistical arbitrage at scale"
+      - "30%+ annualized historical"
+      - "musician + quant polymath"
+      - "extreme R&D investment"
+    market_relevance: "中規模Quantの代表事例"
+
+  - id: "037"
+    name: "Igor Tulchinsky"
+    archetype: "Anchor Trader (Alpha Mining)"
+    nationality: "US/Belarus"
+    primary_role: "WorldQuant founder"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "The UnRules (Tulchinsky 2018)"
+      - "Finding Alphas (Tulchinsky ed. 2015)"
+      - "WorldQuant University公開講座"
+    notable_traits:
+      - "crowdsourced alpha generation"
+      - "millions of small signals approach"
+      - "global researcher network"
+      - "educational mission integration"
+    market_relevance: "クラウドソースQuantの代表"
+
+  - id: "038"
+    name: "Andrew Lo"
+    archetype: "Anchor Trader (Adaptive Markets)"
+    nationality: "US"
+    primary_role: "MIT Sloan Professor, AlphaSimplex founder"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Adaptive Markets (Lo 2017)"
+      - "MIT Lab for Financial Engineering publications"
+      - "Journal of Financial Economics articles"
+    notable_traits:
+      - "adaptive market hypothesis"
+      - "evolutionary finance framework"
+      - "biotech mega-fund proposal"
+      - "academic-practitioner bridge"
+    market_relevance: "Adaptive理論+Quantの代表"
+
+  - id: "039"
+    name: "Emanuel Derman"
+    archetype: "Anchor Trader (Quant Theorist)"
+    nationality: "South Africa/US"
+    primary_role: "Columbia Professor, ex-Goldman quant head"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "My Life as a Quant (Derman 2004)"
+      - "Models.Behaving.Badly (Derman 2011)"
+      - "Columbia Financial Engineering講義"
+    notable_traits:
+      - "local volatility model co-developer"
+      - "physics → finance transition典型例"
+      - "model risk/limits の警告者"
+    market_relevance: "Quantモデル思考の批評的代表"
+
+  - id: "040"
+    name: "Nassim Nicholas Taleb"
+    archetype: "Contrarian (Tail Risk)"
+    nationality: "Lebanon/US"
+    primary_role: "Universa Investments advisor, NYU Professor"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Fooled by Randomness (2001), Black Swan (2007), Antifragile (2012)"
+      - "Real World Risk Institute公開資料"
+      - "Twitter/X @nntaleb"
+      - "NYU Tandon publications"
+    notable_traits:
+      - "tail risk hedging specialist"
+      - "convexity-based portfolios"
+      - "Incerto philosophy series"
+      - "extreme public/polemic style"
+    market_relevance: "Tail Risk理論の象徴的存在"
+
+  # ============================================
+  # Growth/Tech 投資家 (10名)
+  # ============================================
+
+  - id: "041"
+    name: "Cathie Wood"
+    archetype: "Trend Chaser (Disruptive Innovation)"
+    nationality: "US"
+    primary_role: "ARK Invest founder & CIO"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "ARK Big Ideas annual reports"
+      - "ARK ETF日次保有公開 (透明性極めて高い)"
+      - "YouTube ARK Invest channel weekly"
+      - "Twitter/X @CathieDWood"
+    notable_traits:
+      - "disruptive innovation thesis"
+      - "Tesla bull (legendary)"
+      - "full transparency of trades (rare)"
+      - "5-year DCF heavy modeling"
+    market_relevance: "現代Growth/Disruption代表、透明性異例"
+
+  - id: "042"
+    name: "Peter Thiel"
+    archetype: "Contrarian (Monopoly Thesis)"
+    nationality: "US/Germany"
+    primary_role: "Founders Fund, Palantir Co-founder"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "Zero to One (Thiel 2014)"
+      - "Stanford CS183 lecture notes (Blake Masters)"
+      - "Hoover Institution publications"
+      - "SEC 13F filings (Thiel Macro)"
+    notable_traits:
+      - "monopoly > competition thesis"
+      - "secret/contrarian truth framework"
+      - "Facebook early seed"
+      - "long-duration tech bets"
+    market_relevance: "VC×Macro思想の代表"
+
+  - id: "043"
+    name: "Marc Andreessen"
+    archetype: "Trend Chaser (Tech VC)"
+    nationality: "US"
+    primary_role: "a16z (Andreessen Horowitz) co-founder"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "a16z.com essays (Software Eats the World 2011等)"
+      - "a16z podcast & YouTube"
+      - "Twitter/X @pmarca"
+      - "Techno-Optimist Manifesto (2023)"
+    notable_traits:
+      - "software eats the world thesis"
+      - "platform/network effect focus"
+      - "crypto+AI dual bet"
+      - "ideology-driven investing"
+    market_relevance: "VC界の思想的代表"
+
+  - id: "044"
+    name: "Chase Coleman"
+    archetype: "Trend Chaser (Tiger Cub Growth)"
+    nationality: "US"
+    primary_role: "Tiger Global Management founder"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "SEC 13F filings (Tiger Global)"
+      - "Tiger Global investor letters (selectively leaked)"
+      - "Institutional Investor profile articles"
+    notable_traits:
+      - "private + public crossover investing"
+      - "Tiger Cub lineage (Robertson)"
+      - "extreme tech/growth concentration"
+      - "2022 drawdown notable case study"
+    market_relevance: "Crossover Tech投資の代表"
+
+  - id: "045"
+    name: "Philippe Laffont"
+    archetype: "Trend Chaser (Tech Long/Short)"
+    nationality: "France/US"
+    primary_role: "Coatue Management founder"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "SEC 13F filings (Coatue Management)"
+      - "East Meets West Conference talks"
+      - "Bloomberg/CNBC interviews"
+    notable_traits:
+      - "global tech long/short specialist"
+      - "AI infrastructure thesis"
+      - "private + public hybrid"
+      - "fundamental + macro tech overlay"
+    market_relevance: "Tech長短両建ての代表"
+
+  - id: "046"
+    name: "Vinod Khosla"
+    archetype: "Trend Chaser (Frontier Tech)"
+    nationality: "India/US"
+    primary_role: "Khosla Ventures founder"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "Khosla Ventures essays (deeptech/clean energy)"
+      - "TED/Stanford GSB lectures"
+      - "Sun Microsystems co-founder bio"
+      - "Twitter/X @vkhosla"
+    notable_traits:
+      - "frontier deep tech focus (fusion, biotech)"
+      - "high failure tolerance"
+      - "founder-builder background"
+      - "long-cycle bets (10-20年)"
+    market_relevance: "Deep Tech VCの代表"
+
+  - id: "047"
+    name: "Reid Hoffman"
+    archetype: "Trend Chaser (Network Effect)"
+    nationality: "US"
+    primary_role: "Greylock Partners, LinkedIn founder"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "Blitzscaling (Hoffman 2018)"
+      - "Masters of Scale podcast"
+      - "Greylock投資公開コメント"
+      - "Twitter/X @reidhoffman"
+    notable_traits:
+      - "blitzscaling framework"
+      - "network effect specialization"
+      - "founder→investor transition典型"
+      - "AI/societal commentary"
+    market_relevance: "Network Effect投資の代表理論家"
+
+  - id: "048"
+    name: "Bill Gurley"
+    archetype: "Trend Chaser (Marketplace Tech)"
+    nationality: "US"
+    primary_role: "Benchmark Capital (former), independent"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "Above the Crowd blog (2011-present)"
+      - "All-In Podcast guest appearances"
+      - "Uber board member 公開コメント"
+      - "Twitter/X @bgurley"
+    notable_traits:
+      - "marketplace economics expertise"
+      - "Uber/OpenTable early investments"
+      - "regulatory critique (2024 talks)"
+      - "long-form analytical writing"
+    market_relevance: "Marketplace投資の理論派代表"
+
+  - id: "049"
+    name: "Yuri Milner"
+    archetype: "Trend Chaser (Global Tech)"
+    nationality: "Israel/Russia"
+    primary_role: "DST Global founder"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "DST Global公開投資先一覧"
+      - "Breakthrough Initiatives公開資料"
+      - "Forbes profile articles"
+    notable_traits:
+      - "late-stage growth specialist"
+      - "Facebook/Twitter/Alibaba early stage"
+      - "no board seat policy"
+      - "science philanthropy併設"
+    market_relevance: "Late Stage Growth投資の代表"
+
+  - id: "050"
+    name: "Masayoshi Son (孫正義)"
+    archetype: "Trend Chaser (Mega Growth Bet)"
+    nationality: "Japan"
+    primary_role: "SoftBank Group CEO"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "SoftBank annual reports & 決算説明会資料"
+      - "Vision Fund公開投資先"
+      - "Aim Higher (Atsuo Inoue 2021)"
+      - "World Economic Forum/SoftBank World講演"
+    notable_traits:
+      - "extreme size bets ($100B+ Vision Fund)"
+      - "300年構想思考"
+      - "AI Singularity thesis"
+      - "high volatility tolerance"
+    market_relevance: "Mega Growth投資の象徴、日本発Global VC"
+
+  # ============================================
+  # Activist 投資家 (8名)
+  # ============================================
+
+  - id: "051"
+    name: "Carl Icahn"
+    archetype: "Activist (Corporate Raider)"
+    nationality: "US"
+    primary_role: "Icahn Enterprises Chairman"
+    decision_style: "activist_pressure"
+    public_data_sources:
+      - "King Icahn (Stevens 1993)"
+      - "SEC 13D filings (Icahn Enterprises)"
+      - "Icahn公開letters to boards"
+      - "CNBC interview archives"
+    notable_traits:
+      - "hostile takeover veteran (TWA, RJR)"
+      - "shareholder activism godfather"
+      - "tender offer specialist"
+      - "long career (1968-present)"
+    market_relevance: "Activist投資のオリジナル代表"
+
+  - id: "052"
+    name: "Nelson Peltz"
+    archetype: "Activist (Operational)"
+    nationality: "US"
+    primary_role: "Trian Fund Management founder"
+    decision_style: "activist_pressure"
+    public_data_sources:
+      - "Trian Partners white papers (公開campaign deck)"
+      - "Disney 2024 proxy fight materials"
+      - "P&G activist campaign disclosures"
+      - "SEC 13D filings (Trian)"
+    notable_traits:
+      - "operational improvement focus (vs financial)"
+      - "consumer/industrial expertise"
+      - "constructive activist branding"
+      - "long-term board engagement"
+    market_relevance: "Operationalアクティビストの代表"
+
+  - id: "053"
+    name: "Daniel Loeb"
+    archetype: "Activist (Letter-driven)"
+    nationality: "US"
+    primary_role: "Third Point LLC founder"
+    decision_style: "activist_pressure"
+    public_data_sources:
+      - "Third Point quarterly investor letters"
+      - "SEC 13D filings (Third Point)"
+      - "Sotheby's/Yahoo/Sony公開activist letters"
+    notable_traits:
+      - "famous acidic letter style"
+      - "Sony entertainment spinoff campaign"
+      - "event-driven + activist hybrid"
+      - "long/short equity core"
+    market_relevance: "Letter型アクティビストの典型"
+
+  - id: "054"
+    name: "Paul Singer"
+    archetype: "Activist (Distressed/Sovereign)"
+    nationality: "US"
+    primary_role: "Elliott Management founder"
+    decision_style: "activist_pressure"
+    public_data_sources:
+      - "Elliott Management公開campaign letters (AT&T, Samsung, Twitter)"
+      - "SEC 13D filings (Elliott)"
+      - "WSJ/Bloomberg profile articles"
+      - "Argentina sovereign debt litigation public records"
+    notable_traits:
+      - "sovereign debt activism (Argentina)"
+      - "operational activism at scale"
+      - "extreme litigation willingness"
+      - "$60B+ AUM activist"
+    market_relevance: "Activist+Distressed最大級"
+
+  - id: "055"
+    name: "Jeffrey Smith"
+    archetype: "Activist (Tech/Consumer)"
+    nationality: "US"
+    primary_role: "Starboard Value CEO"
+    decision_style: "activist_pressure"
+    public_data_sources:
+      - "Starboard Value白書 (Darden 2014, Yahoo 2016)"
+      - "SEC 13D filings (Starboard)"
+      - "13D Monitor coverage"
+    notable_traits:
+      - "Darden Restaurants全board置換 (legendary 2014)"
+      - "data-heavy campaign decks"
+      - "consumer/tech focus"
+      - "高勝率activist"
+    market_relevance: "現代Activist実務派代表"
+
+  - id: "056"
+    name: "Christopher Hohn"
+    archetype: "Activist (Long-term Concentrated)"
+    nationality: "UK"
+    primary_role: "TCI Fund Management founder"
+    decision_style: "activist_pressure"
+    public_data_sources:
+      - "TCI public letters (Airbus, Safran)"
+      - "Children's Investment Fund Foundation IRS"
+      - "FT/Bloomberg coverage"
+    notable_traits:
+      - "極端な集中 (6-8 names)"
+      - "long-term activism (5-10年)"
+      - "climate/ESG活用 (Glencore, BP)"
+      - "Deutsche Boerse fight legendary"
+    market_relevance: "欧州Activist長期型代表"
+
+  - id: "057"
+    name: "Robert Chapman"
+    archetype: "Activist (Small/Mid Cap)"
+    nationality: "US"
+    primary_role: "Chapman Capital founder"
+    decision_style: "activist_pressure"
+    public_data_sources:
+      - "Chapman Capital公開13D filings"
+      - "WSJ activist coverage"
+      - "Chapman公開letters"
+    notable_traits:
+      - "small/mid cap activist pioneer"
+      - "personal letter style"
+      - "concentrated portfolio"
+    market_relevance: "Small Cap Activistの初期代表"
+
+  - id: "058"
+    name: "Barry Rosenstein"
+    archetype: "Activist (Real Estate/Consumer)"
+    nationality: "US"
+    primary_role: "JANA Partners founder"
+    decision_style: "activist_pressure"
+    public_data_sources:
+      - "SEC 13D filings (JANA Partners)"
+      - "Whole Foods/Apple activist campaign disclosures"
+      - "13D Monitor coverage"
+    notable_traits:
+      - "ESG活用activism (Apple child safety 2018)"
+      - "consumer/retail focus"
+      - "data-driven campaigns"
+    market_relevance: "ESG Activistの代表的事例"
+
+  # ============================================
+  # Hedge Fund Managers ベテラン (12名)
+  # ============================================
+
+  - id: "059"
+    name: "Julian Robertson"
+    archetype: "Conviction Holder (Tiger Cub Founder)"
+    nationality: "US (historical)"
+    primary_role: "Tiger Management founder (historical)"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "Julian Robertson (Strachman 2004)"
+      - "Tiger Management historical performance (32% gross)"
+      - "Tiger Cub成功事例公開分析"
+    notable_traits:
+      - "long/short equity master"
+      - "Tiger Cub育成 (Coleman, Mandel, Ainslie等)"
+      - "fundamental research depth"
+      - "1980 launch → 2000 close"
+    market_relevance: "Hedge Fundマネージャー育成の祖"
+
+  - id: "060"
+    name: "Steven Cohen"
+    archetype: "Trend Chaser (Information Edge)"
+    nationality: "US"
+    primary_role: "Point72 Asset Management founder"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "Black Edge (Kolhatkar 2017)"
+      - "SEC 13F filings (Point72)"
+      - "Point72 Academy公開資料"
+      - "NY Mets owner公開activity"
+    notable_traits:
+      - "short-term trading mastery"
+      - "multi-PM platform model"
+      - "情報フロー優位"
+      - "SAC→Point72 rebrand"
+    market_relevance: "Multi-PM Hedge Fundの代表"
+
+  - id: "061"
+    name: "Ken Griffin"
+    archetype: "Anchor Trader (Multi-strategy)"
+    nationality: "US"
+    primary_role: "Citadel founder"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Citadel公開performance disclosures"
+      - "Bloomberg/CNBC interviews"
+      - "Harvard convertible arbitrage校友history"
+      - "Citadel Securities market making公開data"
+    notable_traits:
+      - "multi-strategy hedge fund leader"
+      - "convertible arbitrage origin"
+      - "market making (Citadel Securities)"
+      - "$60B+ AUM"
+    market_relevance: "現代最大級Hedge Fundの代表"
+
+  - id: "062"
+    name: "Israel Englander"
+    archetype: "Anchor Trader (Multi-strategy)"
+    nationality: "US"
+    primary_role: "Millennium Management founder"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Millennium Management公開performance disclosures"
+      - "Forbes/Institutional Investor profile articles"
+      - "Bloomberg coverage 2010s-present"
+      - "SEC ADV filings (Millennium)"
+    notable_traits:
+      - "pod model originator"
+      - "low-volatility/stable returns"
+      - "extreme risk管理規律"
+      - "$60B+ AUM"
+    market_relevance: "Pod ModelのHedge Fund代表"
+
+  - id: "063"
+    name: "David Tepper"
+    archetype: "Trend Chaser (Distressed Macro)"
+    nationality: "US"
+    primary_role: "Appaloosa Management founder"
+    decision_style: "distressed_value"
+    public_data_sources:
+      - "SEC 13F filings (Appaloosa)"
+      - "CNBC Tepper interview annual appearances"
+      - "Carolina Panthers owner公開activity"
+      - "Federal Reserve put thesis 2009/2020 public commentary"
+    notable_traits:
+      - "Distressed debt mastery"
+      - "Fed/policy読み技術"
+      - "2009 bank stocks legendary trade"
+      - "concentration when conviction high"
+    market_relevance: "Distressed+Macro Hedge Fundの代表"
+
+  - id: "064"
+    name: "Andreas Halvorsen"
+    archetype: "Trend Chaser (Tiger Cub Long/Short)"
+    nationality: "Norway/US"
+    primary_role: "Viking Global Investors founder"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "SEC 13F filings (Viking Global)"
+      - "Institutional Investor profile articles"
+      - "Tiger Cub lineage publications"
+    notable_traits:
+      - "Tiger Cub長/短equity"
+      - "fundamental sector specialist team"
+      - "consistent positive years"
+    market_relevance: "Tiger Cub現代代表"
+
+  - id: "065"
+    name: "Lee Ainslie"
+    archetype: "Conviction Holder (Tiger Cub)"
+    nationality: "US"
+    primary_role: "Maverick Capital founder"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "SEC 13F filings (Maverick Capital)"
+      - "Tiger Cub successor profile coverage"
+      - "Maverick investor letters (selective)"
+    notable_traits:
+      - "Tiger Cubファンダメンタル長/短"
+      - "tech/consumer/healthcare core"
+      - "sector head model"
+    market_relevance: "Tiger Cub Established代表"
+
+  - id: "066"
+    name: "Stephen Mandel"
+    archetype: "Conviction Holder (Tiger Cub Long/Short)"
+    nationality: "US"
+    primary_role: "Lone Pine Capital founder"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "SEC 13F filings (Lone Pine Capital)"
+      - "Institutional Investor Tiger Cub coverage"
+      - "Robertson successor profile articles"
+      - "Dartmouth/HBS guest lectures"
+    notable_traits:
+      - "Tiger Cub long/short equity"
+      - "global consumer/tech focus"
+      - "low public profile despite scale"
+      - "20年超consistent返戻"
+    market_relevance: "Tiger Cub大型長/短equity代表"
+
+  - id: "067"
+    name: "John Arnold"
+    archetype: "Trend Chaser (Energy Trader)"
+    nationality: "US"
+    primary_role: "Centaurus Advisors founder (former)"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "Enron→Centaurus historical coverage"
+      - "Arnold Foundation public IRS records"
+      - "WSJ/Bloomberg profile articles"
+    notable_traits:
+      - "natural gas trading legend"
+      - "317% return 2006"
+      - "early retirement to philanthropy (38歳)"
+    market_relevance: "Energy専門Hedge Fundの代表"
+
+  - id: "068"
+    name: "Boaz Weinstein"
+    archetype: "Contrarian (Credit Arbitrage)"
+    nationality: "US"
+    primary_role: "Saba Capital Management founder"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Saba Capital公開campaign disclosures"
+      - "London Whale 2012 public commentary"
+      - "Closed-end fund activist 13D filings"
+    notable_traits:
+      - "credit derivatives expert"
+      - "London Whale opposite side"
+      - "closed-end fund activist hybrid"
+    market_relevance: "Credit+Hybrid Hedge Fund代表"
+
+  - id: "069"
+    name: "Crispin Odey"
+    archetype: "Contrarian (European Hedge Fund)"
+    nationality: "UK"
+    primary_role: "Odey Asset Management founder (former)"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "Odey Asset Management investor letters (selective leaks)"
+      - "FT/Bloomberg European hedge fund coverage"
+      - "Brexit short公開コメント 2016"
+      - "House of Commons related公開証言"
+    notable_traits:
+      - "European concentrated short bias"
+      - "Brexit/sterling short successful call"
+      - "extreme volatility年次returns"
+      - "Long/short equity contrarian"
+    market_relevance: "欧州Hedge Fund Contrarian代表"
+
+  - id: "070"
+    name: "Daniel Och"
+    archetype: "Trend Chaser (Multi-strategy)"
+    nationality: "US"
+    primary_role: "Sculptor Capital (former Och-Ziff) founder"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Sculptor Capital公開filings (旧Och-Ziff Capital Management)"
+      - "SEC settlement public records 2016"
+      - "Goldman Sachs alumni profile coverage"
+      - "Institutional Investor multi-strategy archives"
+    notable_traits:
+      - "multi-strategy at scale"
+      - "global event-driven"
+      - "Goldman Sachs origin"
+      - "early IPO of hedge fund manager 2007"
+    market_relevance: "Multi-strategy old guard代表"
+
+  # ============================================
+  # Distressed / Special Situations (8名)
+  # ============================================
+
+  - id: "071"
+    name: "Marc Lasry"
+    archetype: "Contrarian (Distressed Debt)"
+    nationality: "Morocco/US"
+    primary_role: "Avenue Capital Group co-founder"
+    decision_style: "distressed_value"
+    public_data_sources:
+      - "Avenue Capital投資letters (selective public)"
+      - "Bloomberg/CNBC TV appearances"
+      - "Milwaukee Bucks owner公開activity"
+    notable_traits:
+      - "distressed sovereign + corporate"
+      - "Asia + Europe distressed expansion"
+      - "long-cycle patient capital"
+    market_relevance: "Distressed Debt代表"
+
+  - id: "072"
+    name: "David Bonderman"
+    archetype: "Contrarian (PE Distressed)"
+    nationality: "US"
+    primary_role: "TPG co-founder"
+    decision_style: "distressed_value"
+    public_data_sources:
+      - "TPG IPO prospectus 2022"
+      - "American Savings/Continental Airlines distressed公開records"
+      - "Forbes/WSJ coverage"
+    notable_traits:
+      - "PE + distressed hybrid"
+      - "Continental Airlines legendary turnaround"
+      - "long career (40+ years)"
+    market_relevance: "PE Distressedの代表"
+
+  - id: "073"
+    name: "Wilbur Ross"
+    archetype: "Contrarian (Distressed Industrial)"
+    nationality: "US"
+    primary_role: "WL Ross & Co founder (former Commerce Secretary)"
+    decision_style: "distressed_value"
+    public_data_sources:
+      - "WL Ross公開distressed deals (Bethlehem Steel等)"
+      - "公開Senate confirmation hearings 2017"
+      - "Bankruptcy court public records"
+    notable_traits:
+      - "industrial distressed specialist"
+      - "steel/textile/coal turnarounds"
+      - "bankruptcy court expertise"
+    market_relevance: "Old Economy Distressed代表"
+
+  - id: "074"
+    name: "Leon Black"
+    archetype: "Contrarian (Distressed Credit)"
+    nationality: "US"
+    primary_role: "Apollo Global Management co-founder (former)"
+    decision_style: "distressed_value"
+    public_data_sources:
+      - "Apollo IPO prospectus & 10-K filings"
+      - "Drexel Burnham high yield legacy"
+      - "Forbes/Institutional Investor coverage"
+    notable_traits:
+      - "Drexel Burnham継承credit expertise"
+      - "private credit先駆"
+      - "complex capital structure plays"
+    market_relevance: "Distressed→Private Credit発展代表"
+
+  - id: "075"
+    name: "Jeffrey Aronson"
+    archetype: "Contrarian (Distressed Multi-strategy)"
+    nationality: "US"
+    primary_role: "Centerbridge Partners co-founder"
+    decision_style: "distressed_value"
+    public_data_sources:
+      - "Centerbridge Partners公開deal records"
+      - "US Bankruptcy court filings (Centerbridge participation)"
+      - "Institutional Investor profile articles"
+      - "PEI/Private Debt Investor coverage"
+    notable_traits:
+      - "distressed debt + private equity hybrid"
+      - "consumer/financial sector distressed"
+      - "control-oriented restructuring"
+      - "long-cycle workout patience"
+    market_relevance: "Distressed Hybrid代表"
+
+  - id: "076"
+    name: "Jonathan Lavine"
+    archetype: "Contrarian (Distressed Credit)"
+    nationality: "US"
+    primary_role: "Bain Capital Credit (formerly Sankaty Advisors) CIO"
+    decision_style: "distressed_value"
+    public_data_sources:
+      - "Bain Capital Credit公開fund prospectuses"
+      - "Sankaty Advisors historical performance coverage"
+      - "Institutional Investor / Private Debt Investor profiles"
+      - "Bain Capital annual letters"
+    notable_traits:
+      - "credit + distressed at scale within Bain Capital"
+      - "multi-asset credit structures"
+      - "long-cycle workout focus"
+      - "private + liquid credit hybrid"
+    market_relevance: "PE系列Distressed Creditの代表"
+
+  - id: "077"
+    name: "Bruce Karsh"
+    archetype: "Contrarian (Distressed Credit)"
+    nationality: "US"
+    primary_role: "Oaktree Capital co-founder / CIO"
+    decision_style: "distressed_value"
+    public_data_sources:
+      - "Oaktree Memos (Karsh authored selections)"
+      - "Oaktree investor day presentations"
+      - "SEC 13F filings (Oaktree)"
+    notable_traits:
+      - "distressed debt at scale"
+      - "Marks との co-leadership"
+      - "cycle-aware deployment"
+    market_relevance: "Oaktree Distressed実務派代表"
+
+  - id: "078"
+    name: "Michael Milken"
+    archetype: "Contrarian (High Yield Pioneer)"
+    nationality: "US (historical relevance)"
+    primary_role: "Drexel Burnham (former), Milken Institute"
+    decision_style: "distressed_value"
+    public_data_sources:
+      - "The Predators' Ball (Bruck 1988)"
+      - "Milken Institute publications"
+      - "Den of Thieves (Stewart 1991)"
+      - "Milken公開educational content"
+    notable_traits:
+      - "high yield bond market創出"
+      - "1980年代 LBO finance"
+      - "felony past後の rehabilitation典型"
+    market_relevance: "High Yield Bond market創設者 (公開情報十分)"
+
+  # ============================================
+  # 日本の著名投資家 (10名)
+  # ============================================
+
+  - id: "079"
+    name: "Yoshiaki Murakami (村上世彰)"
+    archetype: "Activist (Japanese Corporate Governance)"
+    nationality: "Japan"
+    primary_role: "Murakami Fund Group founder"
+    decision_style: "activist_pressure"
+    public_data_sources:
+      - "「生涯投資家」(村上世彰 2017)"
+      - "C&I Holdings公開activist letters"
+      - "金融商品取引法違反裁判公開判決文"
+      - "Bloomberg/日経インタビュー"
+    notable_traits:
+      - "日本企業ガバナンス改革要求"
+      - "東京スタイル/阪神電鉄事例"
+      - "PBR1倍割れ ROE改善要求"
+      - "高公開性"
+    market_relevance: "日本Activist投資家代表"
+
+  - id: "080"
+    name: "Testa (テスタ)"
+    archetype: "Trend Chaser (Day Trader)"
+    nationality: "Japan"
+    primary_role: "個人デイトレーダー"
+    decision_style: "anchor_trader"
+    public_data_sources:
+      - "「最強の投資家テスタ」関連書籍"
+      - "YouTube テスタチャンネル"
+      - "Twitter/X @tesuta001"
+      - "Bloomberg/東洋経済インタビュー"
+    notable_traits:
+      - "個人最大級トレーダー (累計100億円超)"
+      - "スキャルピング+短期"
+      - "リスク管理規律"
+      - "情報発信透明性"
+    market_relevance: "日本個人投資家の象徴"
+
+  - id: "081"
+    name: "BNF (小手川隆)"
+    archetype: "Anchor Trader (Day Trader)"
+    nationality: "Japan"
+    primary_role: "個人デイトレーダー"
+    decision_style: "anchor_trader"
+    public_data_sources:
+      - "「ジェイコム男」関連報道2005"
+      - "東洋経済/日経マネー特集"
+      - "公開インタビューarchives"
+    notable_traits:
+      - "ジェイコム誤発注事件20億円利益 (2005)"
+      - "短期テクニカル特化"
+      - "低公開性"
+    market_relevance: "日本デイトレ伝説的代表"
+
+  - id: "082"
+    name: "Cis (cis)"
+    archetype: "Trend Chaser (Day Trader)"
+    nationality: "Japan"
+    primary_role: "個人投資家"
+    decision_style: "anchor_trader"
+    public_data_sources:
+      - "「一人の力で日経平均を動かせる男の投資哲学」(cis 2018)"
+      - "Twitter/X @cissan_9984"
+      - "東洋経済オンライン特集"
+    notable_traits:
+      - "順張りスキャルピング"
+      - "上がってる株を買う原則"
+      - "極端なリスク許容"
+      - "200億円超累計"
+    market_relevance: "日本順張りトレーダー代表"
+
+  - id: "083"
+    name: "Wataru Murai (村井渉) / 片山晃 (五月)"
+    archetype: "Conviction Holder (Japanese Growth)"
+    nationality: "Japan"
+    primary_role: "個人投資家"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "「勝つ投資 負けない投資」(片山晃・小松原周 2015)"
+      - "東洋経済オンライン連載"
+      - "公開インタビュー"
+    notable_traits:
+      - "中小型Growth長期"
+      - "ファンダメンタル徹底分析"
+      - "65万円→25億円達成"
+    market_relevance: "日本長期Growth個人投資家代表"
+
+  - id: "084"
+    name: "Takashi Kotegawa (BNFと別) Hideto Fujino (藤野英人)"
+    archetype: "Conviction Holder (Japan Equity)"
+    nationality: "Japan"
+    primary_role: "レオス・キャピタルワークス CIO"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "「投資バカの思考法」(藤野英人 2015)"
+      - "ひふみ投信月次レポート"
+      - "YouTubeレオス公式チャンネル"
+      - "日経マネー連載"
+    notable_traits:
+      - "中小型成長株長期"
+      - "投資教育発信"
+      - "ひふみ投信運用責任者"
+    market_relevance: "日本機関投資家の代表"
+
+  - id: "085"
+    name: "Yoshihiko Shimizu (清水洋祐) / 清原達郎"
+    archetype: "Conviction Holder (Japan Value)"
+    nationality: "Japan"
+    primary_role: "タワー投資顧問 (元) / 個人投資家"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "「わが投資術 市場は誰に微笑むか」(清原達郎 2024)"
+      - "高額納税者公示 (1位経験)"
+      - "東洋経済/日経マネー特集"
+    notable_traits:
+      - "中小型割安+成長"
+      - "極端な集中投資"
+      - "個人で日本最高水準資産"
+    market_relevance: "日本Value+Growth代表"
+
+  - id: "086"
+    name: "Hiroyuki Akao (赤尾洋昭) / 渡部清二"
+    archetype: "Conviction Holder (Japan Growth)"
+    nationality: "Japan"
+    primary_role: "複眼経済塾 塾長"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "「会社四季報の達人が教える10倍株・100倍株の探し方」(渡部清二 2023)"
+      - "複眼経済塾YouTube"
+      - "東洋経済オンライン連載"
+    notable_traits:
+      - "会社四季報精読法"
+      - "10倍株発掘論"
+      - "教育発信"
+    market_relevance: "日本Growth個人投資家教育者代表"
+
+  - id: "087"
+    name: "Naomichi Yoshimoto (吉本佳生 別) 井村俊哉"
+    archetype: "Conviction Holder (Japan Small Cap)"
+    nationality: "Japan"
+    primary_role: "個人投資家"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "井村俊哉 YouTube channel"
+      - "Twitter/X @imutoshi13"
+      - "Voicy配信archives"
+    notable_traits:
+      - "小型割安成長株"
+      - "ファンダメンタル詳細分析"
+      - "投資判断公開発信"
+    market_relevance: "日本新世代個人投資家代表"
+
+  - id: "088"
+    name: "Yoshihiko Honda (本多静六)"
+    archetype: "Conviction Holder (Historical Japan)"
+    nationality: "Japan (historical)"
+    primary_role: "東京帝国大学農学博士 / 投資家 (historical)"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "「私の財産告白」(本多静六 1950)"
+      - "「人生計画の立て方」(本多静六 1952)"
+      - "東京大学経済学部archives"
+    notable_traits:
+      - "収入1/4貯蓄法"
+      - "山林投資長期保有"
+      - "明治-昭和投資家原型"
+    market_relevance: "日本Value投資の歴史的祖"
+
+  # ============================================
+  # 暗号資産・新興分野 (5名)
+  # ============================================
+
+  - id: "089"
+    name: "Michael Saylor"
+    archetype: "Conviction Holder (Bitcoin Maximalist)"
+    nationality: "US"
+    primary_role: "MicroStrategy Executive Chairman"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "MicroStrategy 10-K/10-Q filings"
+      - "Bitcoin Conference基調講演"
+      - "Twitter/X @saylor"
+      - "YouTube MicroStrategy Bitcoin for Corporations"
+    notable_traits:
+      - "企業財務BTC全振り (legendary)"
+      - "Energy理論ベースBTC評価"
+      - "BTC standard思想"
+      - "公的発信高密度"
+    market_relevance: "Crypto企業投資の象徴"
+
+  - id: "090"
+    name: "Brian Armstrong"
+    archetype: "Trend Chaser (Crypto Infrastructure)"
+    nationality: "US"
+    primary_role: "Coinbase CEO"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "Coinbase IPO prospectus 2021"
+      - "Coinbase Blog (Armstrong essays)"
+      - "Twitter/X @brian_armstrong"
+      - "SEC公開filings"
+    notable_traits:
+      - "regulated crypto exchange"
+      - "Web3 thesis"
+      - "long-term mission alignment"
+    market_relevance: "Crypto Infra企業代表"
+
+  - id: "091"
+    name: "Anthony Pompliano"
+    archetype: "Trend Chaser (Crypto/Macro Hybrid)"
+    nationality: "US"
+    primary_role: "Pomp Investments founder"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "The Pomp Letter (Substack)"
+      - "Twitter/X @APompliano"
+      - "Pomp Podcast YouTube archives"
+    notable_traits:
+      - "Bitcoin + macro narrative"
+      - "media-driven investing"
+      - "VC + crypto hybrid"
+    market_relevance: "Crypto/Macroメディア型代表"
+
+  - id: "092"
+    name: "Vitalik Buterin"
+    archetype: "Conviction Holder (Ethereum Founder)"
+    nationality: "Russia/Canada"
+    primary_role: "Ethereum co-founder"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "vitalik.eth.limo (personal blog)"
+      - "Ethereum Foundation publications"
+      - "Twitter/X @VitalikButerin"
+      - "Devcon keynotes"
+    notable_traits:
+      - "プロトコル設計思想家"
+      - "long-term protocol value thesis"
+      - "公開哲学+技術発信"
+    market_relevance: "Crypto Protocolネイティブ代表"
+
+  - id: "093"
+    name: "Changpeng Zhao (CZ)"
+    archetype: "Trend Chaser (Crypto Exchange)"
+    nationality: "Canada/China"
+    primary_role: "Binance founder (former CEO)"
+    decision_style: "growth_tech"
+    public_data_sources:
+      - "Binance Blog (CZ essays)"
+      - "Twitter/X @cz_binance"
+      - "DOJ settlement public records 2023"
+    notable_traits:
+      - "global exchange構築"
+      - "BNB ecosystem builder"
+      - "rapid execution culture"
+    market_relevance: "Crypto Exchange代表 (公開情報十分)"
+
+  # ============================================
+  # 学術出身投資家 (7名)
+  # ============================================
+
+  - id: "094"
+    name: "Myron Scholes"
+    archetype: "Anchor Trader (Academic Quant)"
+    nationality: "US/Canada"
+    primary_role: "Stanford Professor, LTCM co-founder (former)"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Black-Scholes-Merton 1973原論文"
+      - "Nobel Prize 1997 lecture"
+      - "When Genius Failed (Lowenstein 2000)"
+    notable_traits:
+      - "option pricing model共同開発"
+      - "LTCM教訓"
+      - "Academic→Practitioner典型"
+    market_relevance: "Quant理論+実践の象徴"
+
+  - id: "095"
+    name: "Robert Merton"
+    archetype: "Anchor Trader (Academic Quant)"
+    nationality: "US"
+    primary_role: "MIT/Harvard Professor, LTCM co-founder (former)"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Continuous-Time Finance (Merton 1990)"
+      - "Nobel Prize 1997 lecture"
+      - "MIT/HBS publications"
+    notable_traits:
+      - "continuous-time finance理論"
+      - "credit risk modeling"
+      - "academic→practitioner→academic"
+    market_relevance: "金融工学理論の象徴"
+
+  - id: "096"
+    name: "Eugene Fama"
+    archetype: "Anchor Trader (Efficient Markets)"
+    nationality: "US"
+    primary_role: "University of Chicago Professor, DFA advisor"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Efficient Capital Markets (Fama 1970)"
+      - "Fama-French 3-factor model 1992"
+      - "Nobel Prize 2013 lecture"
+      - "Chicago Booth podcast/interviews"
+    notable_traits:
+      - "効率市場仮説の父"
+      - "factor investing理論基盤"
+      - "DFA passive+factor"
+    market_relevance: "Passive/Factor投資の理論的祖"
+
+  - id: "097"
+    name: "Kenneth French"
+    archetype: "Anchor Trader (Factor Research)"
+    nationality: "US"
+    primary_role: "Dartmouth Professor, DFA advisor"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Fama-French共著論文series"
+      - "Ken French Data Library (Dartmouth公開)"
+      - "DFA conference talks"
+    notable_traits:
+      - "factor data公開pioneer"
+      - "size/value/momentum factor research"
+      - "academic data共有規範"
+    market_relevance: "Factor投資データ基盤代表"
+
+  - id: "098"
+    name: "Robert Shiller"
+    archetype: "Contrarian (Behavioral Macro)"
+    nationality: "US"
+    primary_role: "Yale Professor"
+    decision_style: "macro_systematic"
+    public_data_sources:
+      - "Irrational Exuberance (Shiller 2000)"
+      - "Narrative Economics (Shiller 2019)"
+      - "Nobel Prize 2013 lecture"
+      - "Shiller CAPE data (Yale公開)"
+    notable_traits:
+      - "CAPE比率提唱"
+      - "narrative economics framework"
+      - "behavioral finance理論派"
+    market_relevance: "Behavioral Macro理論代表"
+
+  - id: "099"
+    name: "Richard Thaler"
+    archetype: "Contrarian (Behavioral Finance)"
+    nationality: "US"
+    primary_role: "Chicago Booth Professor, Fuller & Thaler Asset Management"
+    decision_style: "long_term_value"
+    public_data_sources:
+      - "Misbehaving (Thaler 2015), Nudge (Thaler & Sunstein 2008)"
+      - "Nobel Prize 2017 lecture"
+      - "Fuller & Thaler公開fund prospectuses"
+    notable_traits:
+      - "behavioral finance founder"
+      - "overreaction/underreaction exploit"
+      - "Academic→Asset Management"
+    market_relevance: "Behavioral Finance実装代表"
+
+  - id: "100"
+    name: "Harry Markowitz"
+    archetype: "Anchor Trader (Portfolio Theory)"
+    nationality: "US (historical)"
+    primary_role: "UCSD Professor (historical), MPT pioneer"
+    decision_style: "quant_arbitrage"
+    public_data_sources:
+      - "Portfolio Selection (Markowitz 1952 Journal of Finance)"
+      - "Nobel Prize 1990 lecture"
+      - "UCSD academic archives"
+    notable_traits:
+      - "Modern Portfolio Theory创始"
+      - "mean-variance最適化"
+      - "全現代資産配分の基礎"
+    market_relevance: "Portfolio理論の祖、全Quants/Passiveの起点"
