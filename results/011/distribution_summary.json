@@ -1,0 +1,88 @@
+{
+  "config": {
+    "experiment": "Ep11: 10 年 vs 直近 1 年の SPY リターン分布シフト",
+    "symbol": "SPY",
+    "period_long": "10y",
+    "data_range_long": "2016-06-06 → 2026-06-05",
+    "data_range_recent": "2025-06-05 → 2026-06-05"
+  },
+  "distributions": {
+    "10_years": {
+      "label": "過去 10 年 (2017→2026)",
+      "n": 2514,
+      "mean_pct": 0.06341739377662525,
+      "std_pct": 1.129797114467868,
+      "skew": -0.3216130962187403,
+      "kurtosis": 14.992978401858965,
+      "min_pct": -10.942369351540593,
+      "max_pct": 10.50192812545172,
+      "p01_pct": -3.300582616502838,
+      "p05_pct": -1.6781158454531753,
+      "p50_pct": 0.07317657022027912,
+      "p95_pct": 1.5509399772380534,
+      "p99_pct": 2.6757511775464935,
+      "days_lt_minus2pct": 88,
+      "days_gt_plus2pct": 63,
+      "days_lt_minus5pct": 6,
+      "ratio_days_lt_minus2pct": 0.035003977724741446
+    },
+    "old_9_years": {
+      "label": "旧 9 年 (2017→2025)",
+      "n": 2262,
+      "mean_pct": 0.05934425079531756,
+      "std_pct": 1.1648027478634682,
+      "skew": -0.31368016837576224,
+      "kurtosis": 14.617454095813077,
+      "min_pct": -10.942369351540593,
+      "max_pct": 10.50192812545172,
+      "p01_pct": -3.347842050493045,
+      "p05_pct": -1.743983678138279,
+      "p50_pct": 0.06942191477024018,
+      "p95_pct": 1.5937117595073307,
+      "p99_pct": 2.7016758955240654,
+      "days_lt_minus2pct": 86,
+      "days_gt_plus2pct": 61,
+      "days_lt_minus5pct": 6,
+      "ratio_days_lt_minus2pct": 0.03801945181255526
+    },
+    "recent_1_year": {
+      "label": "直近 1 年 (2025→2026)",
+      "n": 252,
+      "mean_pct": 0.09997870101360136,
+      "std_pct": 0.7459759053235813,
+      "skew": -0.218726803374857,
+      "kurtosis": 1.5271264981382746,
+      "min_pct": -2.702782789908964,
+      "max_pct": 2.906792569891481,
+      "p01_pct": -1.7447245234385238,
+      "p05_pct": -1.2236288606289296,
+      "p50_pct": 0.14641820873607658,
+      "p95_pct": 1.1269506996500405,
+      "p99_pct": 1.735872388914337,
+      "days_lt_minus2pct": 2,
+      "days_gt_plus2pct": 2,
+      "days_lt_minus5pct": 0,
+      "ratio_days_lt_minus2pct": 0.007936507936507936
+    }
+  },
+  "normality_tests": {
+    "10_years": {
+      "label": "10年",
+      "jarque_bera_stat": 23488.982253168913,
+      "jarque_bera_p": 0.0,
+      "jarque_bera_reject_normality": true,
+      "shapiro_wilk_stat": 0.8673823855699543,
+      "shapiro_wilk_p": 7.26603913233183e-42,
+      "shapiro_wilk_reject_normality": true
+    },
+    "recent_1_year": {
+      "label": "直近1年",
+      "jarque_bera_stat": 24.77623033130765,
+      "jarque_bera_p": 4.1678294816860635e-06,
+      "jarque_bera_reject_normality": true,
+      "shapiro_wilk_stat": 0.9790850200173331,
+      "shapiro_wilk_p": 0.0009061078430422368,
+      "shapiro_wilk_reject_normality": true
+    }
+  }
+}
