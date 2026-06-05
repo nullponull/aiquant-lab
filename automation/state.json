@@ -88,7 +88,7 @@
     },
     {
       "number": 7,
-      "article_path": "articles/004_10strategies_open_lab.md",
+      "article_path": "articles/007_10strategies_open_lab.md",
       "x_promo_path": "promo/007_episode7_x.md",
       "scheduled_for": "2026-06-17T12:00:00+09:00",
       "type": "episode",
@@ -127,7 +127,7 @@
     },
     {
       "number": 10,
-      "article_path": "articles/010_100strategies_midterm.md",
+      "article_path": "articles/010_midterm_summary.md",
       "x_promo_path": "promo/010_episode10_x.md",
       "scheduled_for": "2026-07-08T12:00:00+09:00",
       "type": "episode",
@@ -205,7 +205,7 @@
     },
     {
       "number": 16,
-      "article_path": "articles/016_bangai_persona_strategy_hybrid.md",
+      "article_path": "articles/016_persona_strategy_hybrid.md",
       "x_promo_path": "promo/016_episode16_x.md",
       "scheduled_for": "2026-08-19T12:00:00+09:00",
       "type": "bangai",

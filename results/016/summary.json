@@ -1,0 +1,107 @@
+{
+  "config": {
+    "experiment": "Ep16: Persona × Strategy hybrid",
+    "n_personas": 2245,
+    "n_strategies": 10,
+    "n_combinations": 22450
+  },
+  "best_segments": [
+    {
+      "strategy": "Buy-and-Hold",
+      "best_segment": "low-long",
+      "best_pnl_pct": 6.006919650430928,
+      "worst_segment": "high-short",
+      "worst_pnl_pct": 5.403238474177548,
+      "spread": 0.6036811762533798
+    },
+    {
+      "strategy": "SMA-Cross-20-50",
+      "best_segment": "high-short",
+      "best_pnl_pct": 1.9161109180652443,
+      "worst_segment": "low-short",
+      "worst_pnl_pct": 1.8500991185334328,
+      "spread": 0.06601179953181147
+    },
+    {
+      "strategy": "RSI-Mean-Revert",
+      "best_segment": "low-long",
+      "best_pnl_pct": -2.8305563365722386,
+      "worst_segment": "high-short",
+      "worst_pnl_pct": -3.216764889715356,
+      "spread": 0.3862085531431174
+    },
+    {
+      "strategy": "MACD-Cross",
+      "best_segment": "high-short",
+      "best_pnl_pct": 1.4201379154665117,
+      "worst_segment": "low-long",
+      "worst_pnl_pct": 1.3095489289926323,
+      "spread": 0.11058898647387938
+    },
+    {
+      "strategy": "Momentum-20d",
+      "best_segment": "high-short",
+      "best_pnl_pct": 6.294019043291359,
+      "worst_segment": "low-long",
+      "worst_pnl_pct": 5.679409665919738,
+      "spread": 0.6146093773716217
+    },
+    {
+      "strategy": "Bollinger-Revert",
+      "best_segment": "low-short",
+      "best_pnl_pct": 0.0,
+      "worst_segment": "low-short",
+      "worst_pnl_pct": 0.0,
+      "spread": 0.0
+    },
+    {
+      "strategy": "Donchian-Breakout",
+      "best_segment": "low-long",
+      "best_pnl_pct": -0.8793770911788584,
+      "worst_segment": "high-short",
+      "worst_pnl_pct": -0.9915179438812992,
+      "spread": 0.11214085270244079
+    },
+    {
+      "strategy": "Volume-Spike",
+      "best_segment": "low-short",
+      "best_pnl_pct": 0.0,
+      "worst_segment": "low-short",
+      "worst_pnl_pct": 0.0,
+      "spread": 0.0
+    },
+    {
+      "strategy": "Z-Score-Revert",
+      "best_segment": "low-long",
+      "best_pnl_pct": -0.7181388149278074,
+      "worst_segment": "high-short",
+      "worst_pnl_pct": -0.8122683448954721,
+      "spread": 0.09412952996766466
+    },
+    {
+      "strategy": "Random-Control",
+      "best_segment": "low-long",
+      "best_pnl_pct": -1.429107726658556,
+      "worst_segment": "high-short",
+      "worst_pnl_pct": -1.6741934496582824,
+      "spread": 0.24508572299972653
+    }
+  ],
+  "overall_best": {
+    "strategy": "Momentum-20d",
+    "best_segment": "high-short",
+    "best_pnl_pct": 6.294019043291359,
+    "worst_segment": "low-long",
+    "worst_pnl_pct": 5.679409665919738,
+    "spread": 0.6146093773716217
+  },
+  "overall_worst": {
+    "strategy": "RSI-Mean-Revert",
+    "best_segment": "low-long",
+    "best_pnl_pct": -2.8305563365722386,
+    "worst_segment": "high-short",
+    "worst_pnl_pct": -3.216764889715356,
+    "spread": 0.3862085531431174
+  },
+  "avg_segment_spread_pct": 0.22324559984436415
+}

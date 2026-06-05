@@ -1,0 +1,28 @@
+{
+  "config": {
+    "experiment": "Ep12: Lorenz カオスシミュレーション",
+    "system": "Lorenz (sigma=10, rho=28, beta=8/3)",
+    "dt": 0.01,
+    "n_days": 252,
+    "initial_a": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "initial_b": [
+      1.00001,
+      1.00001,
+      1.00001
+    ],
+    "initial_diff_pct": 0.001
+  },
+  "results": {
+    "final_return_a_pct": -8.357508829142557,
+    "final_return_b_pct": -15.211307490965886,
+    "final_return_diff_pct": 7.478843682943066,
+    "first_10pct_diverge_day": 138,
+    "correlation_full": 0.14490247167467338,
+    "correlation_first_half": 0.17216873708007924,
+    "correlation_last_half": 0.12120416048707294
+  }
+}

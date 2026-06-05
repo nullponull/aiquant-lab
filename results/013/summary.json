@@ -1,0 +1,72 @@
+{
+  "config": {
+    "experiment": "Ep13: 自己言及性 — エージェント大量取引のフィードバック",
+    "n_steps": 500,
+    "impact_per_trade": 0.0001,
+    "fundamental_noise_std": 0.005,
+    "momentum_window": 20,
+    "seed": 42
+  },
+  "simulations": [
+    {
+      "n_agents": 0,
+      "corr_fund_price": 1.0,
+      "autocorr_lag1": 0.10021863969450365,
+      "final_divergence_pct": 0.0,
+      "price_final": 96.07070044555174,
+      "fundamental_final": 96.07070044555174,
+      "price_volatility_pct": 0.4799142251749745,
+      "fundamental_volatility_pct": 0.4799142251749745
+    },
+    {
+      "n_agents": 10,
+      "corr_fund_price": 0.9999989769665169,
+      "autocorr_lag1": 0.10121457205774184,
+      "final_divergence_pct": 0.0011098699508133906,
+      "price_final": 96.07176670538752,
+      "fundamental_final": 96.07070044555174,
+      "price_volatility_pct": 0.4799452734642724,
+      "fundamental_volatility_pct": 0.4799142251749745
+    },
+    {
+      "n_agents": 100,
+      "corr_fund_price": 0.999897580649449,
+      "autocorr_lag1": 0.1101580813775917,
+      "final_divergence_pct": 0.011465949506376912,
+      "price_final": 96.08171586355525,
+      "fundamental_final": 96.07070044555174,
+      "price_volatility_pct": 0.4802655893716668,
+      "fundamental_volatility_pct": 0.4799142251749745
+    },
+    {
+      "n_agents": 1000,
+      "corr_fund_price": 0.9895270158284186,
+      "autocorr_lag1": 0.1982925170671665,
+      "final_divergence_pct": 0.1608151670974933,
+      "price_final": 96.22519670300498,
+      "fundamental_final": 96.07070044555174,
+      "price_volatility_pct": 0.48750803125421627,
+      "fundamental_volatility_pct": 0.4799142251749745
+    },
+    {
+      "n_agents": 10000,
+      "corr_fund_price": NaN,
+      "autocorr_lag1": NaN,
+      "final_divergence_pct": NaN,
+      "price_final": NaN,
+      "fundamental_final": 96.07070044555174,
+      "price_volatility_pct": NaN,
+      "fundamental_volatility_pct": 0.4799142251749745
+    },
+    {
+      "n_agents": 100000,
+      "corr_fund_price": 0.034604700900931575,
+      "autocorr_lag1": 0.40424219389204274,
+      "final_divergence_pct": -1642.074161922789,
+      "price_final": -1481.481448749095,
+      "fundamental_final": 96.07070044555174,
+      "price_volatility_pct": 334.37939655039656,
+      "fundamental_volatility_pct": 0.4799142251749745
+    }
+  ]
+}

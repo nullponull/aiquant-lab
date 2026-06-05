@@ -1,0 +1,62 @@
+{
+  "config": {
+    "experiment": "Ep9: グッドハート — grid search 過剰最適化",
+    "symbol": "SPY",
+    "in_sample_period": "2025-12-12 → 2026-03-11",
+    "out_of_sample_period": "2026-03-12 → 2026-06-05"
+  },
+  "strategies": [
+    {
+      "strategy": "SMA-Cross",
+      "best_params": {
+        "fast": 10,
+        "slow": 50
+      },
+      "in_sample_return_pct": 2.388323714681917,
+      "out_of_sample_return_pct": 0.7838777061969227,
+      "difference_pct": -1.6044460084849943,
+      "overfit_severity": "moderate"
+    },
+    {
+      "strategy": "RSI-Mean-Revert",
+      "best_params": {
+        "period": 7,
+        "oversold": 30,
+        "overbought": 70
+      },
+      "in_sample_return_pct": 6.705817854675611,
+      "out_of_sample_return_pct": -7.344855684938834,
+      "difference_pct": -14.050673539614444,
+      "overfit_severity": "severe"
+    },
+    {
+      "strategy": "MACD-Cross",
+      "best_params": {
+        "fast": 12,
+        "slow": 20,
+        "signal_period": 7
+      },
+      "in_sample_return_pct": -3.9251625769409215,
+      "out_of_sample_return_pct": 3.8698339356118217,
+      "difference_pct": 7.794996512552743,
+      "overfit_severity": "no"
+    },
+    {
+      "strategy": "Bollinger-Revert",
+      "best_params": {
+        "period": 15,
+        "n_std": 1.5
+      },
+      "in_sample_return_pct": 3.7611209798114276,
+      "out_of_sample_return_pct": -7.009233509912971,
+      "difference_pct": -10.770354489724399,
+      "overfit_severity": "severe"
+    }
+  ],
+  "summary": {
+    "avg_in_sample_pct": 2.232524993057009,
+    "avg_out_of_sample_pct": -2.425094388260765,
+    "avg_gap_pct": -4.657619381317774,
+    "severe_overfit_count": 2
+  }
+}
