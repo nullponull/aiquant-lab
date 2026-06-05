@@ -78,7 +78,30 @@ class ClaudeCLIClient(LLMClient):
         except subprocess.TimeoutExpired:
             raise RuntimeError(f"Claude CLI timeout after {self.timeout}s")
 
+        # 規範的拒否 (Ep2 で発見) のハンドリング:
+        # Claude CLI が投資判断を拒否すると exit 1 + 短い stderr / 「範囲外」系メッセージを返す。
+        # これを RuntimeError でなく "ABSTAIN" 応答として記録する (Ep6 リベンジで全 agent 完走させるため)。
+        REFUSAL_MARKERS = (
+            "outside my scope", "investment advice", "financial advice",
+            "as a software engineering assistant", "cannot provide",
+            "I cannot", "I can't", "I'm unable", "not the right tool",
+            "範囲外", "投資助言", "投資判断", "対応できません", "お答えできません",
+        )
+
+        def _looks_like_refusal(s: str) -> bool:
+            if not s:
+                return False
+            low = s.lower()
+            return any(m.lower() in low for m in REFUSAL_MARKERS)
+
         if result.returncode != 0:
+            blob = (result.stdout or "") + "\n" + (result.stderr or "")
+            if _looks_like_refusal(blob) or len(blob.strip()) < 20:
+                # 拒否扱いで ABSTAIN を返す (実験継続)
+                return LLMResponse(
+                    text='{"action":"NEUTRAL","confidence":0,"reasoning":"refused"}',
+                    input_tokens=0, output_tokens=0, cost_usd=0.0,
+                )
             raise RuntimeError(
                 f"Claude CLI failed with code {result.returncode}: "
                 f"stderr={result.stderr[:500]}"
@@ -87,10 +110,23 @@ class ClaudeCLIClient(LLMClient):
         try:
             data = json.loads(result.stdout)
         except json.JSONDecodeError as e:
+            # JSON でない応答 = 拒否説教文の可能性
+            if _looks_like_refusal(result.stdout):
+                return LLMResponse(
+                    text='{"action":"NEUTRAL","confidence":0,"reasoning":"refused"}',
+                    input_tokens=0, output_tokens=0, cost_usd=0.0,
+                )
             raise RuntimeError(f"Claude CLI output is not valid JSON: {result.stdout[:500]}") from e
 
         if data.get("is_error"):
-            raise RuntimeError(f"Claude CLI returned error: {data.get('result', '')}")
+            # Claude CLI の構造化エラーレスポンス。拒否系なら ABSTAIN
+            err_text = str(data.get("result", ""))
+            if _looks_like_refusal(err_text):
+                return LLMResponse(
+                    text='{"action":"NEUTRAL","confidence":0,"reasoning":"refused"}',
+                    input_tokens=0, output_tokens=0, cost_usd=0.0,
+                )
+            raise RuntimeError(f"Claude CLI returned error: {err_text}")
 
         usage = data.get("usage", {})
         return LLMResponse(

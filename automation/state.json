@@ -1,5 +1,5 @@
 {
-  "last_published_episode": 1,
+  "last_published_episode": 4,
   "episodes": [
     {
       "number": 0,
@@ -41,10 +41,98 @@
       "scheduled_for": "2026-05-06T12:00:00+09:00",
       "type": "episode",
       "title": "【AIで投資の壁を越える #2】Claude に投資判断を聞いたら「ソフトウェアエンジニアリングの範囲外」と拒否された話",
+      "published": true,
+      "note_url": "https://note.com/ai_compass_media/n/n9d82c9ef7272",
+      "x_thread_id": null,
+      "published_at": "2026-05-06T10:19:20+09:00",
+      "x_thread_url": "https://x.com/nullpodesu (#2 告知 4ツイート 10:46投稿、自動投稿の重複は削除済み)",
+      "_note": "manual_publish_due_to_pre_existing_handcraft. 自動投稿(n4c028d0f7275)は削除済み。"
+    },
+    {
+      "number": 3,
+      "article_path": "articles/003_100strategies_open_lab.md",
+      "x_promo_path": null,
+      "scheduled_for": null,
+      "type": "episode",
+      "title": "【AIで投資の壁を越える #3】100万円×100戦略を6ヶ月並列稼働させて『グッドハートの壁』にぶつかりに行く",
+      "published": true,
+      "note_url": "https://note.com/ai_compass_media/n/n1fe0c4a31341",
+      "x_thread_id": null,
+      "x_thread_url": "https://x.com/nullpodesu (#3 告知 4ツイート)",
+      "published_at": "2026-05-06T10:46:45+09:00",
+      "_note": "manual_publish via /tmp/note_episode3.md"
+    },
+    {
+      "number": 4,
+      "article_path": "articles/004_refusal_safety_net.md",
+      "x_promo_path": "promo/004_episode4_x.md",
+      "scheduled_for": "2026-05-13T12:00:00+09:00",
+      "type": "episode",
+      "title": "【AIで投資の壁を越える #4】まじでやらかした。投稿botに違法サイトを引用させようとして Claude に説教された話",
+      "published": true,
+      "note_url": "https://note.com/notes/nd3367b1fe7a1/landing?puid=5aa707bb-eb87-4e7a-9fb6-5a12a6021106",
+      "x_thread_id": "2054396690640343471",
+      "published_at": "2026-05-13T12:05:20.436613+09:00"
+    },
+    {
+      "number": 6,
+      "article_path": "articles/006_real_llm_reveals_ep2_wrong.md",
+      "x_promo_path": "promo/006_episode6_x.md",
+      "scheduled_for": "2026-06-10T12:00:00+09:00",
+      "type": "episode",
+      "title": "【AIで投資の壁を越える #6】まじでやらかした。Ep2 の結論は Mock LLM が騙していた — 実 Claude で再検証したら Solo が倍の精度を出した話",
       "published": false,
       "note_url": null,
       "x_thread_id": null,
       "published_at": null
     }
-  ]
+  ],
+  "derivatives": [
+    {
+      "slot": "scam_decode_free",
+      "type": "free_derivative",
+      "title": "X で見かける『中国の天才クオンツが○倍』系投稿の見抜き方 — AIコンパス詐欺解剖",
+      "note_url": "https://note.com/ai_compass_media/n/nefed0e5582b3",
+      "x_thread_id": null,
+      "published": true,
+      "published_at": "2026-05-03T21:40:52+09:00",
+      "_note": "manual_publish, free article"
+    },
+    {
+      "slot": "sku5_paid_v1",
+      "type": "paid_derivative",
+      "title": "【AIで投資の壁を越える 詐欺解剖DB #1】100ツイート検証で見えた、AI投資詐欺の数学的構造",
+      "note_url": "https://note.com/ai_compass_media/n/n5a292ef6f2ba",
+      "x_thread_id": null,
+      "price": 4980,
+      "published": true,
+      "published_at": "2026-05-06T10:31:52+09:00",
+      "_note": "manual_publish, paid 4980yen"
+    },
+    {
+      "slot": "ai_sales_series_announcement",
+      "type": "free_announcement",
+      "title": "【新シリーズ】AI × 販売実験 — 6つのマーケットで「AIで作って売る」を検証する",
+      "note_url": "https://note.com/ai_compass_media/n/n79300c351721",
+      "x_thread_id": null,
+      "published": true,
+      "published_at": "2026-05-06T11:25:07+09:00",
+      "_note": "manual_publish, free announcement (sub-series)"
+    },
+    {
+      "slot": "kdp_paid_v1",
+      "type": "paid_derivative",
+      "title": "(予定) KDP 17冊 AI執筆書籍の実データ分析",
+      "note_url": null,
+      "price": 4980,
+      "published": false,
+      "_note": "future paid article, awaiting KDP cookie + dashboard data"
+    }
+  ],
+  "_meta": {
+    "schema_version": 2,
+    "last_modified": "2026-05-06T12:14:54.262015",
+    "modified_by": "manual_correction_2026-05-06",
+    "comment": "Episode#2 重複投稿修正、#3 + 派生3記事追記"
+  }
 }

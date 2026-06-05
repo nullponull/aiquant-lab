@@ -1,0 +1,47 @@
+{
+  "config": {
+    "client": "ClaudeCLIClient",
+    "n_events": 30,
+    "symbol": "SPY",
+    "timestamp": "2026-06-05",
+    "_note": "Debate-3x2 で stderr 空の RuntimeError でクラッシュ、Debate-10/Evaluator は未実行"
+  },
+  "summaries": [
+    {
+      "agent": "Baseline-Momentum",
+      "directional_accuracy": 64.3,
+      "cumulative_return_pct": 48.94,
+      "total_tokens": 0.0,
+      "estimated_cost_usd": 0.0,
+      "cost_per_correct": 0.0
+    },
+    {
+      "agent": "Solo",
+      "directional_accuracy": 63.6,
+      "cumulative_return_pct": 14.66,
+      "total_tokens": 1507730.0,
+      "estimated_cost_usd": 3317.006,
+      "cost_per_correct": 473.858
+    },
+    {
+      "agent": "Debate-3",
+      "directional_accuracy": 64.3,
+      "cumulative_return_pct": 16.01,
+      "total_tokens": 4522125.0,
+      "estimated_cost_usd": 9948.675,
+      "cost_per_correct": 1105.40833
+    },
+    {
+      "agent": "Debate-5",
+      "directional_accuracy": 57.1,
+      "cumulative_return_pct": 36.28,
+      "total_tokens": 7534669.0,
+      "estimated_cost_usd": 16576.2718,
+      "cost_per_correct": 2072.03398
+    },
+    {
+      "agent": "Debate-3x2",
+      "crashed": true
+    }
+  ]
+}

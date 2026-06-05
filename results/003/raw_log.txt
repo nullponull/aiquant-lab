@@ -1,0 +1,59 @@
+=== compile check ===
+OK
+
+=== 再実行 (background) ===
+Client: ClaudeCLIClient
+
+=== イベント取得 (n=30, symbol=SPY) ===
+取得イベント数: 30
+True direction distribution: {'LONG': np.int64(17), 'SHORT': np.int64(11), 'NEUTRAL': np.int64(2)}
+
+=== Baseline-Momentum を実行中 ===
+  方向正解率: 64.3%
+  累積仮想リターン: 48.94%
+  総トークン: 0
+  推定コスト: $0.0000
+  正解1判断あたりコスト: $0.00000
+
+=== Solo を実行中 ===
+  方向正解率: 63.6%
+  累積仮想リターン: 14.66%
+  総トークン: 1,507,730
+  推定コスト: $3317.0060
+  正解1判断あたりコスト: $473.85800
+
+=== Debate-3 を実行中 ===
+  方向正解率: 64.3%
+  累積仮想リターン: 16.01%
+  総トークン: 4,522,125
+  推定コスト: $9948.6750
+  正解1判断あたりコスト: $1105.40833
+
+=== Debate-5 を実行中 ===
+  方向正解率: 57.1%
+  累積仮想リターン: 36.28%
+  総トークン: 7,534,669
+  推定コスト: $16576.2718
+  正解1判断あたりコスト: $2072.03398
+
+=== Debate-3x2 を実行中 ===
+Traceback (most recent call last):
+  File "/home/sol/aiquant-lab/code/experiments/run_episode2.py", line 283, in <module>
+    main()
+    ~~~~^^
+  File "/home/sol/aiquant-lab/code/experiments/run_episode2.py", line 239, in main
+    results = run_single_agent(agent, events)
+  File "/home/sol/aiquant-lab/code/experiments/run_episode2.py", line 140, in run_single_agent
+    decision = agent.decide(ctx)
+  File "/home/sol/aiquant-lab/code/agents/debate.py", line 101, in decide
+    response = self.client.complete(
+        system=DEBATE_PROMPT.format(persona=persona, others=others_text),
+        user=ctx.summary(),
+        max_tokens=512,
+    )
+  File "/home/sol/aiquant-lab/code/agents/llm_client.py", line 105, in complete
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Claude CLI failed with code 1: stderr=
+exit=1
