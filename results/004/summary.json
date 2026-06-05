@@ -1,0 +1,135 @@
+{
+  "config": {
+    "experiment": "Ep7: 10 戦略 30 日並列バックテスト",
+    "symbol": "SPY",
+    "initial_capital_jpy": 1000000,
+    "commission": 0.0005
+  },
+  "strategies": [
+    {
+      "name": "Buy-and-Hold",
+      "n_days": 30,
+      "n_trades": 1,
+      "total_return": 0.06812672694480737,
+      "annualized_return": 0.7395277879663076,
+      "sharpe": 6.125260103787227,
+      "max_drawdown": -0.019300430077719755,
+      "win_rate": 0.6551724137931034,
+      "final_equity_jpy": 1068126,
+      "survival": "alive"
+    },
+    {
+      "name": "SMA-Cross-20-50",
+      "n_days": 30,
+      "n_trades": 1,
+      "total_return": 0.02085967089079288,
+      "annualized_return": 0.18936402344182013,
+      "sharpe": 4.7167947048076675,
+      "max_drawdown": -0.007017150543660922,
+      "win_rate": 0.8,
+      "final_equity_jpy": 1020859,
+      "survival": "alive"
+    },
+    {
+      "name": "RSI-Mean-Revert",
+      "n_days": 30,
+      "n_trades": 12,
+      "total_return": -0.03564984535928195,
+      "annualized_return": -0.26282272716601995,
+      "sharpe": -3.549222090369477,
+      "max_drawdown": -0.04725580811727437,
+      "win_rate": 0.45,
+      "final_equity_jpy": 964350,
+      "survival": "wounded"
+    },
+    {
+      "name": "MACD-Cross",
+      "n_days": 30,
+      "n_trades": 2,
+      "total_return": 0.015391548657105236,
+      "annualized_return": 0.13689870691601969,
+      "sharpe": 1.370128714331056,
+      "max_drawdown": -0.04111767937669819,
+      "win_rate": 0.4482758620689655,
+      "final_equity_jpy": 1015391,
+      "survival": "alive"
+    },
+    {
+      "name": "Momentum-20d",
+      "n_days": 30,
+      "n_trades": 1,
+      "total_return": 0.06812672694480737,
+      "annualized_return": 0.7395277879663076,
+      "sharpe": 6.125260103787227,
+      "max_drawdown": -0.019300430077719755,
+      "win_rate": 0.6551724137931034,
+      "final_equity_jpy": 1068126,
+      "survival": "alive"
+    },
+    {
+      "name": "Bollinger-Revert",
+      "n_days": 30,
+      "n_trades": 0,
+      "total_return": 0.0,
+      "annualized_return": 0.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "win_rate": null,
+      "final_equity_jpy": 1000000,
+      "survival": "alive"
+    },
+    {
+      "name": "Donchian-Breakout",
+      "n_days": 30,
+      "n_trades": 14,
+      "total_return": -0.011152935734489056,
+      "annualized_return": -0.08990929340925058,
+      "sharpe": -1.911615583870619,
+      "max_drawdown": -0.017842274392366964,
+      "win_rate": 0.5384615384615384,
+      "final_equity_jpy": 988847,
+      "survival": "wounded"
+    },
+    {
+      "name": "Volume-Spike",
+      "n_days": 30,
+      "n_trades": 0,
+      "total_return": 0.0,
+      "annualized_return": 0.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "win_rate": null,
+      "final_equity_jpy": 1000000,
+      "survival": "alive"
+    },
+    {
+      "name": "Z-Score-Revert",
+      "n_days": 30,
+      "n_trades": 4,
+      "total_return": -0.00911980310242988,
+      "annualized_return": -0.07407107477082042,
+      "sharpe": -1.3009539073650582,
+      "max_drawdown": -0.022339563750714886,
+      "win_rate": 0.36363636363636365,
+      "final_equity_jpy": 990880,
+      "survival": "wounded"
+    },
+    {
+      "name": "Random-Control",
+      "n_days": 30,
+      "n_trades": 18,
+      "total_return": -0.021124612905707885,
+      "annualized_return": -0.1641848609512192,
+      "sharpe": -2.41948367972166,
+      "max_drawdown": -0.029841096368953934,
+      "win_rate": 0.47058823529411764,
+      "final_equity_jpy": 978875,
+      "survival": "wounded"
+    }
+  ],
+  "summary": {
+    "alive": 6,
+    "wounded": 4,
+    "dead": 0
+  }
+}
