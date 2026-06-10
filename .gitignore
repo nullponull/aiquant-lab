@@ -74,3 +74,4 @@ logs/
 *.anthropic
 api_keys.txt
 secrets.txt
+.venv312/

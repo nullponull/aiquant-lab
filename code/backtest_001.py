@@ -6,6 +6,12 @@
 - 30%: 中期成長株（SPYを母集団とし、トレーリング8%損切/20%利確）
 
 期待値計算の検証も同時に実施。
+
+v2 での修正 (注意: 記事 #1 公開時の results/001 は旧コードで生成):
+- TP/SL 約定後の再エントリーを「同一バー・同一価格」→「翌営業日」に修正
+- 売買手数料 (片道 0.05%) を控除するように修正
+いずれも旧実装は楽観側に歪んでいたため、修正後の戦略成績は同等かやや悪化する。
+記事の結論 (戦略 ≈ SPY、優位性なし) は強まる方向。
 """
 
 import yfinance as yf
@@ -17,6 +23,9 @@ from pathlib import Path
 
 RESULTS_DIR = Path(__file__).parent.parent / "results" / "001"
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
+# 片道手数料率 (v2 で追加。旧実装はコストゼロだった)
+COMMISSION = 0.0005
 
 
 def fetch_data(start="2014-01-01", end="2024-12-31"):
@@ -40,8 +49,8 @@ def simulate_strategy(prices: pd.DataFrame, initial_capital=1_000_000):
     div_alloc = cap * 0.70
     growth_alloc = cap * 0.30
 
-    # 配当貴族部分: NOBLバイアンドホールド
-    nobl_units = div_alloc / prices["NOBL"].iloc[0]
+    # 配当貴族部分: NOBLバイアンドホールド (購入時手数料を控除)
+    nobl_units = div_alloc * (1 - COMMISSION) / prices["NOBL"].iloc[0]
 
     # 中期成長部分: ルールベース取引
     growth_cash = growth_alloc
@@ -54,22 +63,25 @@ def simulate_strategy(prices: pd.DataFrame, initial_capital=1_000_000):
 
         # 中期成長部分のロジック
         if growth_position is None:
-            # 新規エントリー
+            # 新規エントリー (手数料控除)
             entry_price = row["QQQ"]
-            units = growth_cash / entry_price
+            invested = growth_cash * (1 - COMMISSION)
+            units = invested / entry_price
             growth_position = {
                 "entry_price": entry_price,
                 "units": units,
                 "entry_date": date,
             }
-            growth_value = growth_cash
+            growth_value = invested
         else:
             current_price = row["QQQ"]
             ret = (current_price - growth_position["entry_price"]) / growth_position["entry_price"]
 
             if ret <= -0.08 or ret >= 0.20:
-                # 損切り or 利確
-                exit_value = growth_position["units"] * current_price
+                # 損切り or 利確 (売却手数料控除)。
+                # v2: 旧実装は同一バー・同一価格で即再エントリーしていたが、
+                # 現実には約定確認後の発注になるため再エントリーは翌営業日とする。
+                exit_value = growth_position["units"] * current_price * (1 - COMMISSION)
                 growth_trades.append({
                     "entry_date": str(growth_position["entry_date"].date()),
                     "exit_date": str(date.date()),
@@ -79,14 +91,7 @@ def simulate_strategy(prices: pd.DataFrame, initial_capital=1_000_000):
                     "result": "TP" if ret >= 0.20 else "SL",
                 })
                 growth_cash = exit_value
-                # 翌日エントリー（同日にも再エントリーする簡略実装）
-                new_entry = current_price
-                units = growth_cash / new_entry
-                growth_position = {
-                    "entry_price": new_entry,
-                    "units": units,
-                    "entry_date": date,
-                }
+                growth_position = None  # 翌営業日に再エントリー
                 growth_value = growth_cash
             else:
                 growth_value = growth_position["units"] * current_price
