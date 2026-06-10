@@ -59,7 +59,7 @@ AI で市場予測ができないと言われる理由は、6 つの壁に整理
 | **変動の大きさ** (ボラティリティ) | ボラクラスタリング（最も確立した予測可能性） | `code/forecast/volatility.py` (EWMA / HAR-RV, QLIKE 評価) | ✅ 実装済 |
 | **レジーム** (静穏/荒れ) | レジームの持続性（高い対角遷移確率） | `code/forecast/regime.py` (2 状態 HMM) | ✅ 実装済 |
 | **相対的な強弱** (クロスセクション) | 横断ランキングはノイズが平均化され検出力が高い | `code/crosssect/ranking.py` (Rank IC + NW t 値) | ✅ 実装済 |
-| **自分のモデルの信頼度** (キャリブレーション) | 確率予測の較正は検証可能 | Brier / log loss（今後） | 📅 予定 |
+| **確率分布そのもの** (較正) | PIT・カバレッジ・対数スコアで検証可能 | `code/forecast/distribution.py` (Student-t+EWMA) | ✅ 実装済 |
 
 ### フェーズ構成
 
@@ -107,7 +107,7 @@ git clone https://github.com/nullponull/aiquant-lab
 cd aiquant-lab
 uv sync
 
-# テスト実行（ルックアヘッド検証含む 26 件）
+# テスト実行（ルックアヘッド検証・較正検証含む 31 件）
 uv run pytest tests/ -v
 
 # Phase 2-3 パイプライン（実データ、約 5-10 分）
@@ -155,37 +155,40 @@ uv run python code/experiments/run_episode2.py --mock --n-events 30
 
 ## ディレクトリ構造
 
+このリポジトリは 3 つの領域に分かれています。**研究 (ルート直下)** が本体で、**media/** は連載の運用、**ventures/** は派生プロジェクトです。
+
 ```
 aiquant-lab/
-├── articles/          # note 記事の本文（連載各回）
+│ ── 研究 (本体) ──
 ├── code/
 │   ├── strategies/    # バックテストエンジン v2 + 戦略集
-│   │   ├── base.py            # 約定モデル/コスト/トレード統計/データ取得
-│   │   └── strategies.py      # 10 戦略レジストリ
-│   ├── stats/         # 統計的有意性検定
-│   │   └── significance.py    # 二項検定 / PSR / DSR / Reality Check
-│   ├── validation/    # Phase 2: 検証方法論
-│   │   └── walkforward.py     # walk-forward + purge/embargo
-│   ├── forecast/      # Phase 3a/3b: 予測可能な対象
-│   │   ├── volatility.py      # EWMA / HAR-RV + QLIKE 評価
-│   │   └── regime.py          # 2 状態ガウシアン HMM (自前 EM)
-│   ├── crosssect/     # Phase 3c: クロスセクション
-│   │   └── ranking.py         # Rank IC + Newey-West t 値
-│   ├── paper/         # Phase 4: ペーパートレーディング
-│   │   ├── paper_trader.py    # 状態管理/コスト/キルスイッチ
-│   │   └── run_daily.py       # レジーム×ボラターゲ方針 (日次 cron)
+│   ├── stats/         # 二項検定 / PSR / DSR / Reality Check
+│   ├── validation/    # walk-forward + purge/embargo (Phase 2)
+│   ├── forecast/      # ボラ予測 / レジームHMM / 分布予測+較正 (Phase 3)
+│   ├── crosssect/     # Rank IC + Newey-West (Phase 3c)
+│   ├── paper/         # ペーパートレーディング (Phase 4)
 │   ├── agents/        # LLM エージェント実装
-│   ├── experiments/   # 各エピソード実験 + パイプライン
-│   │   ├── run_phase234_pipeline.py   # 週次 cron で実データ評価
-│   │   └── run_significance_audit.py  # 既存結果の有意性監査
-│   └── backtest_001.py
-├── tests/             # pytest (ルックアヘッド検証含む 26 件)
+│   └── experiments/   # 各エピソード実験 + 週次パイプライン
+├── tests/             # pytest 31 件 (ルックアヘッド/較正/検出力の保証)
+├── results/           # 検証結果 + 自動レポート
+├── data/cache/        # 価格データのスナップショット (再現性)
 ├── .github/workflows/ # CI / 週次パイプライン / 日次ペーパー運用
-├── results/           # 検証結果（JSON, CSV, 自動レポート）
-├── data/cache/        # 価格データのスナップショット（再現性）
-├── promo/  docs/  legal/
-├── pyproject.toml
-└── README.md
+│
+│ ── 記事運用 ──
+├── media/
+│   ├── articles/      # note 記事本文
+│   ├── promo/         # X 投稿
+│   ├── docs/          # メディア戦略・運用ガイド
+│   ├── automation/    # 配信自動化 (publish_episode.py, systemd units)
+│   └── POSTING_STRATEGY.md
+│
+│ ── 派生プロジェクト ──
+├── ventures/
+│   ├── research_monitor/  # AI情報収集・主張検証 (旧 automation/research)
+│   ├── patent_mine/       # 特許マイニング
+│   └── persona100/        # ペルソナ生成
+│
+├── docs/  legal/  pyproject.toml  README.md
 ```
 
 ---
@@ -202,7 +205,7 @@ aiquant-lab/
 
 **結論**: 凝った戦略を組んでも SPY 放置と差はほぼゼロ。3 週間で +4% 以上のリターンが起きる確率は 13.2%（ノイズの範囲）。
 
-詳細: [articles/001_3weeks_4percent_backtest_note.md](articles/001_3weeks_4percent_backtest_note.md)
+詳細: [media/articles/001_3weeks_4percent_backtest_note.md](media/articles/001_3weeks_4percent_backtest_note.md)
 
 ---
 
@@ -214,7 +217,7 @@ LLM 議論型エージェントを実装で検証しようとして、**予想�
 
 これを「**規範的拒否（第 7 の壁）**」として連載に追加。技術的な壁ではなく、社会的・規範的な壁。
 
-詳細: [articles/002_llm_debate_vs_evaluator.md](articles/002_llm_debate_vs_evaluator.md)
+詳細: [media/articles/002_llm_debate_vs_evaluator.md](media/articles/002_llm_debate_vs_evaluator.md)
 
 再現コード: [code/experiments/demonstrate_claude_cli_wall.py](code/experiments/demonstrate_claude_cli_wall.py)
 

@@ -139,6 +139,36 @@ def phase3c_cross_section(lines: list[str]) -> None:
     lines.append("")
 
 
+def phase3d_distribution(df: pd.DataFrame, lines: list[str]) -> None:
+    from forecast.distribution import evaluate_calibration
+    lines.append("## Phase 3d: 分布予測の較正 — 「予測可能な形」の判定")
+    lines.append("")
+    ret = df["close"].pct_change()
+    res = evaluate_calibration(ret, min_train=252)
+    m, b = res["model"], res["baseline_const_gaussian"]
+    lines.append("| 指標 | t+EWMA 分布予測 | 定数分散ガウシアン |")
+    lines.append("|---|---|---|")
+    lines.append(f"| PIT KS p値 (>0.05で較正合格) | **{m['ks_pvalue']:.3f}** | {b['ks_pvalue']:.3f} |")
+    lines.append(f"| 95%区間カバレッジ (名目0.95) | {m['coverage']['95%']:.3f} | {b['coverage']['95%']:.3f} |")
+    lines.append(f"| 99%区間カバレッジ (名目0.99) | {m['coverage']['99%']:.3f} | {b['coverage']['99%']:.3f} |")
+    lines.append(f"| 平均対数スコア (高いほど良い) | {m['mean_log_score']:.3f} | {b['mean_log_score']:.3f} |")
+    lines.append("")
+    lines.append(f"- 方向確率の Brier: {res['direction_brier']:.4f} "
+                 f"(コイン投げ {res['direction_brier_coin']:.4f}) → "
+                 f"{'方向に予測力あり' if res['direction_predictable'] else '方向は予測できない (想定通り)'}")
+    lines.append(f"- 推定自由度 ν={m['fitted_df_last']:.1f} (小さいほどファットテール)")
+    lines.append("")
+    if m["calibrated_5pct"]:
+        lines.append("→ **判定: 分布の意味で予測可能。** 明日のリターンの確率分布"
+                     " (幅と尾) は検定に合格する精度で予測できている。"
+                     "一方で方向 (平均) は予測できない。これがこのプロジェクトの"
+                     "言う「予測可能な形」の現在地。")
+    else:
+        lines.append("→ 判定: この期間では較正不合格。モデル改善 (レジーム条件付き"
+                     "スケール等) が必要。")
+    lines.append("")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--skip-universe", action="store_true")
@@ -153,6 +183,7 @@ def main() -> int:
     phase2_walkforward(df, lines)
     phase3a_volatility(df, lines)
     phase3b_regime(df, lines)
+    phase3d_distribution(df, lines)
     if not args.skip_universe:
         try:
             phase3c_cross_section(lines)
