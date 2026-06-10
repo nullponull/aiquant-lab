@@ -1,0 +1,37 @@
+name: Paper Trading (daily)
+
+# Phase 4: レジーム×ボラターゲティング方針の模擬運用。
+# 実発注は行わない。状態 (results/paper/state.json) を毎営業日更新する。
+
+on:
+  schedule:
+    - cron: "30 14 * * 1-5"   # 平日 14:30 UTC = 米国市場オープン直後
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Run daily paper trading
+        run: uv run python code/paper/run_daily.py
+
+      - name: Commit state
+        run: |
+          git config user.name "paper-bot"
+          git config user.email "actions@github.com"
+          git add results/paper/ data/cache/ || true
+          git diff --cached --quiet || git commit -m "paper: daily update $(date -u +%F)"
+          git push

@@ -48,6 +48,38 @@ AI で市場予測ができないと言われる理由は、6 つの壁に整理
 
 ---
 
+## 研究フレームワーク: 「予測可能」の再定義
+
+このプロジェクトの到達目標は「市場を予測可能な形にする」ことです。ただし**「明日の方向を当てる」という意味での予測は目標にしません** ── それが不可能に近いことは、本リポジトリの有意性監査が定量的に示しています（10 戦略の最良でも Reality Check p=1.0、方向精度 63% は p=0.20 でコイン投げと区別不能）。
+
+代わりに、実証的に攻められる「予測可能性」を 4 つに分解し、それぞれを実装・検証します：
+
+| 予測対象 | 根拠 | 実装 | 状態 |
+|---|---|---|---|
+| **変動の大きさ** (ボラティリティ) | ボラクラスタリング（最も確立した予測可能性） | `code/forecast/volatility.py` (EWMA / HAR-RV, QLIKE 評価) | ✅ 実装済 |
+| **レジーム** (静穏/荒れ) | レジームの持続性（高い対角遷移確率） | `code/forecast/regime.py` (2 状態 HMM) | ✅ 実装済 |
+| **相対的な強弱** (クロスセクション) | 横断ランキングはノイズが平均化され検出力が高い | `code/crosssect/ranking.py` (Rank IC + NW t 値) | ✅ 実装済 |
+| **自分のモデルの信頼度** (キャリブレーション) | 確率予測の較正は検証可能 | Brier / log loss（今後） | 📅 予定 |
+
+### フェーズ構成
+
+| フェーズ | 内容 | 状態 |
+|---|---|---|
+| 1. 基盤 | 約定モデル修正・コスト・テスト・CI・データスナップショット | ✅ 完了 |
+| 2. 方法論 | walk-forward + purge、DSR / Reality Check の標準装備 | ✅ 完了 |
+| 3. 予測対象の転換 | ボラ予測・レジーム検出・Rank IC（実データ評価は週次 CI で自動実行） | 🔄 運用開始 |
+| 4. 模擬運用 | レジーム×ボラターゲティング方針のペーパートレード（日次 CI、キルスイッチ付き） | 🔄 運用開始 |
+
+すべての主張は統計的検定（多重検定補正込み）を通すこと、すべての数値は再現可能であること、を原則とします。
+
+### 自動実行
+
+- **週次** (`research_pipeline.yml`): SPY 10 年の walk-forward、ボラ予測評価、レジーム推定、40 銘柄 Rank IC を実行し `results/phase23/` にレポートをコミット
+- **日次** (`paper_trading.yml`): `weight(SPY) = P(静穏) × min(1, 目標ボラ/予測ボラ)` のペーパー運用。方向予測を一切使わず、検証済みの予測可能性のみで運用するのがポイント。状態は `results/paper/state.json`
+- 実発注は行いません（投資助言・運用業の論点を避け、自己研究に限定）
+
+---
+
 ## 連載スケジュール
 
 | 回 | タイトル | 検証する壁 | ステータス |
@@ -74,6 +106,15 @@ AI で市場予測ができないと言われる理由は、6 つの壁に整理
 git clone https://github.com/nullponull/aiquant-lab
 cd aiquant-lab
 uv sync
+
+# テスト実行（ルックアヘッド検証含む 26 件）
+uv run pytest tests/ -v
+
+# Phase 2-3 パイプライン（実データ、約 5-10 分）
+uv run python code/experiments/run_phase234_pipeline.py
+
+# 既存結果の有意性監査
+uv run python code/experiments/run_significance_audit.py
 ```
 
 ### 第 1 回の実験を再現する
@@ -84,7 +125,7 @@ uv sync
 uv run python code/backtest_001.py
 ```
 
-期待される結果：
+期待される結果（旧エンジン時点の公開値。現行エンジンは翌営業日再エントリー＋手数料控除のため、やや保守的な値になります）：
 - ツイート戦略（70/30）: CAGR 13.29%
 - SPY バイアンドホールド: CAGR 13.20%
 - 差: 0.09%（誤差レベル）
@@ -116,27 +157,33 @@ uv run python code/experiments/run_episode2.py --mock --n-events 30
 
 ```
 aiquant-lab/
-├── articles/         # note 記事の本文（連載各回）
-│   ├── 000_manifesto.md
-│   ├── 001_3weeks_4percent_backtest_note.md
-│   └── 002_llm_debate_vs_evaluator.md
+├── articles/          # note 記事の本文（連載各回）
 ├── code/
-│   ├── agents/       # LLM エージェント実装
-│   │   ├── base.py
-│   │   ├── llm_client.py    # Anthropic API + Claude CLI + Mock
-│   │   ├── solo.py
-│   │   ├── debate.py
-│   │   ├── evaluator.py
-│   │   └── baseline.py
-│   ├── experiments/
-│   │   ├── run_episode2.py
-│   │   └── demonstrate_claude_cli_wall.py
+│   ├── strategies/    # バックテストエンジン v2 + 戦略集
+│   │   ├── base.py            # 約定モデル/コスト/トレード統計/データ取得
+│   │   └── strategies.py      # 10 戦略レジストリ
+│   ├── stats/         # 統計的有意性検定
+│   │   └── significance.py    # 二項検定 / PSR / DSR / Reality Check
+│   ├── validation/    # Phase 2: 検証方法論
+│   │   └── walkforward.py     # walk-forward + purge/embargo
+│   ├── forecast/      # Phase 3a/3b: 予測可能な対象
+│   │   ├── volatility.py      # EWMA / HAR-RV + QLIKE 評価
+│   │   └── regime.py          # 2 状態ガウシアン HMM (自前 EM)
+│   ├── crosssect/     # Phase 3c: クロスセクション
+│   │   └── ranking.py         # Rank IC + Newey-West t 値
+│   ├── paper/         # Phase 4: ペーパートレーディング
+│   │   ├── paper_trader.py    # 状態管理/コスト/キルスイッチ
+│   │   └── run_daily.py       # レジーム×ボラターゲ方針 (日次 cron)
+│   ├── agents/        # LLM エージェント実装
+│   ├── experiments/   # 各エピソード実験 + パイプライン
+│   │   ├── run_phase234_pipeline.py   # 週次 cron で実データ評価
+│   │   └── run_significance_audit.py  # 既存結果の有意性監査
 │   └── backtest_001.py
-├── promo/            # X 投稿テンプレ集
-├── docs/             # 設計ドキュメント
-├── legal/            # 免責事項テンプレ
-├── results/          # 検証結果（JSON, CSV）
-├── POSTING_STRATEGY.md
+├── tests/             # pytest (ルックアヘッド検証含む 26 件)
+├── .github/workflows/ # CI / 週次パイプライン / 日次ペーパー運用
+├── results/           # 検証結果（JSON, CSV, 自動レポート）
+├── data/cache/        # 価格データのスナップショット（再現性）
+├── promo/  docs/  legal/
 ├── pyproject.toml
 └── README.md
 ```
