@@ -18,7 +18,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO_ROOT / 'code'))
 
 import pandas as pd
-from strategies.base import backtest, fetch_spy_data, save_results, COMMISSION
+from strategies.base import backtest, equity_curve, fetch_spy_data, save_results, COMMISSION, MIN_DAYS_FOR_ANNUALIZATION
 from strategies.strategies import STRATEGIES
 
 
@@ -61,16 +61,11 @@ def main() -> int:
         evaluation_index = df30.index
         signals = signals_full.reindex(evaluation_index).fillna(0)
 
-        result = backtest(name, df30, signals)
+        result = backtest(name, df30, signals, execution='next_open')
         results.append(result)
 
-        # equity curve を保存
-        pos = signals.shift(1).fillna(0).clip(-1, 1)
-        daily_ret = df30['close'].pct_change().fillna(0)
-        strat_ret = pos * daily_ret
-        trade_changes = pos.diff().abs().fillna(0)
-        cost = trade_changes * COMMISSION
-        equity = (1 + strat_ret - cost).cumprod()
+        # equity curve を保存 (エンジンと同一ロジックを使用)
+        equity = equity_curve(df30, signals, execution='next_open')
         equity_curves[name] = equity.values
 
         survival_icon = {
@@ -91,6 +86,12 @@ def main() -> int:
     total_loss = sum(r.final_equity_jpy - 1_000_000 for r in results)
     print(f'生存集計: ✓生存 {alive} / !負傷 {wounded} / ✗死亡 {dead}')
     print(f'10 戦略合計損益: ¥{total_loss:+,d}')
+    if results and not results[0].annualization_reliable:
+        print()
+        print(f'⚠️  評価期間 {results[0].n_days} 営業日は統計的判断には短すぎます'
+              f' (推奨 {MIN_DAYS_FOR_ANNUALIZATION} 営業日以上)。')
+        print('   sharpe / 年率値は参考値であり、生死判定はノイズを含みます。')
+        print('   有意性の評価には code/experiments/run_significance_audit.py を使ってください。')
     print()
 
     # 保存
