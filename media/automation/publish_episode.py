@@ -14,6 +14,7 @@ systemd timer / cron で定期実行する想定。
 """
 
 import argparse
+import difflib
 import json
 import logging
 import os
@@ -22,6 +23,8 @@ import subprocess
 import sys
 import tempfile
 import time
+import urllib.request
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -31,7 +34,9 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 STATE_PATH = PROJECT_ROOT / "media" / "automation" / "state.json"
 
 # AIコンパス用 note 認証 state
-NOTE_STATE_PATH = Path("/home/sol/.note-state-aicompass3.json")
+# 2026-06-12: 旧 aicompass3 アカウントがシャドウBANで削除されたため、
+# 連載は @ai_compass_media (https://note.com/ai_compass_media) に移行済み。
+NOTE_STATE_PATH = Path("/home/sol/.note-state-ai_compass_media.json")
 
 # 既存の note 投稿スクリプト (Node.js + Playwright)
 NOTE_PUBLISHER_CJS = Path("/home/sol/note-post-mcp/publish-single.cjs")
@@ -67,6 +72,48 @@ def load_state() -> dict:
 def save_state(state: dict) -> None:
     with open(STATE_PATH, "w") as f:
         json.dump(state, f, indent=2, ensure_ascii=False)
+
+
+# 重複検知用: AIコンパス note RSS
+NOTE_RSS_URL = "https://note.com/ai_compass_media/rss"
+
+
+def fetch_recent_note_titles(rss_url: str = NOTE_RSS_URL, limit: int = 50) -> list[str]:
+    """note RSS から最近の記事タイトルを取得 (重複検知用)"""
+    try:
+        req = urllib.request.Request(
+            rss_url,
+            headers={"User-Agent": "Mozilla/5.0 (compatible; aiquant-publisher/1.0)"}
+        )
+        with urllib.request.urlopen(req, timeout=15) as r:
+            content = r.read()
+        root = ET.fromstring(content)
+        titles = []
+        for item in root.findall(".//item")[:limit]:
+            t = item.find("title")
+            if t is not None and t.text:
+                titles.append(t.text.strip())
+        return titles
+    except Exception as e:
+        logger.warning(f"note RSS 取得失敗 (重複検知スキップ): {e}")
+        return []
+
+
+def is_title_already_published(target: str, recent_titles: list[str],
+                                threshold: float = 0.7) -> tuple[bool, str | None]:
+    """既存記事タイトルとの類似度で重複判定。マッチした既存タイトルも返す。"""
+    if not recent_titles:
+        return False, None
+    best_ratio = 0.0
+    best_match = None
+    for t in recent_titles:
+        ratio = difflib.SequenceMatcher(None, target, t).ratio()
+        if ratio > best_ratio:
+            best_ratio = ratio
+            best_match = t
+    if best_ratio >= threshold:
+        return True, f"{best_match} (similarity={best_ratio:.2f})"
+    return False, None
 
 
 def find_next_episode(state: dict, force_episode: int | None = None) -> dict | None:
@@ -378,6 +425,25 @@ def main():
         return 0
 
     logger.info(f"=== Episode #{episode['number']}: {episode['title'][:60]} ===")
+
+    # 重複検知: note RSS で AI コンパスの最近の投稿タイトルと類似度チェック
+    # state.json と note 実態のズレで重複投稿が起きた事例 (2026-05-06) への対策
+    if not args.dry_run:
+        recent_titles = fetch_recent_note_titles()
+        is_dup, matched = is_title_already_published(episode["title"], recent_titles)
+        if is_dup:
+            logger.warning(f"⚠️ 既に投稿済みと判定 (重複防止): {matched}")
+            episode["published"] = True
+            episode["_skipped_due_to_duplicate"] = True
+            episode["published_at"] = datetime.now(JST).isoformat()
+            state["last_published_episode"] = max(
+                state.get("last_published_episode", 0), episode["number"]
+            )
+            save_state(state)
+            logger.info(f"✓ Episode #{episode['number']} を published=true としてマーク (RSS重複検知による)")
+            return 0
+        else:
+            logger.info(f"重複検知: 該当なし ({len(recent_titles)} 件確認)")
 
     note_ok = True
     x_ok = True
