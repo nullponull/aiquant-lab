@@ -20,9 +20,16 @@ logger = logging.getLogger("aggregator")
 
 
 def load_all_scored() -> list[dict]:
-    """results 配下の全 scored_*.json を読み込む"""
+    """results 配下の全 scored_*.json を読み込む
+
+    Mock パイロット (sample_patents.json 由来) は除外。
+    実 J-PlatPat 由来 (ファイル名に "jplatpat" を含む) のみ採用。
+    """
     all_records: list[dict] = []
     for f in sorted(RESULTS_DIR.glob("scored_*.json")):
+        if "jplatpat" not in f.name:
+            logger.info(f"  skip mock: {f.name}")
+            continue
         try:
             data = json.load(open(f, encoding="utf-8"))
             for r in data:

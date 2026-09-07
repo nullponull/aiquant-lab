@@ -64,72 +64,65 @@ def fetch_patent_text(patent_number: str, headless: bool = True) -> dict:
         )
         page = ctx.new_page()
         try:
-            # Step 1: 簡易検索で出願番号を取得
+            # 簡易検索 → 結果テーブル内の文献番号リンクを直接クリックすると
+            # /p0200 (本文ページ) が新タブで開く。固定アドレス URL は特開で
+            # 機能しないため、検索ベースの直接ルートに統一。
             page.goto("https://www.j-platpat.inpit.go.jp/s0100", wait_until="networkidle", timeout=60000)
             time.sleep(10)
             page.click("#mat-radio-1", timeout=5000)
             time.sleep(1)
-            search_query = re.sub(r"[^\d-]", "", patent_number)
+            # 元号付き (特開平/特開昭/実開平/実開昭) はフルテキストで検索、
+            # 西暦付き (特開2002-028196 等) は数字とハイフンのみで OK。
+            if re.search(r"(平|昭|大)", patent_number):
+                search_query = patent_number
+            else:
+                search_query = re.sub(r"[^\d-]", "", patent_number)
             page.fill("input#s01_srchCondtn_txtSimpleSearch", search_query)
             time.sleep(1)
             page.click("#s01_srchBtn_btnSearch")
             time.sleep(15)
 
-            # 検索結果から行内の出願番号を取得
-            row_data = page.evaluate(
-                """(num) => {
-                    const rows = document.querySelectorAll('table tr');
-                    for (const row of rows) {
-                        const cells = row.querySelectorAll('td');
-                        if (cells.length < 4) continue;
-                        const row_text = row.innerText || '';
-                        if (row_text.includes(num)) {
-                            return {
-                                cells: Array.from(cells).map(c => (c.innerText||'').trim()),
-                                full: row_text.substring(0, 500)
-                            };
+            # 出願番号を結果から取得 (オプション、メタデータ用)
+            application_number = ""
+            try:
+                row_data = page.evaluate(
+                    """(num) => {
+                        const rows = document.querySelectorAll('table tr');
+                        for (const row of rows) {
+                            const cells = row.querySelectorAll('td');
+                            if (cells.length < 4) continue;
+                            const row_text = row.innerText || '';
+                            if (row_text.includes(num)) {
+                                return Array.from(cells).map(c => (c.innerText||'').trim());
+                            }
                         }
-                    }
-                    return null;
-                }""",
-                patent_number,
-            )
-            if not row_data:
+                        return null;
+                    }""",
+                    patent_number,
+                )
+                if row_data:
+                    for cell in row_data:
+                        if cell.startswith(("実願", "特願")):
+                            application_number = cell.replace("実願", "").replace("特願", "")
+                            break
+            except Exception:
+                pass
+
+            # 文献番号リンクを直接クリック → 新タブで本文取得
+            target = page.locator(f'a:has-text("{patent_number}")')
+            if target.count() == 0:
                 browser.close()
                 return {"_error": f"特許 {patent_number} がリストに見つからず"}
-
-            cells = row_data.get("cells", [])
-            # 出願番号は通常 cells[1] (例: 実願2003-272390 or 特願YYYY-NNNNNN)
-            application_number = ""
-            for cell in cells:
-                if cell.startswith(("実願", "特願")):
-                    application_number = cell.replace("実願", "").replace("特願", "")
-                    application_type_jp = "実願" if cell.startswith("実願") else "特願"
-                    break
-            if not application_number:
-                browser.close()
-                return {"_error": f"出願番号取得失敗、cells={cells}"}
-
-            # Step 2: 固定アドレス URL に直接アクセス
-            fixed_url = f"https://www.j-platpat.inpit.go.jp/c1801/PU/JP-{application_number}/20/ja"
-            page.goto(fixed_url, wait_until="domcontentloaded", timeout=60000)
-            time.sleep(12)
-
-            # Step 3: 固定アドレスページの「実登XXXXXXX」リンクをクリック
-            # 新タブで /p0200 (本文ページ) が開く挙動だが、タイミングが不安定。
-            # expect_page() で確実に取得。
 
             text_page = None
             try:
                 with ctx.expect_page(timeout=20000) as new_page_info:
-                    page.click(f'a:has-text("{patent_number}")', force=True)
+                    target.first.click(force=True)
                 text_page = new_page_info.value
                 text_page.wait_for_load_state("domcontentloaded", timeout=30000)
                 time.sleep(15)
             except Exception:
-                # フォールバック: 同タブクリック + 待機
-                time.sleep(20)
-                # context.pages を確認
+                time.sleep(15)
                 for p_ in ctx.pages:
                     if "/p02" in p_.url or "p0200" in p_.url:
                         text_page = p_
@@ -146,8 +139,45 @@ def fetch_patent_text(patent_number: str, headless: bool = True) -> dict:
             except Exception:
                 pass
 
+            # 各セクションの「開く」トグルを展開 (請求の範囲・詳細な説明など)
+            # J-PlatPat の各セクションは <a class="l-toggle__header"> でラップされ、
+            # 子に「閉じる」または「開く」が表示される。「開く」のみクリックする。
+            try:
+                clicked = text_page.evaluate(
+                    """() => {
+                        let n = 0;
+                        document.querySelectorAll('a.l-toggle__header').forEach(el => {
+                            const t = (el.innerText||'').trim();
+                            // ヘッダ末尾に「開く」がある = 折りたたみ状態
+                            if (t.endsWith('開く')) {
+                                try { el.click(); n++; } catch(e) {}
+                            }
+                        });
+                        return n;
+                    }"""
+                )
+                time.sleep(min(2 + (clicked or 0), 12))
+            except Exception:
+                pass
+
             body = text_page.evaluate("document.body.innerText")
-            if len(body) < 1000:
+            # 「開く」展開が遅延レンダの場合、もう一度展開を試みる
+            if len(body) < 1500:
+                try:
+                    text_page.evaluate(
+                        """() => {
+                            document.querySelectorAll('a.l-toggle__header').forEach(el => {
+                                const t = (el.innerText||'').trim();
+                                if (t.endsWith('開く')) { try { el.click(); } catch(e) {} }
+                            });
+                        }"""
+                    )
+                    time.sleep(8)
+                    body = text_page.evaluate("document.body.innerText")
+                except Exception:
+                    pass
+            # 要約 + 書誌が取れていれば PDCA は判断可能なので 800 字を最低閾値に
+            if len(body) < 800:
                 browser.close()
                 return {"_error": f"本文取得失敗 (text_page URL={text_page.url}, len={len(body)})"}
 

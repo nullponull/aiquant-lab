@@ -43,7 +43,7 @@ logger = logging.getLogger("jplatpat_daily")
 
 
 def fetch_via_subprocess(keyword: str, max_results: int = 20,
-                         pub_year_from: int = 2000, pub_year_to: int = 2005) -> list[dict]:
+                         pub_year_from: int = 1995, pub_year_to: int = 2008) -> list[dict]:
     """system python3 経由で playwright 起動（uv の python では playwright 未インストール）"""
     bridge = f"""
 import json, sys
