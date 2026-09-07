@@ -1,5 +1,5 @@
 {
-  "last_published_episode": 4,
+  "last_published_episode": 20,
   "episodes": [
     {
       "number": 0,
@@ -81,10 +81,11 @@
       "scheduled_for": "2026-06-10T12:00:00+09:00",
       "type": "episode",
       "title": "【AIで投資の壁を越える #6】まじでやらかした。Ep2 の結論は Mock LLM が騙していた — 実 Claude で再検証したら Solo が倍の精度を出した話",
-      "published": false,
-      "note_url": null,
+      "published": true,
+      "note_url": "https://note.com/notes/n2221c98d449f/landing?puid=05e3610c-fefd-450f-b557-24d1b7ca7d6b",
       "x_thread_id": null,
-      "published_at": null
+      "published_at": "2026-06-11T12:01:43.159594+09:00",
+      "_skipped_due_to_duplicate": true
     },
     {
       "number": 7,
@@ -94,10 +95,11 @@
       "type": "episode",
       "title": "【AIで投資の壁を越える #7】まじでやらかし続編。10戦略を30日並列稼働させたら、トレード回数が多いほど負けた話",
       "angle": "Ep3 リベンジ。グッドハートの壁第1回",
-      "published": false,
-      "note_url": null,
-      "x_thread_id": null,
-      "published_at": null
+      "published": true,
+      "note_url": "https://note.com/notes/n03a6b6a21367/landing?puid=c2d4fcd5-058e-43d7-a7e1-432738ff2d00",
+      "x_thread_id": "2071028907776917634",
+      "published_at": "2026-06-28T15:33:34.778822+09:00",
+      "_skipped_due_to_duplicate": true
     },
     {
       "number": 8,
@@ -107,10 +109,11 @@
       "type": "episode",
       "title": "【AIで投資の壁を越える #8】裏切られた。生存4戦略を GitHub に公開した翌週、3戦略のエッジが消えた話",
       "angle": "再帰性 = 第1の壁を実証",
-      "published": false,
-      "note_url": null,
+      "published": true,
+      "note_url": "https://note.com/notes/nf0012c2ee96f/landing?puid=a1017653-ecac-4e8f-b8ef-0ac20faae756",
       "x_thread_id": null,
-      "published_at": null
+      "published_at": "2026-06-30T12:02:55.082027+09:00",
+      "_skipped_due_to_duplicate": true
     },
     {
       "number": 9,
@@ -120,10 +123,11 @@
       "type": "episode",
       "title": "【AIで投資の壁を越える #9】これ俺だけ?生き残った戦略を「最適化」したら、全部負けに転じた話",
       "angle": "グッドハートの壁 = 第3の壁、最適化の罠",
-      "published": false,
-      "note_url": null,
+      "published": true,
+      "note_url": "https://note.com/notes/n7f00b1029dd3/landing?puid=e2cb8ad1-364f-4a5b-9af4-9932aee13b64",
       "x_thread_id": null,
-      "published_at": null
+      "published_at": "2026-07-02T12:01:21.370589+09:00",
+      "_skipped_due_to_duplicate": true
     },
     {
       "number": 10,
@@ -228,6 +232,50 @@
       "note_url": null,
       "x_thread_id": null,
       "published_at": null
+    },
+    {
+      "number": 18,
+      "article_path": "articles/018_signal_monitoring_live_experiment.md",
+      "x_promo_path": "promo/018_episode18_x.md",
+      "scheduled_for": "2026-06-08T12:00:00+09:00",
+      "type": "bangai",
+      "title": "【AIで投資の壁を越える 番外編 #5】仮想¥1000万でレゾナック+東京応化を1ヶ月運用してみる — シグナル監視 AI 自動化は実際に機能するか",
+      "angle": "連載完結後の実証実験開始、Day 1 実況 (2026-06-06)、Ep19 への接続。GitHub Actions cron + ペーパートレード公開",
+      "price": 500,
+      "published": true,
+      "note_url": "https://note.com/notes/n08a1f88f4df5/landing?puid=478b8550-4059-4b61-878d-245dd0a00900",
+      "x_thread_id": "2063818493561311423",
+      "published_at": "2026-06-08T12:03:27.528510+09:00"
+    },
+    {
+      "number": 19,
+      "article_path": "articles/019_signal_monitoring_results.md",
+      "x_promo_path": "promo/019_episode19_x.md",
+      "scheduled_for": "2026-07-08T12:00:00+09:00",
+      "type": "bangai",
+      "title": "【AIで投資の壁を越える 番外編 #6】1ヶ月のペーパートレード結果報告 — バックテストとのギャップ実測値",
+      "angle": "Ep18 の結果報告、Ep9 グッドハート過適合の現実検証、Ep14 沈黙クラッシュ base rate 実測、AI 自動化の妥当性総括",
+      "price": 500,
+      "published": false,
+      "note_url": null,
+      "x_thread_id": null,
+      "published_at": null
+    },
+    {
+      "number": 20,
+      "article_path": "articles/020_jobs_infra_brevo_migration.md",
+      "x_promo_path": "promo/020_episode20_x.md",
+      "scheduled_for": "2026-06-10T12:00:00+09:00",
+      "type": "bangai",
+      "title": "【AIで投資の壁を越える 番外編 #7】GitHub Actions が死んだ日、Cloudflare Worker + ローカル FastAPI で全自動メディア運用基盤を 1 日で組み直した記録",
+      "angle": "Ep14 (沈黙クラッシュ) と Ep15 (SaaS の壁) の現実版続編。全リポジトリ Actions 連鎖死 → Cloudflare Worker + Tunnel + FastAPI + Brevo に 1 日で組み直し。自動復旧 L1-L4 設計の実装記録",
+      "price": 500,
+      "published": true,
+      "note_url": "https://note.com/notes/nbc3c835f0422/landing",
+      "x_thread_id": "2064920519787659673",
+      "published_at": "2026-06-11T12:58:18+09:00",
+      "x_thread_url": "https://x.com/nullpodesu/status/2064920519787659673",
+      "_note": "note 投稿成功 + X Tweet1 投稿成功 (リプライは手動投稿)"
     }
   ],
   "derivatives": [
