@@ -89,8 +89,8 @@ def main():
             patent_copy["pdca_actions"] = verdict.get("next_actions", [])
         enriched.append(patent_copy)
 
-    # GO 判定の候補抽出
-    go_candidates = [p for p in enriched if p.get("pdca_verdict") == "GO"]
+    # GO / GO_PREMIUM 判定の候補抽出 (ALERT 対象)
+    go_candidates = [p for p in enriched if p.get("pdca_verdict") in ("GO", "GO_PREMIUM")]
 
     # 週次レポート生成
     md_lines = []
