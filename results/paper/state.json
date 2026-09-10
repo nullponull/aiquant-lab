@@ -1,0 +1,14 @@
+{
+  "cash": 34496.436510975356,
+  "positions": {
+    "SPY": 1272.4285149484597
+  },
+  "equity_history": [
+    {
+      "date": "2026-09-10",
+      "equity": 999035.4609755354
+    }
+  ],
+  "frozen": false,
+  "kill_reason": null
+}
