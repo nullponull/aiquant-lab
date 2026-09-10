@@ -129,17 +129,35 @@ def rebalance(state: PaperState,
 
 
 def performance_summary(state: PaperState) -> dict:
+    """常に同じキーを返す。
+
+    [2026-09-10] 以前は履歴が 2 件未満のとき
+    `{"n_days", "total_return"}` だけを返していた。呼び出し側は
+    `summary["current_equity"]` を無条件に読むので **初日は必ず KeyError で落ちる**。
+
+    そして落ちる場所が悪かった。`state.save()` の後・`git commit` の前で落ちるため、
+    ワークフローの "Commit state" ステップに到達せず**状態が保存されない**。
+    翌日また履歴 1 件から始まり、同じ所で落ちる——**失敗が自分を再生産していた**
+    （2026-09-07 / 08 / 09 と毎日同じ形で失敗）。
+
+    戻り値の形が入力で変わる関数は、呼び出し側の分岐を増やすか、こうして落ちる。
+    **形は常に一つにして、値の方で「まだ分からない」を表す。**
+    """
     eq = pd.Series({e["date"]: e["equity"] for e in state.equity_history},
                    dtype=float).sort_index()
-    if len(eq) < 2:
-        return {"n_days": len(eq), "total_return": 0.0}
-    ret = eq.iloc[-1] / eq.iloc[0] - 1
-    dd = (eq / eq.cummax() - 1).min()
+
+    # 履歴が無いときの現在値は保有評価額が取れないので現金で代用する
+    current = float(eq.iloc[-1]) if len(eq) else float(state.cash)
+    # 収益率と最大ドローダウンは 2 点以上ないと定義できない。0 ではなく「まだ無い」
+    # を表したいが、表示側が数値を前提にしているので 0.0 を入れ、n_days で判別させる。
+    ret = float(eq.iloc[-1] / eq.iloc[0] - 1) if len(eq) >= 2 else 0.0
+    dd = float((eq / eq.cummax() - 1).min()) if len(eq) >= 2 else 0.0
+
     return {
         "n_days": int(len(eq)),
-        "total_return": float(ret),
-        "max_drawdown": float(dd),
+        "total_return": ret,
+        "max_drawdown": dd,
         "frozen": state.frozen,
         "kill_reason": state.kill_reason,
-        "current_equity": float(eq.iloc[-1]),
+        "current_equity": current,
     }
