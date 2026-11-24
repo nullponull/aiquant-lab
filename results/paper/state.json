@@ -1,7 +1,7 @@
 {
-  "cash": 1000878.3704774266,
+  "cash": NaN,
   "positions": {
-    "SPY": 0.0027305715457133146
+    "SPY": NaN
   },
   "equity_history": [
     {
@@ -211,6 +211,10 @@
     {
       "date": "2026-11-20",
       "equity": 1000880.318904052
+    },
+    {
+      "date": "2026-11-23",
+      "equity": NaN
     }
   ],
   "frozen": false,
