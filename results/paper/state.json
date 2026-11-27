@@ -223,6 +223,10 @@
     {
       "date": "2026-11-25",
       "equity": NaN
+    },
+    {
+      "date": "2026-11-27",
+      "equity": NaN
     }
   ],
   "frozen": false,
